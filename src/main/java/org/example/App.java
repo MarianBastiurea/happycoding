@@ -1,13 +1,13 @@
 package org.example;
 
 /**
- * Hello world!
+ * Hello Marian!
  *
  */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        System.out.println( "Hello Marian!" );
     }
 }
