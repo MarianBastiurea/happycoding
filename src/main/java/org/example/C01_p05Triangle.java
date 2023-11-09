@@ -1,6 +1,6 @@
 package org.example;
 
-class C01_P05{
+class triangle{
 
     public static void main (String[] args){
         int height = 7;
@@ -8,7 +8,7 @@ class C01_P05{
         int area;
         int perimeter;
         area = height* width;
-        System.out.println("Triangle area is "+ area+" inches");
+        System.out.println("Triangle area is "+ area+" square inches");
         perimeter = (height+width)*2;
         System.out.println("Triangle perimeter is "+ perimeter+" inches");
 
