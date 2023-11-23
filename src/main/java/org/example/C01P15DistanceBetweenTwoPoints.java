@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
- class C01_p15 {
+public class C01P15DistanceBetweenTwoPoints {
     public static void main(String[] args) {
         int x1;
         int x2;
