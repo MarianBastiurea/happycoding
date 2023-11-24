@@ -1,9 +1,8 @@
 package org.example;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-class C01_p22 {
+class sumOfAllOddsValue {
     public static void main(String[] args) {
         int sum;
        int[] myArray=new int[5];

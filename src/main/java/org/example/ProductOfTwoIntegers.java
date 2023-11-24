@@ -1,27 +1,20 @@
 package org.example;
 
-import com.sun.source.util.DocTreeScanner;
-
 import java.util.Scanner;
 
-class C01_p09 {
+class ProductOfTwoIntegers {
     public static void main(String[] args) {
         int a;
         int b;
         int c;
         int d;
         int a2;
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter first integer:");
-        a=sc.nextInt();
+        a = sc.nextInt();
         System.out.println("Enter second integer: ");
-        b=sc.nextInt();
-        c=a+b;
-        System.out.println("Sum is "+c);
-
-
-        }
-
-
-
+        b = sc.nextInt();
+        c = a * b;
+        System.out.println("Product is " + c);
+    }
 }

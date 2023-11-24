@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C01_p24 {
+class checkIfTwoIntegersAreMultiplied {
     public static void main(String[] args) {
         int a;
         int b;
