@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
- class C03_p08 {
+ class C03P08SumOfNOddsNumber {
     public static void main(String[] args) {
         int a;
         int b=-1;

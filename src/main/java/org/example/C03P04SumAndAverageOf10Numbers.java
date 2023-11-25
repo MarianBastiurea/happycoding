@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C03_p04 {
+class C03P04SumAndAverageOf10Numbers {
     public static void main(String[] args) {
         int sum=0;
         double average=0;

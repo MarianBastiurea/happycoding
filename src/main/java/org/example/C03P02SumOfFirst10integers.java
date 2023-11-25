@@ -1,6 +1,6 @@
 package org.example;
 
-class C03_p02 {
+class C03P02SumOfFirst10integers {
     public static void main(String[] args) {
         int a=0;
         int sum=0;

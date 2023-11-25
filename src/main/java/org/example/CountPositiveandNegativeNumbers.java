@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C01_p27 {
+class CountPositiveandNegativeNumbers {
     public static void main(String[] args) {
         int a=0;
         int b=0;

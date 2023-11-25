@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C03_p03 {
+class C03P03DisplayNnaturalNumbersAndSum {
     public static void main(String[] args) {
         int a;
         int sum = 0;
