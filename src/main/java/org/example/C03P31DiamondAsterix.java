@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
- class C03_p31 {
+ class C03P31DiamondAsterix {
     public static void main(String[] args) {
         int a;
         int rows;

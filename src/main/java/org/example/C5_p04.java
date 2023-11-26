@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C05_p04{
+class C05P04CopyElementsFromArrayInOtherArray {
     public static void main(String[] args) {
         int a,j;
         int sum=0;

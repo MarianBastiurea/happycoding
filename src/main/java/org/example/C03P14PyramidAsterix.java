@@ -1,7 +1,7 @@
 package org.example;
 
 import java.util.Scanner;
-class C03_p13 {
+class C03P14PyramidAsterix {
     int row;
     public static void main(String[] args) {
         int a;
@@ -17,10 +17,9 @@ class C03_p13 {
             }
             rows = rows - 1;
             for (int c = 1; c <= i; ++c) {
-                b=b+1;
-                System.out.print(b+" ");
+                System.out.print(" *");
             }
-                System.out.println("");
+            System.out.println("");
         }
     }
 }

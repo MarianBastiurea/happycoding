@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C05_p05{
+class C05P05FindDuplicateElementsInArray {
     public static void main(String[] args) {
         int a,j;
         Scanner sc=new Scanner(System.in);

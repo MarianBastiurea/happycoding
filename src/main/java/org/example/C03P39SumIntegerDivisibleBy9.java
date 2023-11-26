@@ -1,8 +1,6 @@
 package org.example;
 
-import java.util.Scanner;
-
-class C03_p39{
+class C03P39SumIntegerDivisibleBy9 {
     public static void main(String[] args) {
         int sum=0;
         for (int i=100; i<=200;++i) {

@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C05_p03{
+class C05P03SumOfAllElementsInArray {
     public static void main(String[] args) {
         int a,j;
         int sum=0;

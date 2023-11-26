@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
- class C03_p18 {
+ class C03P18SumSeries {
     public static void main(String[] args) {
        int n;
        int x;

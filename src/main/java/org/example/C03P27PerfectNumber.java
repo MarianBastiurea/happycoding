@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C03_p27 {
+class C03P27PerfectNumber {
     public static void main(String[] args) {
        int a;
        int sum=0;

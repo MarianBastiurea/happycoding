@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C05_p02{
+class C05P02DisplayNumberInReverseOrder {
     public static void main(String[] args) {
         int a,j;
         Scanner sc=new Scanner(System.in);

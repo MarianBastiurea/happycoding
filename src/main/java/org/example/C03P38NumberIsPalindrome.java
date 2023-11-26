@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C03_p38 {
+class C03P38NumberIsPalindrome {
     public static void main(String[] args) {
         int a;
         int b;

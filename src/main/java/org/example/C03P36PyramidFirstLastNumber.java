@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
- class C03_p36 {
+ class C03P36PyramidFirstLastNumber {
     public static void main(String[] args) {
         int a;
         Scanner sc=new Scanner(System.in);
