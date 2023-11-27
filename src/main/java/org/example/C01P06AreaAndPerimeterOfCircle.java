@@ -1,6 +1,6 @@
 package org.example;
 
-class AreaAndPerimeterOfCircle {
+class C01P06AreaAndPerimeterOfCircle {
     public static void main(String[] args) {
         double area;
         double perimeter;

@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
- class C3P16SumNtermsEven {
+ class C3P16SumOfNtermsEven {
     public static void main(String[] args) {
         int a;
         int b=0;

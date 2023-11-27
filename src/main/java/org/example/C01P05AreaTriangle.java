@@ -1,6 +1,6 @@
 package org.example;
 
-class AreaTriangle{
+class C01P05AreaTriangle {
 
     public static void main (String[] args){
         int height = 7;
