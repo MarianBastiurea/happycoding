@@ -1,7 +1,7 @@
 package org.example;
 
 import java.util.Scanner;
-class C03P14PyramidAsterix {
+public class C03P14DisplayAPatternLikeAPyramidUsingAsterix {
     int row;
     public static void main(String[] args) {
         int a;

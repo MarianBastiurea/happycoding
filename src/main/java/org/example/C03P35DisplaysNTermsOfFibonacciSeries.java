@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C03P35FibonacciSeries {
+public class C03P35DisplaysNTermsOfFibonacciSeries {
     public static void main(String[] args) {
         int a;
         Scanner sc=new Scanner(System.in);

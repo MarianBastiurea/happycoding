@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C03P33PascalTriangle {
+public class C03P33DisplaysPascalTriangle {
     public static void main(String[] args) {
        int a;
        Scanner sc=new Scanner(System.in);

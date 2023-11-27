@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C03P38NumberIsPalindrome {
+public class C03P38CheckIfNumberIsPalindrome {
     public static void main(String[] args) {
         int a;
         int b;

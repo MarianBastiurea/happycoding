@@ -3,7 +3,7 @@ package org.example;
 import java.util.Scanner;
 
 
-class C03P09DisplayAPatternLikeATriangleUsingAsterix {
+public class C03P09DisplayAPatternLikeATriangleUsingAsterix {
     public static void main(String[] args) {
         int a;
         String b="*";

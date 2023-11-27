@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C03P05ReturnCubeOfNumber {
+public class C03P05ReturnCubeOfNumber {
     public static void main(String[] args) {
         int a;
         int b;

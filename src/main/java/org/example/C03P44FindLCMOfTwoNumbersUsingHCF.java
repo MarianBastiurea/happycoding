@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C03P44FindLCMUsingHCF {
+public class C03P44FindLCMOfTwoNumbersUsingHCF {
     public static void main(String args[]){
         int x, y, a, b, temp,HCF, LCM;
         Scanner scanner = new Scanner(System.in);

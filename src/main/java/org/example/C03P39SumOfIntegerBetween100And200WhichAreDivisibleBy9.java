@@ -1,6 +1,6 @@
 package org.example;
 
-class C03P39SumIntegerDivisibleBy9 {
+public class C03P39SumOfIntegerBetween100And200WhichAreDivisibleBy9 {
     public static void main(String[] args) {
         int sum=0;
         for (int i=100; i<=200;++i) {

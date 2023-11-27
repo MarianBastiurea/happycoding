@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C04P36CheckAPassword {
+public class C04P36CheckAPassword {
     public static void main(String[] args) {
         String password ="1234";
         String str;

@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
- class C03P37NumberInReverseOrder {
+ public class C03P37ReturnANumberInReverseOrder {
     public static void main(String[] args) {
        int a;
        int reverseNumber = 0;

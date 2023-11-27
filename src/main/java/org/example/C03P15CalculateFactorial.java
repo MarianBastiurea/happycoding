@@ -1,7 +1,7 @@
 package org.example;
 
 import java.util.Scanner;
-class C03P15CalculateFactorial {
+public class C03P15CalculateFactorial {
 
 
     public static void main(String[] args) {

@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
- class C03P10DisplayAPatternLikeATriangleUsingANumber {
+ public class C03P10DisplayAPatternLikeATriangleUsingANumber {
     public static void main(String[] args) {
         int a;
 

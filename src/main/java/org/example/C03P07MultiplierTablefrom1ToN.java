@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C03P07MultiplierTablefrom1ToN {
+public class C03P07MultiplierTablefrom1ToN {
     public static void main(String[] args) {
         int a=1;
         int b=1;

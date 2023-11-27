@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C02P05FindIfNumberDivideBy3or7 {
+public class C02P05FindIfNumberDivideBy3or7 {
     public static void main(String[] args) {
         int a;
         int b;

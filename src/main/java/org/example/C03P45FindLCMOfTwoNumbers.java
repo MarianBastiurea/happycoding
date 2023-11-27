@@ -1,7 +1,7 @@
 package org.example;
 
 import java.util.Scanner;
- class C03P45FindLCM {
+ public class C03P45FindLCMOfTwoNumbers {
     public static void main(String[] args) {
         int a, b;
         int c = 1;

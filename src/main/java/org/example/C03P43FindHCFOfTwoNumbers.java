@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C03P43FindHCFTwoNumbers {
+public class C03P43FindHCFOfTwoNumbers {
     public static void main(String[] args) {
         int a;
         int b;

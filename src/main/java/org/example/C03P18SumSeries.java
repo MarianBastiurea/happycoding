@@ -2,7 +2,8 @@ package org.example;
 
 import java.util.Scanner;
 
- class C03P18SumSeries {
+ public class C03P18FindSumOfSeries {
+     //1-x^2/2!+X^4/4!
     public static void main(String[] args) {
        int n;
        int x;

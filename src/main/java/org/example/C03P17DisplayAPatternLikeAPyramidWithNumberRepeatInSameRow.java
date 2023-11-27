@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class C03P17PyramidNumberRepeatSameRow {
+public class C03P17DisplayAPatternLikeAPyramidWithNumberRepeatInSameRow {
     public static void main(String[] args) {
        int a;
        int rows;

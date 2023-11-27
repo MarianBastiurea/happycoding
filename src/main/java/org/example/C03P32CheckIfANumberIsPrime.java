@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
- class C03P32NumberIsPrime {
+ public class C03P32CheckIfANumberIsPrime {
     public static void main(String[] args) {
        int a;
        Scanner sc=new Scanner(System.in);
