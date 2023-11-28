@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class C5P06FindAllUniqueElementsTest {
+class C5P06FindAllUniqueElementsInArrayTest {
     @Test
     public void numeTest() {
-        C5P06FindAllUniqueElements obj=new C5P06FindAllUniqueElements();
+        C5P06FindAllUniqueElementsInArray obj=new C5P06FindAllUniqueElementsInArray();
         int[] myArray=new int[4];
         myArray[0]=3;
         myArray[1]=2;

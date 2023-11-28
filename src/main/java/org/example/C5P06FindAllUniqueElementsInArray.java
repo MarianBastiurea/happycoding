@@ -1,6 +1,6 @@
 package org.example;
 
-public class C5P06FindAllUniqueElements {
+public class C5P06FindAllUniqueElementsInArray {
     public int[] uniqueElement(int[] myArray) {
         int[] allUniqueElements =new int[2];
         int indexAllUniqueElements=0;

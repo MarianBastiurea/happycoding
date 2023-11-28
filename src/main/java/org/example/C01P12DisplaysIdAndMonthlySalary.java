@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class DisplaysIdAndMonthlySalary {
+public class C01P12DisplaysIdAndMonthlySalary {
     public static void main(String[] args) {
         String id="0342";
         double hourlySalary;

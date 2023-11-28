@@ -1,6 +1,6 @@
 package org.example;
 
-class DisplayVariable {
+public class C01P07DisplayVariable {
     public static void main(String[] args) {
         int a=125;
         int b=12345;

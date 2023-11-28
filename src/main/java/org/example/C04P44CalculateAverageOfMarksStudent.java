@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public class C04P44CalculateAverageOfMark {
+public class C04P44CalculateAverageOfMarksStudent {
     public static void main(String[] args) {
        double average=0;
        double sum=0;
