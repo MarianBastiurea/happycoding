@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class SumOfTwoInteger {
+public class C01P09InputTwoIntegerAndCalculateTheirSum {
     public static void main(String[] args) {
         int a;
         int b;

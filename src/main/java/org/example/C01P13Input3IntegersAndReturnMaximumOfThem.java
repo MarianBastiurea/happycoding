@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public class C01P07Input3IntegersAndReturnMaximumOfThem {
+public class C01P13Input3IntegersAndReturnMaximumOfThem {
     public static void main(String[] args) {
         int a;
         int b;

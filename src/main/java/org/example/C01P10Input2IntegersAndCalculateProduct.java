@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class ProductOfTwoIntegers {
+public class C01P10Input2IntegersAndCalculateProduct {
     public static void main(String[] args) {
         int a;
         int b;

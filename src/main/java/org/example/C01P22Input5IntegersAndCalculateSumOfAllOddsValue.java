@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-class sumOfAllOddsValue {
+public class C01P22Input5IntegersAndCalculateSumOfAllOddsValue {
     public static void main(String[] args) {
         int sum;
        int[] myArray=new int[5];

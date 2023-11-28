@@ -1,6 +1,6 @@
 package org.example;
 
-public class Palindrome {
+public class C03P38CheckIfaGeneralNumberIsPalindrome {
     public boolean isPalindrome(char[] string) {
         boolean result = false;
         if (string == null) {

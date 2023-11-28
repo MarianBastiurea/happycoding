@@ -1,6 +1,6 @@
 package org.example;
 
-class TransformDaysinYears {
+public class C01P08InputNumberOfDaysAndTransforinYearsMonthsAndweeks {
     public static void main(String[] args) {
         int years;
         int weeks;
