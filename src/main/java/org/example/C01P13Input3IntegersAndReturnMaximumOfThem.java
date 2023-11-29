@@ -7,7 +7,6 @@ public class C01P13Input3IntegersAndReturnMaximumOfThem {
         int a;
         int b;
         int c;
-        int d;
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter first integer:");
         a=sc.nextInt();
