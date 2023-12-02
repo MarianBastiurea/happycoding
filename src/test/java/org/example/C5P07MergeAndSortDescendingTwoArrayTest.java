@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class C5P06MergeAndSortDescendingTwoArrayTest {
+public class C5P07MergeAndSortDescendingTwoArrayTest {
     @Test
     public void MergeAndSortTwoArray() {
         C5P07MergeAndSortDescendingTwoArray obj= new C5P07MergeAndSortDescendingTwoArray();
