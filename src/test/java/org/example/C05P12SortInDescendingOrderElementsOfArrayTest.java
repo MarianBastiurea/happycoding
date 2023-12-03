@@ -7,12 +7,26 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 public class C05P12SortInDescendingOrderElementsOfArrayTest {
     @Test
     public void ThreeElements() {
-        C05P12SortInDescendingOrderElementsOfArray obj = new C05P12SortInDescendingOrderElementsOfArray();
-        int[] myArray = new int[3];
-        myArray[0] = 5;
-        myArray[1] = 9;
-        myArray[2] = 1;
-        int[] result = obj.SortInDescendingOrder(myArray);
-        assertArrayEquals(result, new int[] {9,5,1});
+        int[] myArray = {1,4,9};
+        int[] result = C05P12SortInDescendingOrderElementsOfArray.SortInDescendingOrder(myArray);
+        assertArrayEquals(new int[]{9,4,1}, result);
+    }
+    @Test
+    public void SixElements() {
+        int[] myArray = {1,4,9,12,100,0};
+        int[] result = C05P12SortInDescendingOrderElementsOfArray.SortInDescendingOrder(myArray);
+        assertArrayEquals(new int[]{100,12,9,4,1,0}, result);
+    }
+    @Test
+    public void TwoElements() {
+        int[] myArray = {1,4};
+        int[] result = C05P12SortInDescendingOrderElementsOfArray.SortInDescendingOrder(myArray);
+        assertArrayEquals(new int[]{4,1}, result);
+    }
+    @Test
+    public void TwoElementsReverseOrder() {
+        int[] myArray = {4,1};
+        int[] result = C05P12SortInDescendingOrderElementsOfArray.SortInDescendingOrder(myArray);
+        assertArrayEquals(new int[]{4,1}, result);
     }
 }

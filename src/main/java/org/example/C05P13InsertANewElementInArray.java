@@ -12,6 +12,6 @@ public class C05P13InsertANewElementInArray {
             else
                 resultArray[i] = myArray[i - 1];
         }
-    return resultArray;
+        return resultArray;
     }
 }

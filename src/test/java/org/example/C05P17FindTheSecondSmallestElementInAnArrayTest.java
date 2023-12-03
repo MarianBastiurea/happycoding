@@ -15,6 +15,5 @@ public class C05P17FindTheSecondSmallestElementInAnArrayTest {
         myArray[4] = 5;
         int[] result = obj.SecondSmallestElementInAnArray(myArray);
         assertArrayEquals(result, new int[]{4});
-
     }
 }
