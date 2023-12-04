@@ -8,14 +8,14 @@ import  java.util.Scanner;
 public class C05P11SortInAscendingOrderElementsOfArrayTest {
     @Test
     public void FiveElements() {
-        C05P11SortInAscendingOrderElementsOfArray obj = new C05P11SortInAscendingOrderElementsOfArray();
-        int[] myArray = new int[5];
-        myArray[0] = 2;
-        myArray[1] = 7;
-        myArray[2] = 4;
-        myArray[3] = 5;
-        myArray[4] = 9;
-        int[] result = obj.SortInAscendingOrder(myArray);
-        assertArrayEquals(result, new int[]{2, 4, 5, 7, 9});
+        int[] myArray = {2,7,4,5,9};
+        int[] result = C05P11SortInAscendingOrderElementsOfArray.SortInAscendingOrder(myArray);
+        assertArrayEquals(new int[]{2, 4, 5, 7, 9},result);
+    }
+    @Test
+    public void TenElements() {
+        int[] myArray = {2,7,4,5,9,-10,-23,9,100,1209};
+        int[] result = C05P11SortInAscendingOrderElementsOfArray.SortInAscendingOrder(myArray);
+        assertArrayEquals(new int[]{-23,-10,2,4,5,7,9,9,100,1209},result);
     }
 }
