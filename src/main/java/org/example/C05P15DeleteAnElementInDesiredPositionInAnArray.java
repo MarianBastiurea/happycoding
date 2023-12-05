@@ -1,10 +1,8 @@
 package org.example;
 
 public class C05P15DeleteAnElementInDesiredPositionInAnArray {
-    public int[] DeleteAnElement(int[] myArray){
-        int LengthOfResultArray=4;
-        int elementToBeDeleted=3;
-        int positionToDeleteAnElement=2;
+    public static int[] DeleteAnElement(int[] myArray, int elementToBeDeleted, int positionToDeleteAnElement){
+        int LengthOfResultArray= myArray.length-1;
         int[] resultArray=new int[LengthOfResultArray];
         for(int i=0;i<LengthOfResultArray;i++) {
             if(i<positionToDeleteAnElement)
