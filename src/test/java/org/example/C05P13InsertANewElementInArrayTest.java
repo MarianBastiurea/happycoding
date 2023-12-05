@@ -7,14 +7,30 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 public class C05P13InsertANewElementInArrayTest {
     @Test
     public void FiveElements(){
-        C05P13InsertANewElementInArray obj=new C05P13InsertANewElementInArray();
-        int[] myArray=new int[5];
-        myArray[0]=2;
-        myArray[1]=5;
-        myArray[2]=7;
-        myArray[3]=9;
-        myArray[4]=11;
-        int[] result=obj.InsertElements(myArray);
+        int[] myArray={2,5,7,9,11};
+        int elementToBeInserted=8;
+        int[] result=C05P13InsertANewElementInArray.InsertElements(myArray, elementToBeInserted);
         assertArrayEquals(result, new int[] {2,5,7,8,9,11});
+    }
+    @Test
+    public void OneElements(){
+        int[] myArray={2};
+        int elementToBeInserted=8;
+        int[] result=C05P13InsertANewElementInArray.InsertElements(myArray, elementToBeInserted);
+        assertArrayEquals(result, new int[] {2,8});
+    }
+    @Test
+    public void NoElements(){
+        int[] myArray={};
+        int elementToBeInserted=8;
+        int[] result=C05P13InsertANewElementInArray.InsertElements(myArray, elementToBeInserted);
+        assertArrayEquals(result, new int[] {8});
+    }
+    @Test
+    public void TenElements(){
+        int[] myArray={-100,-20,2,5,7,9,11,80,100,300};
+        int elementToBeInserted=55;
+        int[] result=C05P13InsertANewElementInArray.InsertElements(myArray, elementToBeInserted);
+        assertArrayEquals(result, new int[] {-100,-20,2,5,7,9,11,55,80,100,300});
     }
 }

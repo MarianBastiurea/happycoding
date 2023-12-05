@@ -1,17 +1,24 @@
 package org.example;
 
 public class C05P13InsertANewElementInArray {
-    public int[] InsertElements(int[] myArray) {
-        int[] resultArray=new int[6];
-        int pos=3;
-        for (int i=0; i<6; i++){
-            if (i<pos)
-                resultArray[i] = myArray[i];
-             else if (i==pos)
-                resultArray[i]=8;
-            else
-                resultArray[i] = myArray[i - 1];
+    public static int[] InsertElements(int[] myArray, int elementToBeInserted) {
+        int[] resultArray=new int[myArray.length+1];
+        int positionWhereElementWillBeInserted=0;
+        //Find position where new element will be inserted
+        for (int i=0; i< myArray.length; i++) {
+            if (myArray[i] < elementToBeInserted) {
+                positionWhereElementWillBeInserted = i+1;
+            }
         }
+            for(int j=0;j< resultArray.length;j++){
+                if (j<positionWhereElementWillBeInserted)
+                    resultArray[j]=myArray[j];
+                else if (j==positionWhereElementWillBeInserted)
+                    resultArray[j]=elementToBeInserted;
+                else resultArray[j]=myArray[j-1];
+
+                }
+
         return resultArray;
     }
 }
