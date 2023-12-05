@@ -1,10 +1,8 @@
 package org.example;
 
 public class C05P14InsertAnewElementInaPositionInArray {
-    public int[] InsertElement(int[] myArray) {
-        int LengthOfResultArray=5;
-        int elementToBeInserted=5;
-        int positionToInsertNewElement=1;
+    public static int[] InsertElement(int[] myArray, int elementToBeInserted,int positionToInsertNewElement) {
+        int LengthOfResultArray= myArray.length+1;
         int[] resultArray=new int[LengthOfResultArray];
         for(int i=0;i<LengthOfResultArray;i++) {
             if(i<positionToInsertNewElement)
