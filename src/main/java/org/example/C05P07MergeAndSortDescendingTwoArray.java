@@ -1,8 +1,7 @@
 package org.example;
 import java.util.Arrays;
-import java.util.Collections;
 
-public class C5P07MergeAndSortDescendingTwoArray {
+public class C05P07MergeAndSortDescendingTwoArray {
     public int[] MergeAndSort(int [] FirstArray, int [] SecondArray) {
         int lengthArray= FirstArray.length+SecondArray.length;
         int [] myArray=new int[lengthArray];

@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class C5P06FindAllUniqueElementsInArrayTest {
     @Test
     public void numeTest() {
-        C5P06FindAllUniqueElementsInArray obj=new C5P06FindAllUniqueElementsInArray();
+        C05P06FindAllUniqueElementsInArray obj=new C05P06FindAllUniqueElementsInArray();
         int[] myArray=new int[4];
         myArray[0]=3;
         myArray[1]=2;

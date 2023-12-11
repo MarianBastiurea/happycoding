@@ -1,6 +1,6 @@
 package org.example;
 
-public class C5P01StoreElementsInArray {
+public class C05P01StoreElementsInArray {
     public static void main(String[] args) {
         int[] myArray= new int[10];
         myArray[0]=1;

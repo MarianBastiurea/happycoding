@@ -1,6 +1,6 @@
 package org.example;
 
-public class C5P08FrequencyElementInArray {
+public class C05P08FrequencyElementInArray {
     public int[] FrequencyElement(int[] myArray) {
         int[] FrequencyArray = new int[3];
         for (int i=0; i< myArray.length; i++) {
