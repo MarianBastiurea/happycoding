@@ -1,18 +1,26 @@
 package org.example;
 
 public class C05P32_Find_pair_Of_Elements_Of_An_Array_With_Given_Sum {
-    public static int[] FindPair(int[] myArray, int sum) {
-        int[] resultArray = new int[2];
+    public static int[][] FindPair(int[] myArray, int sum) {
+        int k=0;
+        int TemporaryLength=myArray.length* myArray.length;
+        int[][] TemporaryMatrix=new int [TemporaryLength][2];
+
         for (int i = 0; i < myArray.length; i++) {
             for (int j = i + 1; j < myArray.length; j++) {
                 if (myArray[i] + myArray[j] == sum) {
-                    resultArray[0] = myArray[i];
-                    resultArray[1] = myArray[j];
-                    i=myArray.length;
-                    j= myArray.length;
+                    TemporaryMatrix[k][0] = myArray[i];
+                    TemporaryMatrix[k][1] = myArray[j];
+                    k++;
                 }
             }
         }
-        return resultArray;
+        int[][] resultMatrix=new int [k][2];
+        for(int l=0;l<k;l++) {
+            for (int m = 0; m <= 1; m++) {
+                resultMatrix[l][m] = TemporaryMatrix[l][m];
+            }
+        }
+                return resultMatrix;
     }
 }
