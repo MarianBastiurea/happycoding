@@ -19,4 +19,14 @@ public class C05P32_Find_pair_Of_Elements_Of_An_Array_With_Given_Sum_Test {
         int[][] result= C05P32_Find_pair_Of_Elements_Of_An_Array_With_Given_Sum.FindPair(myArray, sum);
         assertArrayEquals(pair,result);
     }
+    @Test
+    public void NoPairs(){
+        int[] myArray={15,5,20,0,25,-5};
+        int sum=7;
+        int[][] pair=new int [0][0];
+        int[][] result= C05P32_Find_pair_Of_Elements_Of_An_Array_With_Given_Sum.FindPair(myArray, sum);
+        assertArrayEquals(pair,result);
+    }
 }
+
+
