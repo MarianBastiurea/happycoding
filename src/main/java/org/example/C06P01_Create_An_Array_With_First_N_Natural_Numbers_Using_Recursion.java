@@ -1,6 +1,6 @@
 package org.example;
 
-public class C06P01_Create_An_Array_With_First_N_Natural_Numbers {
+public class C06P01_Create_An_Array_With_First_N_Natural_Numbers_Using_Recursion {
 
 
     public static int[] CreateAnArray(int start, int numberOfElements) {

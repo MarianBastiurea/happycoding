@@ -1,6 +1,6 @@
 package org.example;
 
-public class C06P03_Find_First_N_Elements_Of_Fibonacci_Series {
+public class C06P03_Find_First_N_Elements_Of_Fibonacci_Series_Using_Recursion {
 
     public static int[] FirstNElements(int NumberOfElements){
         int[] myArray= new int[NumberOfElements];
