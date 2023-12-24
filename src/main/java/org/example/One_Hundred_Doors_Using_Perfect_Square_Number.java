@@ -20,7 +20,7 @@ this Class will use second pattern.
  */
 public class One_Hundred_Doors_Using_Perfect_Square_Number {
     public static String CheckStatusDoor(int number) {
-        String status;
+        String status="";
         for (int i = 2; i < number; i++) {
 
             if (number / i == i && number % i == 0) {
