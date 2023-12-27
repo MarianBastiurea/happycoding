@@ -36,6 +36,7 @@ public class Find_The_Longest_Substring_Of_A_Given_String_Without_Repeating_Char
             end++;
         }
 
+
         return myString.substring(maxStart, maxStart + maxLength);
     }
 }

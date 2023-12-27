@@ -1,22 +1,22 @@
 package org.example;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+// Beer song on algorithm. Start counting down from 99 to 0 beer.
+
 public class BeerSong {
     public static void main(String[] args) {
-        int beerNum = 99;
+        int beerNumber = 99;
         String word = "bottles ";
-        while (beerNum > 0) {
-            if (beerNum == 1) {
+        while (beerNumber > 0) {
+            if (beerNumber == 1) {
                 word = "bottle ";
             }
-            System.out.println(beerNum + " " + word + " of beer on the wall");
-            System.out.println(beerNum + " " + word + "of beer.");
+            System.out.println(beerNumber + " " + word + " of beer on the wall");
+            System.out.println(beerNumber + " " + word + "of beer.");
             System.out.println("Take me down");
             System.out.println("Pass it around");
-            beerNum = beerNum - 1;
-            if (beerNum > 1) {
-                System.out.println(beerNum + " " + word + " of beer on the walls");
+            beerNumber = beerNumber - 1;
+            if (beerNumber > 1) {
+                System.out.println(beerNumber + " " + word + " of beer on the walls");
             } else {
                 System.out.println("No more bottles of beer on the wall");
             }

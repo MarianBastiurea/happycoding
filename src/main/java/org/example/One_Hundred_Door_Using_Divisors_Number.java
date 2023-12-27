@@ -19,19 +19,19 @@ that means doors with number 1, 4, 9,16... will be open.
 this Class will use odds or even divisors door's number.
  */
 public class One_Hundred_Door_Using_Divisors_Number {
-    public static String OneHundredDivisors(int DoorsNumber) {
-        int k = 0;
+    public static String OneHundredDivisors(int doorsNumber) {
+        int numberOfDivisors = 0;
         String status;
-        int[] temporaryArray = new int[DoorsNumber];
-        for (int i = 1; i <= DoorsNumber; i++) {
-            for (int j = 1; j <= DoorsNumber; j++) {
-                if (i * j == DoorsNumber) {
-                    temporaryArray[k] = i;
-                    k++;
+        int[] temporaryArray = new int[doorsNumber];
+        for (int i = 1; i <= doorsNumber; i++) {
+            for (int j = 1; j <= doorsNumber; j++) {
+                if (i * j == doorsNumber) {
+                    temporaryArray[numberOfDivisors] = i;
+                    numberOfDivisors++;
                 }
             }
         }
-        if (k % 2 == 0) {
+        if (numberOfDivisors % 2 == 0) {
             status = "Closed";
         } else {
             status = "Open";

@@ -21,38 +21,38 @@ Example output (for the above input)
 0111 */
 
 
-public class Mine_Field {
-    public static char[][] FillMineField(char[][] mineField) {
+public class MineField {
+    public static char[][] hintField(char[][] mineField) {
 
         int rows = mineField.length;
         int columns = mineField[0].length;
 
-        //create new matrix hintField with same dimension like mineField
         char[][] hintField = new char[rows][columns];
+        char mine = '*';
 
         // fill hintField with 0,1 or 2 depending how many mines are around hintField[i][j]
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                if (mineField[i][j] == '*') {
-                    hintField[i][j] = '*';
+                if (mineField[i][j] == mine) {
+                    hintField[i][j] = mine;
                 } else {
-                    hintField[i][j] = (char) ('0' + countMines(mineField, i, j, rows, columns));
+                    hintField[i][j] = (char) ('0' + countAdjacentMines(mineField, i, j, rows, columns));
                 }
             }
         }
         return hintField;
     }
-    //count how many mines do we have in mineField
-        private static int countMines(char[][] field, int i, int j, int rows, int cols) {
-            int count = 0;
-            for (int x = Math.max(0, i - 1); x < Math.min(rows, i + 2); x++) {
-                for (int y = Math.max(0, j - 1); y < Math.min(cols, j + 2); y++) {
-                    if (field[x][y] == '*') {
-                        count++;
-                    }
+
+    private static int countAdjacentMines(char[][] field, int i, int j, int rows, int cols) {
+        int count = 0;
+        for (int x = Math.max(0, i - 1); x < Math.min(rows, i + 2); x++) {
+            for (int y = Math.max(0, j - 1); y < Math.min(cols, j + 2); y++) {
+                if (field[x][y] == '*') {
+                    count++;
                 }
             }
-            return count;
         }
+        return count;
     }
+}
 

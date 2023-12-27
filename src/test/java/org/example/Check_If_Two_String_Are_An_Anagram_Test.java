@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Check_If_Two_String_Are_An_Anagram_Test {
     @Test
-    public void StoneToTones(){
+    public void twoWordsWithSameCharactersAreAnagram(){
         String FirstString="Stone";
         String SecondString="Tones";
         String ResultString="Anagram";
@@ -13,7 +13,7 @@ public class Check_If_Two_String_Are_An_Anagram_Test {
         assertEquals(ResultString,result);
     }
     @Test
-    public void StoneToMother(){
+    public void twoWordsWithDifferentLengthsAreNotAnagram(){
         String FirstString="Stone";
         String SecondString="Mother";
         String ResultString="Not Anagram";
@@ -21,7 +21,7 @@ public class Check_If_Two_String_Are_An_Anagram_Test {
         assertEquals(ResultString,result);
     }
     @Test
-    public void ChangeToMother(){
+    public void twoSameLengthWordsWithDifferentCharactersAreNotAnagrams(){
         String FirstString="Change";
         String SecondString="Mother";
         String ResultString="Not Anagram";
