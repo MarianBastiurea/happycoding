@@ -1,5 +1,8 @@
 package org.example;
 
+/* Write a Java program to display multiple variables.
+//https://www.w3resource.com/c-programming-exercises/basic-declarations-and-expressions/c-programming-basic-exercises-7.php
+*/
 public class C01P07_Print_Different_Type_Of_Variable {
     public static void main(String[] args) {
         int a = 125;
