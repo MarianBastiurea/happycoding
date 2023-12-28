@@ -1,7 +1,8 @@
 package org.example;
 
 import java.util.Scanner;
-/* Write a C program to display the sum of n terms of even natural numbers.
+
+/* Write a Java program to display the sum of n terms of even natural numbers.
 https://www.w3resource.com/c-programming-exercises/for-loop/c-for-loop-exercises-16.php
  */
 
