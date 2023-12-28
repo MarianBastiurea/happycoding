@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class C04P36CheckAPasswordTest {
+class C04P36_Check_A_Password_Test {
 
     @Test
     void incorrectUserPasswordReturnsIncorrectPasswordMessage() {
@@ -14,7 +14,7 @@ class C04P36CheckAPasswordTest {
 
 
         //call function
-        String result = C04P36CheckAPassword.checkPassword(password, userInput);
+        String result = C04P36_Check_A_Password.checkPassword(password, userInput);
 
         //verify result
         assertEquals("Incorrect password", result);
@@ -27,7 +27,7 @@ class C04P36CheckAPasswordTest {
         String userInput = "1111";
 
         //call function
-        String result = C04P36CheckAPassword.checkPassword(password, userInput);
+        String result = C04P36_Check_A_Password.checkPassword(password, userInput);
 
         //verify result
         assertEquals("Correct password", result);
