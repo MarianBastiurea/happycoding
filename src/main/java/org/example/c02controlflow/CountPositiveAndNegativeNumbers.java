@@ -1,12 +1,11 @@
-package org.example;
+package org.example.c02controlflow;
 
 import java.util.Scanner;
 
-/* Write a Java program that reads 5 numbers and counts the number of positive numbers and negative numbers.
-
-https://www.w3resource.com/c-programming-exercises/basic-declarations-and-expressions/c-programming-basic-exercises-27.php
+/*
+Write a Java program that reads 5 numbers and counts the number of positive numbers and negative numbers.
 */
-public class C01P27_Count_Positive_and_Negative_Numbers_From_Five_Given_Integers {
+public class CountPositiveAndNegativeNumbers {
     public static void main(String[] args) {
         int negativeNumbers = 0, positiveNumbers = 0;
         int[] myArray = new int[5];

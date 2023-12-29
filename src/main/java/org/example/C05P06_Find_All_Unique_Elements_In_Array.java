@@ -1,8 +1,13 @@
 package org.example;
 
-public class C05P06FindAllUniqueElementsInArray {
+/* Write a program in C to print all unique elements in an array.
+
+https://www.w3resource.com/c-programming-exercises/array/c-array-exercise-6.php
+ */
+
+public class C05P06_Find_All_Unique_Elements_In_Array {
     public static int[] uniqueElement(int[] myArray) {
-        int[] allUniqueElements = new int[2];
+        int[] allUniqueElements = new int[myArray.length];
         int indexAllUniqueElements = 0;
         int len = myArray.length;
         for (int i = 0; i < len; i++) {

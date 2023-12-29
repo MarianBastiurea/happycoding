@@ -1,12 +1,11 @@
-package org.example;
+package org.example.c02controlflow;
 
 import java.util.Scanner;
 
-/* Write a Java program that reads two integers and checks whether they are multiplied or not.
-
-https://www.w3resource.com/c-programming-exercises/basic-declarations-and-expressions/c-programming-basic-exercises-24.php
+/* 
+Write a Java program that reads two integers and checks whether they are multiplied or not.
 */
-public class C01P24_Check_If_Two_Integers_Are_Multiplied {
+public class CheckIfTwoIntegersAreMultiplied {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter first integer:");

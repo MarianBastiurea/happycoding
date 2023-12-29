@@ -1,6 +1,6 @@
-package org.example;
+package org.example.c02controlflow;
 
-// Beer song on algorithm. Start counting down from 99 to 0 beer.
+// Algorithm to count down from 99 to 0 beer.
 
 public class BeerSong {
     public static void main(String[] args) {

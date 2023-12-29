@@ -1,14 +1,14 @@
-package org.example;
+package org.example.c01declarationsandexpressions;
 
 import java.util.Scanner;
 
-/* Write a JAVA program to calculate the distance between two points.
-
+/*
+Write a JAVA program to calculate the distance between two points.
 We will input x,y coordinates of each point and we will
 calculate distance between them using Pitagora's Theorem
-https://www.w3resource.com/c-programming-exercises/basic-declarations-and-expressions/c-programming-basic-exercises-15.php
+
 */
-public class C01P15_Calculate_Distance_Between_Two_Points {
+public class CalculateDistanceBetweenTwoPoints {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
