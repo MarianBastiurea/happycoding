@@ -2,7 +2,21 @@ package org.example;
 
 import java.util.Scanner;
 
-public class C04P44CalculateAverageOfMarksStudent {
+/* Write a Java program to calculate the average mathematics marks of some students.
+Input 0 (excluding to calculate the average) or a negative value to terminate the input process.
+Test Data :
+Input Mathematics marks (0 to terminate): 10
+15
+20
+25
+0
+Expected Output:
+Average marks in Mathematics: 17.50
+
+https://www.w3resource.com/c-programming-exercises/basic-declarations-and-expressions/c-programming-basic-exercises-44.php
+ */
+
+public class C04P44_Calculate_Average_Of_Marks_Student {
     public static void main(String[] args) {
         //input
         int[] defaultMarks = new int[20];
@@ -20,12 +34,7 @@ public class C04P44CalculateAverageOfMarksStudent {
         for (int i = 0; i < marks.length; i++) {
             marks[i] = defaultMarks[i];
         }
-
-
-        //algoritm
         double average = getAverage(marks);
-
-        //output
         System.out.printf("Average is: %.2f", average);
     }
 
