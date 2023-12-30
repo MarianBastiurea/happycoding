@@ -1,11 +1,11 @@
-package org.example;
+package org.example.c01declarationsandexpressions;
 
 import java.util.Scanner;
 
-/* Write a program in Java to display the multiplier table vertically from 1 to n.
-https://www.w3resource.com/c-programming-exercises/for-loop/c-for-loop-exercises-7.php
+/*
+Write a program in Java to display the multiplier table vertically from 1 to n.
  */
-public class C03P07_Display_The_Multiplier_Table_From_1_To_Given_Number {
+public class DisplayTheMultiplierTableFrom1ToGivenNumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter integer: ");

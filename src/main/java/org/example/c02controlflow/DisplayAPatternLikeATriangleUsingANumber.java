@@ -1,8 +1,9 @@
-package org.example;
+package org.example.c02controlflow;
 
 import java.util.Scanner;
 
-/* Write a Java program to display a pattern like a right angle triangle with a number.
+/*
+Write a Java program to display a pattern like a right angle triangle with a number.
 
 The pattern like :
 
@@ -11,10 +12,9 @@ The pattern like :
 123
 1234
 
-https://www.w3resource.com/c-programming-exercises/for-loop/c-for-loop-exercises-10.php
  */
 
-public class C03P10_Display_A_Pattern_Like_A_Triangle_Using_A_Number {
+public class DisplayAPatternLikeATriangleUsingANumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of rows: ");
@@ -23,7 +23,7 @@ public class C03P10_Display_A_Pattern_Like_A_Triangle_Using_A_Number {
             for (int j = 1; j <= i; ++j) {
                 System.out.printf(j + " ");
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 }
