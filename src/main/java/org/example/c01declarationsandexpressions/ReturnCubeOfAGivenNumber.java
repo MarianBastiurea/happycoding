@@ -1,11 +1,11 @@
-package org.example;
+package org.example.c01declarationsandexpressions;
 
 import java.util.Scanner;
-/*Write a program in Java to display the cube of the number up to an integer.
-https://www.w3resource.com/c-programming-exercises/for-loop/c-for-loop-exercises-5.php
- */
+/*
+ Write a program in Java to display the cube of the number up to an integer.
+*/
 
-public class C03P05_Return_Cube_Of_A_Given_Number {
+public class ReturnCubeOfAGivenNumber {
     public static void main(String[] args) {
         int givenNumber, cubeValueOfNumber;
         Scanner sc = new Scanner(System.in);

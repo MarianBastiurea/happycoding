@@ -1,9 +1,10 @@
-package org.example;
+package org.example.c02controlflow;
 
-/* Write a Java program to compute the sum of the first 10 natural numbers.
-https://www.w3resource.com/c-programming-exercises/for-loop/c-for-loop-exercises-2.php
+/*
+Write a Java program to compute the sum of the first 10 natural numbers.
+
  */
-class C03P02_Display_Sum_Of_First_10_integers {
+class DisplaySumOfFirst10integers {
     public static void main(String[] args) {
         int count = 0;
         int sum = 0;

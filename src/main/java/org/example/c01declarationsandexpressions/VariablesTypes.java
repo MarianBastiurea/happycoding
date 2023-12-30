@@ -1,5 +1,7 @@
 package org.example.c01declarationsandexpressions;
 
+import java.util.Scanner;
+
 /*
 Write a Java program to display multiple variables.
 */
@@ -46,5 +48,19 @@ public class VariablesTypes {
         System.out.println("s+c=" + a9);
         System.out.println("ax+c=" + ax + "+" + cAsInt + "=" + a10);
         System.out.println("ax+ux=" + ax + "+" + ux + "=" + a11);
+    }
+
+    public static class DisplayTheMultiplicationTableOfAGivenInteger {
+        public static void main(String[] args) {
+            int givenNumber;
+            int multipliedNumber;
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter integer:");
+            givenNumber = sc.nextInt();
+            for (int i = 1; i < 11; ++i) {
+                multipliedNumber = givenNumber * i;
+                System.out.println(givenNumber + "X" + i + "=" + multipliedNumber);
+            }
+        }
     }
 }

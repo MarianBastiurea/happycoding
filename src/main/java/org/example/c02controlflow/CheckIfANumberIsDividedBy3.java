@@ -1,11 +1,11 @@
-package org.example;
+package org.example.c02controlflow;
 
 import java.util.Scanner;
 
-/* Write a Java program that checks if a given non-negative number is a multiple of 3 or 7, but not both
-https://www.w3resource.com/c-programming-exercises/basic-algo/c-programming-basic-algorithm-exercises-20.php
+/*
+Write a Java program that checks if a given non-negative number is a multiple of 3 or 7, but not both
 */
-public class C02P20_Check_If_A_Given_Number_Is_Divided_By_3 {
+public class CheckIfANumberIsDividedBy3 {
 
     public static void main(String[] args) {
         int givenNumber;

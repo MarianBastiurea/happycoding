@@ -1,12 +1,12 @@
-package org.example;
+package org.example.c02controlflow;
 
 import java.util.Scanner;
 
-/*Write a program in Java to read 10 numbers from the keyboard and find their sum and average.
-https://www.w3resource.com/c-programming-exercises/for-loop/c-for-loop-exercises-4.php
+/*
+Write a program in Java to read 10 numbers from the keyboard and find their sum and average.
  */
 
-public class C03P04_Calculate_Sum_And_Average_Of_10_Given_Numbers {
+public class CalculateSumAndAverageOf10GivenNumbers {
     public static void main(String[] args) {
         double sum = 0;
         int[] myArray = new int[10];
