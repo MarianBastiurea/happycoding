@@ -1,18 +1,17 @@
-package org.example;
+package org.example.c02controlflow;
 
 import java.util.Scanner;
 
-/*  Write a C program to find the HCF (Highest Common Factor) of two numbers.
+/*
+Write a C program to find the HCF (Highest Common Factor) of two numbers.
 Test Data :
 Input 1st number for HCF: 24
 Input 2nd number for HCF: 28
 Expected Output :
 HCF of 24 and 28 is : 4
-
-https://www.w3resource.com/c-programming-exercises/for-loop/c-for-loop-exercises-43.php
  */
 
-public class C03P43_Find_HCF_Of_Two_Numbers {
+public class FindHcfOfTwoNumbers {
     public static void main(String[] args) {
         int c = 1;
         Scanner sc = new Scanner(System.in);

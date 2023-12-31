@@ -1,16 +1,17 @@
-package org.example;
+package org.example.c02controlflow;
 
+import org.example.c01declarationsandexpressions.CalculateAverageOfMarksStudent;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class C04P44_Calculate_Average_Of_Marks_Student_Test {
+class CalculateAverageOfMarksStudentTest {
 
     @Test
     void studentWithNoMarkShouldHave0Average() {
         int[] marks = {};
 
-        double average = C04P44_Calculate_Average_Of_Marks_Student.getAverage(marks);
+        double average = CalculateAverageOfMarksStudent.getAverage(marks);
 
         assertTrue(average == 0D);
     }
@@ -19,7 +20,7 @@ class C04P44_Calculate_Average_Of_Marks_Student_Test {
     void oneNoteShouldAverageItself() {
         int[] marks = {5};
 
-        double average = C04P44_Calculate_Average_Of_Marks_Student.getAverage(marks);
+        double average = CalculateAverageOfMarksStudent.getAverage(marks);
 
         assertTrue(average == 5D);
     }
@@ -28,7 +29,7 @@ class C04P44_Calculate_Average_Of_Marks_Student_Test {
     void twoNotesShouldAverage() {
         int[] marks = {5, 7};
 
-        double average = C04P44_Calculate_Average_Of_Marks_Student.getAverage(marks);
+        double average = CalculateAverageOfMarksStudent.getAverage(marks);
 
         assertTrue(average == 6D);
     }

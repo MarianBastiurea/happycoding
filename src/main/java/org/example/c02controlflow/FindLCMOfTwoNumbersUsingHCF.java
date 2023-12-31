@@ -1,18 +1,17 @@
-package org.example;
+package org.example.c02controlflow;
 
 import java.util.Scanner;
-/* Write a C program to find the LCM(least common multiple)
- of any two numbers using HCF(highest common factor).
+/*
+Write a C program to find the LCM(least common multiple)
+of any two numbers using HCF(highest common factor).
 Test Data :
 Input 1st number for LCM: 15
 Input 2nd number for LCM: 20
 Expected Output :
 The LCM of 15 and 20 is : 60
-
-https://www.w3resource.com/c-programming-exercises/for-loop/c-for-loop-exercises-44.php
  */
 
-public class C03P44_Find_LCM_Of_Two_Given_Numbers_Using_HCF {
+public class FindLCMOfTwoNumbersUsingHCF {
     public static void main(String args[]) {
         int x, y, temp, HCF, LCM;
         Scanner scanner = new Scanner(System.in);

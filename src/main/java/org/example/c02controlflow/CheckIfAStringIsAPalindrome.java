@@ -1,12 +1,10 @@
-package org.example;
+package org.example.c02controlflow;
 
-/* Write a C program to check whether a number is a palindrome or not.
-
-https://www.w3resource.com/c-programming-exercises/for-loop/c-for-loop-exercises-38.php
-
+/*
+ Write a C program to check whether a number is a palindrome or not.
  */
 
-public class C03P38_Check_If_A_String_Is_A_Palindrome {
+public class CheckIfAStringIsAPalindrome {
     public boolean isPalindrome(char[] string) {
         boolean result = false;
         if (string == null) {

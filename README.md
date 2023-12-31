@@ -12,6 +12,8 @@
    * Display the multiplication table of a given integer
    * Display the multiplier table from 1 to given number
    * Display a triangle using asterisk
+   * Check a password
+   * Calculate average of marks student
 2. Control flow
    * Beer Song
    * Max of three numbers
@@ -29,7 +31,7 @@
    * Display a pattern like a pyramid with number increased by 1
    * Display a pattern like a pyramid using asterisk
    * Calculate factorial Of a number
-   * Calculating sum of a n of even terms
+   * Calculating sum of n even terms
    * Display a pattern like pyramid with a number repeating in same row
    * Find sum of a series
    * Display Floyd triangle
@@ -40,6 +42,12 @@
    * Display N terms of Fibonacci series
    * Displays a pattern like a pyramid where first and last number are 1
    * Return a number in reverse order
+   * Check if a number is a palindrome
+   * Check if a string isa palindrome
+   * Sum of integer between 100 and 200 which are divisible by 9
+   * Find HCF of two numbers
+   * Find LCM of two numbers using HCF
+   * Find LCM of two numbers
 3. Arrays 
    * Find all unique elements in array
 4. Recursion

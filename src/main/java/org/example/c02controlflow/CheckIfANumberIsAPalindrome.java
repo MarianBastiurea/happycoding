@@ -1,13 +1,11 @@
-package org.example;
+package org.example.c02controlflow;
 
 import java.util.Scanner;
-/* Write a Java program to check whether a number is a palindrome or not.
-
-https://www.w3resource.com/c-programming-exercises/for-loop/c-for-loop-exercises-38.php
-
+/*
+Write a Java program to check whether a number is a palindrome or not.
  */
 
-public class C03P38_Check_If_A_Given_Number_Is_A_Palindrome {
+public class CheckIfANumberIsAPalindrome {
     public static void main(String[] args) {
         int reverseNumber = 0;
         Scanner sc = new Scanner(System.in);
