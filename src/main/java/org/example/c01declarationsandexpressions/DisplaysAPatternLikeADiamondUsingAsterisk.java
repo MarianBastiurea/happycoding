@@ -1,7 +1,8 @@
-package org.example;
+package org.example.c01declarationsandexpressions;
 
 import java.util.Scanner;
-/*Write a program in Java to display a pattern like a diamond.
+/*
+Write a program in Java to display a pattern like a diamond.
 
     *
    ***
@@ -13,15 +14,13 @@ import java.util.Scanner;
    ***
     *
 
-    https://www.w3resource.com/c-programming-exercises/for-loop/index.php
  */
 
-
-public class C03P31_Displays_A_Pattern_Like_A_Diamond_Using_Asterisk {
+public class DisplaysAPatternLikeADiamondUsingAsterisk {
     public static void main(String[] args) {
         int rows;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter number of asterisk at diagonal: ");
+        System.out.print("Enter number of asterisk at diagonal: ");
         int numberOfRows = sc.nextInt();
         rows = numberOfRows - 1;
         for (int i = 1; i <= numberOfRows; ++i) {

@@ -1,14 +1,12 @@
-package org.example;
+package org.example.c02controlflow;
 
 import java.util.Scanner;
 
-/*Write a program in C to display the number in reverse order.
-
-https://www.w3resource.com/c-programming-exercises/for-loop/c-for-loop-exercises-37.php
+/*
+Write a program in C to display the number in reverse order.
  */
 
-
-public class C03P37_Return_A_Given_Number_In_Reverse_Order {
+public class ReturnANumberInReverseOrder {
     public static void main(String[] args) {
         int reverseNumber = 0;
         Scanner sc = new Scanner(System.in);

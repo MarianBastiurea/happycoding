@@ -1,8 +1,9 @@
-package org.example;
+package org.example.c02controlflow;
 
 import java.util.Scanner;
 
-/* Write a Java program to make such a pattern like a pyramid with a
+/*
+Write a Java program to make such a pattern like a pyramid with a
 number which will repeat the number in the same row.
 
    1
@@ -10,9 +11,8 @@ number which will repeat the number in the same row.
  3 3 3
 4 4 4 4
 
-https://www.w3resource.com/c-programming-exercises/for-loop/c-for-loop-exercises-17.php
  */
-public class C03P17_Display_A_Pattern_Like_A_Pyramid_With_A_Number_Repeating_In_Same_Row {
+public class DisplayAPatternLikeAPyramidWithANumberRepeatingInSameRow {
     public static void main(String[] args) {
         int rows;
         Scanner sc = new Scanner(System.in);

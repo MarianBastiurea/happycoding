@@ -1,8 +1,9 @@
-package org.example;
+package org.example.c02controlflow;
 
 import java.util.Scanner;
 
-/* Write a program in Java to print Floyd's Triangle.
+/*
+Write a program in Java to print Floyd's Triangle.
 
 1
 01
@@ -10,10 +11,9 @@ import java.util.Scanner;
 0101
 10101
 
-https://www.w3resource.com/c-programming-exercises/for-loop/c-for-loop-exercises-22.php
  */
 
-public class C03P22_Display_Floyd_Triangle {
+public class DisplayFloydTriangle {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter number of rows: ");

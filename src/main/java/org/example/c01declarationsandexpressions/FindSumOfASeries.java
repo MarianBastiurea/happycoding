@@ -1,7 +1,8 @@
-package org.example;
+package org.example.c01declarationsandexpressions;
 
 import java.util.Scanner;
-/*Write a program in Java to find the sum of the series [ 1-X^2/2!+X^4/4!- .........].
+/*
+Write a program in Java to find the sum of the series [ 1-X^2/2!+X^4/4!- .........].
 Test Data :
 Input the Value of x :2
 Input the number of terms : 5
@@ -10,14 +11,13 @@ the sum = -0.415873
 Number of terms = 5
 value of x = 2.000000
 
-https://www.w3resource.com/c-programming-exercises/for-loop/c-for-loop-exercises-18.php
  */
 
-public class C03P18_Find_Sum_Of_A_Series {
+public class FindSumOfASeries {
     public static void main(String[] args) {
         int numberOfTerms, x;
         int a = 0;
-        double b, sum; // b with values -1 and 1 give the sign of series term
+        double b, sum; // b have values -1 and 1 give the sign of series term
         double result = 1;
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter value of X: ");

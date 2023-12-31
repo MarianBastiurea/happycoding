@@ -1,8 +1,9 @@
-package org.example;
+package org.example.c02controlflow;
 
 import java.util.Scanner;
 
-/*  Write a Java program to display Pascal's triangle.
+/*
+Write a Java program to display Pascal's triangle.
  Test Data :
 Input number of rows: 5
 Expected Output :
@@ -13,11 +14,9 @@ Expected Output :
   1   3   3   1
 1   4   6   4   1
 
-https://www.w3resource.com/c-programming-exercises/for-loop/c-for-loop-exercises-33.php
-
  */
 
-public class C03P33_Displays_Pascal_Triangle {
+public class DisplaysPascalTriangle {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of rows: ");

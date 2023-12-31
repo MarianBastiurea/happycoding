@@ -26,7 +26,21 @@
    * Display a pattern like a triangle using a number
    * Display a pattern like a triangle with same number on row
    * Display a pattern like a triangle with number increased By 1
-3. Arrays
-4. Find all unique elements in array
+   * Display a pattern like a pyramid with number increased by 1
+   * Display a pattern like a pyramid using asterisk
+   * Calculate factorial Of a number
+   * Calculating sum of a n of even terms
+   * Display a pattern like pyramid with a number repeating in same row
+   * Find sum of a series
+   * Display Floyd triangle
+   * Find if a number is a perfect number
+   * Displays a pattern like a diamond using asterisk
+   * Check if a number is prime
+   * Display Pascal triangle
+   * Display N terms of Fibonacci series
+   * Displays a pattern like a pyramid where first and last number are 1
+   * Return a number in reverse order
+3. Arrays 
+   * Find all unique elements in array
 4. Recursion
 5. Searching and sorting

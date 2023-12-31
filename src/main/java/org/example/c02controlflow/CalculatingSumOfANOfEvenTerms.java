@@ -1,12 +1,12 @@
-package org.example;
+package org.example.c02controlflow;
 
 import java.util.Scanner;
 
-/* Write a Java program to display the sum of n terms of even natural numbers.
-https://www.w3resource.com/c-programming-exercises/for-loop/c-for-loop-exercises-16.php
+/*
+ Write a Java program to display the sum of n terms of even natural numbers.
  */
 
-public class C03P16_Calculating_Sum_Of_A_Given_N_Of_Even_Terms {
+public class CalculatingSumOfANOfEvenTerms {
     public static void main(String[] args) {
         int count = 0;
         int sum = 0;
