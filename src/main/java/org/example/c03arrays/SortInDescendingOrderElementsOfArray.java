@@ -1,8 +1,10 @@
-package org.example;
+package org.example.c03arrays;
 
-public class C05P12SortInDescendingOrderElementsOfArray {
+/*
+Write a program in Java to sort the elements of the array in descending order.
+ */
+public class SortInDescendingOrderElementsOfArray {
     public static int[] SortInDescendingOrder(int[] myArray) {
-            int[] resultArray = new int[myArray.length];
         int temp = 0;
         for (int i = 0; i < myArray.length; i++) {
             for (int j = i + 1; j < myArray.length; j++) {
@@ -14,6 +16,6 @@ public class C05P12SortInDescendingOrderElementsOfArray {
             }
         }
         return myArray;
-        }
     }
+}
 

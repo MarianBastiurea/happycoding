@@ -1,6 +1,10 @@
-package org.example;
+package org.example.c03arrays;
 
-public class C05P11SortInAscendingOrderElementsOfArray {
+/*
+Write a program in Java to sort elements of an array in ascending order.
+ */
+
+public class SortInAscendingOrderElementsOfArray {
     public static int[] SortInAscendingOrder(int[] myArray) {
         int temp = 0;
         for (int i = 0; i < myArray.length; i++) {

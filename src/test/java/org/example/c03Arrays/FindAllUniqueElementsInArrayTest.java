@@ -1,7 +1,5 @@
 package org.example.c03Arrays;
-/*
-Write a program in Java to print all unique elements in an array.
- */
+
 import org.example.c03arrays.FindAllUniqueElementsInArray;
 import org.junit.jupiter.api.Test;
 

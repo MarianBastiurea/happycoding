@@ -1,7 +1,7 @@
 package org.example.c03arrays;
 
 /*
-Write a program in C to print all unique elements in an array.
+Write a program in Java to print all unique elements in an array.
 */
 
 public class FindAllUniqueElementsInArray {
@@ -23,7 +23,7 @@ public class FindAllUniqueElementsInArray {
             }
         }
         int[] resultArray = new int[k];
-        int j=0;
+        int j = 0;
         for (int i = 0; i < temporaryArray.length; i++) {
             if (temporaryArray[i] != 0) {
                 resultArray[j] = temporaryArray[i];

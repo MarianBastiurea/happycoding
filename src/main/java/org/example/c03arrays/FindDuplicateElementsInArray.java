@@ -1,12 +1,11 @@
-package org.example;
+package org.example.c03arrays;
 
 
-/* Write a program in Java to count the total number of duplicate elements in an array.
-
-https://www.w3resource.com/c-programming-exercises/array/c-array-exercise-5.php
+/*
+Write a program in Java to count the total number of duplicate elements in an array.
  */
 
-public class C05P05_Find_Duplicate_Elements_In_Array {
+public class FindDuplicateElementsInArray {
 
     public static int FindDuplicate(int[] myArray) {
         int count = 0;

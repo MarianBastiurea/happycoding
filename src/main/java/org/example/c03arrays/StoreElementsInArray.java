@@ -1,12 +1,9 @@
-package org.example;
+package org.example.c03arrays;
 
-/* Write a program in C to store elements in an array and print them.
-
-https://www.w3resource.com/c-programming-exercises/array/c-array-exercise-1.php
- */
+// Write a program in Java to store elements in an array and print them.
 
 
-public class C05P01_Store_Elements_In_Array {
+public class StoreElementsInArray {
     public static void main(String[] args) {
         int[] myArray = new int[10];
         myArray[0] = 0;

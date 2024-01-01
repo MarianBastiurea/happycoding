@@ -50,5 +50,17 @@
    * Find LCM of two numbers
 3. Arrays 
    * Find all unique elements in array
+   * Store elements in array
+   * Display elements of array in reverse order
+   * Calculate sum of all elements of array
+   * Copy elements of one array into another array
+   * Find duplicate elements in array
+   * Merge and sort descending two array
+   * Count frequency of element in array
+   * Maximum and minimum in array
+   * Split in odds and even elements of an array
+   * Sort in ascending order elements of array
+   * Sort in descending order elements of array
+   * Insert a new element in array
 4. Recursion
 5. Searching and sorting

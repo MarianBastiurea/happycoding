@@ -1,13 +1,12 @@
-package org.example;
+package org.example.c03arrays;
 
 import java.util.Scanner;
 
-/* Write a program in C to copy the elements of one array into another array.
+/*
+Write a program in C to copy the elements of one array into another array.
+*/
 
-https://www.w3resource.com/c-programming-exercises/array/c-array-exercise-4.php
- */
-
-public class C05P04_Copy_Elements_From_Array_In_Other_Array {
+public class CopyElementsOfOneArrayIntoAnotherArray {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Input number of array's element: ");
