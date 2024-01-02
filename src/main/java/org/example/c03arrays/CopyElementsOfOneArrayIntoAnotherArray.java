@@ -3,7 +3,7 @@ package org.example.c03arrays;
 import java.util.Scanner;
 
 /*
-Write a program in C to copy the elements of one array into another array.
+Write a program in Java to copy the elements of one array into another array.
 */
 
 public class CopyElementsOfOneArrayIntoAnotherArray {
@@ -27,7 +27,7 @@ public class CopyElementsOfOneArrayIntoAnotherArray {
         }
         System.out.print("Elements of copy array are: ");
         for (int i = 0; i < numberOfElements; ++i) {
-            System.out.print(myArray[i] + " ");
+            System.out.print(copyArray[i] + " ");
         }
     }
 }

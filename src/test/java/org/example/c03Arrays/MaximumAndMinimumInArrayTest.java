@@ -9,10 +9,7 @@ public class MaximumAndMinimumInArrayTest {
     @Test
     public void ThreeElements() {
         MaximumAndMinimumInArray obj = new MaximumAndMinimumInArray();
-        int[] myArray = new int[3];
-        myArray[0] = 45;
-        myArray[1] = 25;
-        myArray[2] = 21;
+        int[] myArray ={45,25,21};
         int[] result = obj.MaximumAndMinimum(myArray);
         assertArrayEquals(result, new int[]{45, 21});
     }

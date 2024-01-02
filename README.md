@@ -70,5 +70,9 @@
    * Matrices subtraction
    * Transpose a matrix
    * Sum of right diagonal in a matrix
+   * Sum of left diagonal in matrix
+   * Sum of rows and sum of columns in matrix
+   * Change elements in lower triangular of a matrix
+   * Change elements in upper triangular of a matrix
 4. Recursion
 5. Searching and sorting

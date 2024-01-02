@@ -1,7 +1,10 @@
-package org.example;
+package org.example.c03arrays;
 
-public class C05P24_Sum_Of_Left_Diagonal_In_Matrix {
-    public static int Sum_Of_Diagonal(int[][] myMatrix){
+/*
+Write a program in Java to find the sum of the left diagonals of a matrix.
+*/
+public class SumOfLeftDiagonalInMatrix {
+    public static int sumOfDiagonal(int[][] myMatrix){
         int sum=0;
         int decrement= myMatrix.length-1;
         for (int i=0;i<myMatrix[0].length;i++){
@@ -14,5 +17,4 @@ public class C05P24_Sum_Of_Left_Diagonal_In_Matrix {
         }
         return sum;
     }
-
 }

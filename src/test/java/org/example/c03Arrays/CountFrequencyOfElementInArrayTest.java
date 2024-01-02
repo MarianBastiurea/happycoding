@@ -9,10 +9,7 @@ public class CountFrequencyOfElementInArrayTest {
     @Test
     public void OneTime() {
         CountFrequencyOfElementInArray obj = new CountFrequencyOfElementInArray();
-        int[] myArray = new int[3];
-        myArray[0] = 25;
-        myArray[1] = 12;
-        myArray[2] = 43;
+        int[] myArray ={2,12,43};
         int[] result = obj.FrequencyElement(myArray);
         assertArrayEquals(result, new int[]{1, 1, 1});
     }
@@ -20,10 +17,7 @@ public class CountFrequencyOfElementInArrayTest {
     @Test
     public void TwoTime() {
         CountFrequencyOfElementInArray obj = new CountFrequencyOfElementInArray();
-        int[] myArray = new int[3];
-        myArray[0] = 25;
-        myArray[1] = 25;
-        myArray[2] = 43;
+        int[] myArray = {25,25,43};
         int[] result = obj.FrequencyElement(myArray);
         assertArrayEquals(result, new int[]{2, 2, 1});
     }
