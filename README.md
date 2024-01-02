@@ -62,5 +62,13 @@
    * Sort in ascending order elements of array
    * Sort in descending order elements of array
    * Insert a new element in array
+   * Insert a new element in a position in array
+   * Delete an element in desired position in array
+   * Find the second largest element in array
+   * Find the second smallest element in array
+   * Adding two matrices of the same size
+   * Matrices subtraction
+   * Transpose a matrix
+   * Sum of right diagonal in a matrix
 4. Recursion
 5. Searching and sorting

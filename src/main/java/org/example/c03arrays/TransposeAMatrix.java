@@ -1,7 +1,10 @@
-package org.example;
+package org.example.c03arrays;
 
-public class C05P22TransposeAMatrix {
-    public static int[][] TransposeAMatrix(int[][]myMatrix) {
+/*
+Write a program in Java to find the transpose of a given matrix.
+ */
+public class TransposeAMatrix {
+    public static int[][] TransposeAMatrix(int[][] myMatrix) {
         int rows = myMatrix.length;
         int columns = myMatrix[0].length;
         int[][] MatrixTransposed = new int[columns][rows];
