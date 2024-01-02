@@ -1,6 +1,9 @@
-package org.example;
+package org.example.c04recursion;
 
-public class C06P01_Create_An_Array_With_First_N_Natural_Numbers_Using_Recursion {
+/*
+Write a program in Java to print the first 50 natural numbers using recursion.
+ */
+public class CreateAnArrayWithFirstNNaturalNumbersUsingRecursion {
 
 
     public static int[] CreateAnArray(int start, int numberOfElements) {

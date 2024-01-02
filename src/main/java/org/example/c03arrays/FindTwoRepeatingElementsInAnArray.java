@@ -1,6 +1,8 @@
-package org.example;
-
-public class C05P44_Find_Two_Repeating_Elements_In_An_Array {
+package org.example.c03arrays;
+/*
+Write a program in Java to find the two repeating elements in a given array.
+ */
+public class FindTwoRepeatingElementsInAnArray {
     public static int[] FindTwo(int[] myArray) {
         int[] resultArray = new int[2];
         int k = 0;

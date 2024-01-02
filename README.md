@@ -74,5 +74,12 @@
    * Sum of rows and sum of columns in matrix
    * Change elements in lower triangular of a matrix
    * Change elements in upper triangular of a matrix
+   * Check if two matrix are equals
+   * Find pair of elements of an array with given sum
+   * Rotate an array by given position
+   * Find two repeating elements in an array
+   * Transform a matrix using spiral path in array
 4. Recursion
+   * Create an array with first n natural numbers using recursion
+   * Sum numbers from 1 to n using recursion
 5. Searching and sorting
