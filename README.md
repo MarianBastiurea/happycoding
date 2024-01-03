@@ -80,6 +80,12 @@
    * Find two repeating elements in an array
    * Transform a matrix using spiral path in array
 4. Recursion
-   * Create an array with first n natural numbers using recursion
-   * Sum numbers from 1 to n using recursion
+   * Create an array with first n natural numbers 
+   * Sum numbers from 1 to n 
+   * Find first n elements of Fibonacci series
+   * Find factorial of a number
 5. Searching and sorting
+   * Swap between max and first element in array using sort algorithm
+   * Find maximum in an array using selection sort algorithm
+   * Sort array using bubble sort algorithm
+   * Sort an array using the insertion sort algorithm
