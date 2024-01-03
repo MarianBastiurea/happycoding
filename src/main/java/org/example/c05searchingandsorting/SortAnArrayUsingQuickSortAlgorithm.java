@@ -1,13 +1,12 @@
-package org.example;
+package org.example.c05searchingandsorting;
 
-public class C07P06_Sort_An_Array_Using_Quick_Sort_Algorithm {
+/*
+Write a Java program to sort a list of elements using the quick sort algorithm. >
+ */
+public class SortAnArrayUsingQuickSortAlgorithm {
     public static int[] QuickSort(int[] myArray) {
         int N = myArray.length;
         SortArray(myArray, 0, N - 1);
-        System.out.println("temporaryArray is: ");
-        for (int i = 0; i < myArray.length; i++) {
-            System.out.print(myArray[i] + " ");
-        }
         return myArray;
     }
 

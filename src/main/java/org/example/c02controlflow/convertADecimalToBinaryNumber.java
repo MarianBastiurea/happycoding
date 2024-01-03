@@ -1,6 +1,9 @@
-package org.example;
+package org.example.c02controlflow;
 
-public class Convert_A_Decimal_Number_To_A_Binary_Number_Using_A_Function {
+/*
+Write a program in Java to convert a decimal number to a binary number using the function.
+ */
+public class convertADecimalToBinaryNumber {
     public static int ConvertDecimalToBinary(int Number) {
         int[] temporaryArray = new int[40];
         int index = 0;

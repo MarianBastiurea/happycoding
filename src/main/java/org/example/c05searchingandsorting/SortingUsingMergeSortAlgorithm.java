@@ -1,7 +1,10 @@
-package org.example;
+package org.example.c05searchingandsorting;
 
-public class C07P04_Sorting_An_Array_Using_The_Merge_Sort_Algorithm {
-    public static int[] SortingUsingMergeSortingAlgorithm(int[] myArray) {
+/*
+Write a Java program to sort a list of elements using the merge sort algorithm.
+ */
+public class SortingUsingMergeSortAlgorithm {
+    public static int[] SortingAlgoritjm(int[] myArray) {
         int m = myArray.length / 2;// Find middle of array
         int[] resultArray = new int[myArray.length];// myArray sorted
         int[] leftArray = new int[m];//left half of original array

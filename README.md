@@ -48,6 +48,8 @@
    * Find HCF of two numbers
    * Find LCM of two numbers using HCF
    * Find LCM of two numbers
+   * Convert a decimal number to a binary number using the function
+   * Convert a decimal number to octal number
 3. Arrays 
    * Find all unique elements in array
    * Store elements in array
@@ -89,3 +91,6 @@
    * Find maximum in an array using selection sort algorithm
    * Sort array using bubble sort algorithm
    * Sort an array using the insertion sort algorithm
+   * Sorting an array using merge sort algorithm
+   * Sort an array using quick sort algorithm
+   * Find the position of a target value within a sorted array using binary search

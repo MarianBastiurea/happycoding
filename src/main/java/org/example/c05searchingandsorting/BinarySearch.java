@@ -1,6 +1,9 @@
-package org.example;
+package org.example.c05searchingandsorting;
 
-public class Find_Position_Of_A_Target_Value_Within_Sorted_Array_Using_Binary_Search {
+/*
+Write a Java program to find the position of a target value within a sorted array using binary search.
+ */
+public class BinarySearch {
     public static int FindPosition(int[] myArray, int Target) {
         int middlePosition = myArray.length / 2;
         int position = 0;
