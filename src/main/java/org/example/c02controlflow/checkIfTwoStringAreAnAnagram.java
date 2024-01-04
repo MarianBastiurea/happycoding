@@ -1,10 +1,15 @@
-package org.example;
+package org.example.c02controlflow;
+
 import java.util.Arrays;
-public class Check_If_Two_String_Are_An_Anagram {
-    public static String CheckAnagram(String FirstString, String SecondString){
-        String result="";
-        if (FirstString.length()!=SecondString.length()){
-            result="Not Anagram";
+/*
+Write a program in C to check whether two given strings are an anagram.
+ */
+
+public class checkIfTwoStringAreAnAnagram {
+    public static String CheckAnagram(String FirstString, String SecondString) {
+        String result;
+        if (FirstString.length() != SecondString.length()) {
+            result = "Not Anagram";
         } else {
             //Convert both string to lower case
             FirstString = FirstString.toLowerCase();
@@ -24,7 +29,7 @@ public class Check_If_Two_String_Are_An_Anagram {
             } else result = "Not Anagram";
         }
         return result;
-        }
     }
+}
 
 

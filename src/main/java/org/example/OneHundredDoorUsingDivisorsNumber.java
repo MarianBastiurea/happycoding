@@ -18,15 +18,29 @@ you will notice that door which door's number is a perfect square number will be
 that means doors with number 1, 4, 9,16... will be open.
 this Class will use odds or even divisors door's number.
  */
-public class One_Hundred_Door_Using_Divisors_Number {
-    public static String OneHundredDivisors(int doorsNumber) {
+public class OneHundredDoorUsingDivisorsNumber {
+
+    public static String[][] doorStatus(int[] myArray) {
+        String[][] resultMatrix = new String[100][2];
+        for (int i = 0; i < myArray.length; i++) {
+            resultMatrix[i][0] = Integer.toString(i + 1);
+            resultMatrix[i][1] = FindDivisors(i + 1);
+        }
+        for (int i = 0; i < 100; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(resultMatrix[i][j]);
+            }
+        }
+        return resultMatrix;
+    }
+
+    public static String FindDivisors(int k) {
         int numberOfDivisors = 0;
         String status;
-        int[] temporaryArray = new int[doorsNumber];
-        for (int i = 1; i <= doorsNumber; i++) {
-            for (int j = 1; j <= doorsNumber; j++) {
-                if (i * j == doorsNumber) {
-                    temporaryArray[numberOfDivisors] = i;
+
+        for (int i = 1; i <= k; i++) {
+            for (int j = 1; j <= k; j++) {
+                if (i * j == k) {
                     numberOfDivisors++;
                 }
             }

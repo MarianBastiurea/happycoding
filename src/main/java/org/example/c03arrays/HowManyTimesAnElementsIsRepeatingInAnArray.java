@@ -1,7 +1,7 @@
-package org.example;
+package org.example.c03arrays;
 
-public class How_Many_Times_An_Elements_Is_Repeating_In_An_Array {
-    public static int[][] How_Many_Times(int[] myArray) {
+public class HowManyTimesAnElementsIsRepeatingInAnArray {
+    public static int[][] howManyTimes(int[] myArray) {
         int k = 0; //number of unique elements which it will find number of appearence
         int count = 0; // how many times a number appears in an array
         int countZero = 0; // how many times an unique number appears in first temporary matrix
@@ -40,7 +40,7 @@ public class How_Many_Times_An_Elements_Is_Repeating_In_An_Array {
                 }
             }
         }
-        // count haw many {0,0} it is in Second Temporary matrix
+        // count how many {0,0} it is in Second Temporary matrix
         for (int x = 0; x < k; x++) {
             if (SecondTemporaryMatrix[x][0] == 0 && SecondTemporaryMatrix[x][1] == 0) {
                 countZero++;
@@ -56,7 +56,7 @@ public class How_Many_Times_An_Elements_Is_Repeating_In_An_Array {
                     resultMatrix[a][j] = SecondTemporaryMatrix[i][j];
                 }
             }
-            if (resultMatrix[a][1] > 0&&k-countZero>2) {
+            if (resultMatrix[a][1] > 0 && k - countZero > 2) {
                 a++;
             }
         }

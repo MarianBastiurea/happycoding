@@ -1,6 +1,6 @@
-package org.example;
+package org.example.c02controlflow;
 
-public class Find_The_Longest_Substring_Between_Two_Same_Characters {
+public class FindTheLongestSubstringBetweenTwoSameCharacters {
     public static String FindLongestSubstring(String myString) {
         // define a matrix where we store repeating element and distance between them
         int[][] LongestSubstring = new int[myString.length()][2];
@@ -18,10 +18,9 @@ public class Find_The_Longest_Substring_Between_Two_Same_Characters {
                 }
             }
         }
-
         // define two temporary values to store first position of repeating element and
         // distance to second repeating  element
-        int tempI = 0, tempJ = 0;
+        int tempI, tempJ;
 
         // Find the biggest distance between two same elements
         // will be the last row in matrix
@@ -42,7 +41,6 @@ public class Find_The_Longest_Substring_Between_Two_Same_Characters {
         // define two values start and end for longest substring
         int start = LongestSubstring[k - 1][0];
         int end = LongestSubstring[k - 1][1];
-        String resultString = myString.substring(start, end);
-        return resultString;
+        return myString.substring(start, end);
     }
 }

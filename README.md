@@ -50,6 +50,10 @@
    * Find LCM of two numbers
    * Convert a decimal number to a binary number using the function
    * Convert a decimal number to octal number
+   * check if two string are an anagram
+   * Convert a number to a hexadecimal number
+   * Find the longest substring between two same characters
+   * Find the longest substring of a given string without repeating characters
 3. Arrays 
    * Find all unique elements in array
    * Store elements in array
@@ -81,6 +85,8 @@
    * Rotate an array by given position
    * Find two repeating elements in an array
    * Transform a matrix using spiral path in array
+   * How many times an Elements is repeating in an array
+   * Mine field
 4. Recursion
    * Create an array with first n natural numbers 
    * Sum numbers from 1 to n 
