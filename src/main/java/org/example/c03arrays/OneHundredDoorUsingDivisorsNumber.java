@@ -1,4 +1,4 @@
-package org.example;
+package org.example.c03arrays;
 
 /*100 doors
 

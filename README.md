@@ -86,6 +86,8 @@
    * Find two repeating elements in an array
    * Transform a matrix using spiral path in array
    * How many times an Elements is repeating in an array
+   * One hundred doors using divisors number
+   * One hundred doors using perfect square number
    * Mine field
 4. Recursion
    * Create an array with first n natural numbers 
