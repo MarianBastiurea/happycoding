@@ -14,6 +14,7 @@
    * Display a triangle using asterisk
    * Check a password
    * Calculate average of marks student
+   * Dog
 2. Control flow
    * Beer Song
    * Max of three numbers
