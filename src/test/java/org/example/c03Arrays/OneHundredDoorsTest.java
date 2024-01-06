@@ -1,13 +1,11 @@
 package org.example.c03Arrays;
 
+import org.junit.jupiter.api.Test;
+import org.example.c03arrays.OneHundredDoors;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-
-import org.example.c03arrays.OneHundredDoorsUsingPerfectSquareNumber;
-import org.junit.jupiter.api.Test;
-
-public class OneHundredDoorsUsingPerfectSquareNumberTest {
-
+public class OneHundredDoorsTest {
     @Test
     public void OneHundredDoors() {
         int[] DoorsNumber = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
@@ -34,8 +32,7 @@ public class OneHundredDoorsUsingPerfectSquareNumberTest {
                 {"96", "Closed"}, {"97", "Closed"}, {"98", "Closed"}, {"99", "Closed"}, {"100", "Open"}};
 
 
-        String[][] result = OneHundredDoorsUsingPerfectSquareNumber.doorStatus(DoorsNumber);
+        String[][] result = OneHundredDoors.Toggle100Doors(DoorsNumber);
         assertArrayEquals(result, resultString);
     }
 }
-

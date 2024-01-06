@@ -89,6 +89,7 @@
    * One hundred doors using divisors number
    * One hundred doors using perfect square number
    * Mine field
+   * One Hundred Doors
 4. Recursion
    * Create an array with first n natural numbers 
    * Sum numbers from 1 to n 
