@@ -11,10 +11,10 @@ public class CalculateFactorialOfANumber {
         int factorial = 1;
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter integer:");
-        int givenNumber = sc.nextInt();
-        for (int i = 1; i <= givenNumber; ++i) {
+        int number = sc.nextInt();
+        for (int i = 1; i <= number; i++) {
             factorial = factorial * i;
         }
-        System.out.println("factorial of " + givenNumber + " is " + factorial);
+        System.out.println("factorial of " + number + " is " + factorial);
     }
 }

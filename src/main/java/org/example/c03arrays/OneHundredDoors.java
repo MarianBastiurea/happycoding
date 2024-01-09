@@ -12,7 +12,7 @@ Question: What state are the doors in after the last pass? Which are open, which
 This class just toggle 100  passes on doors.
  */
 public class OneHundredDoors {
-    public static String[][] Toggle100Doors(int[] DoorsNumber) {
+    public static String[][] toggle100Doors() {
         String[][] resultMatrix = new String[100][2]; // Doors are from 1 to 100
 
         // Initialize all doors as 'Closed'

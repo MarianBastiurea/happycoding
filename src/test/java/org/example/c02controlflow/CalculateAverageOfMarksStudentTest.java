@@ -1,6 +1,5 @@
 package org.example.c02controlflow;
 
-import org.example.c01declarationsandexpressions.CalculateAverageOfMarksStudent;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

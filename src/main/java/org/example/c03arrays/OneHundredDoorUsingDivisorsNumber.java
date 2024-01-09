@@ -9,20 +9,20 @@ The third time, every 3rd door (door #3, #6, #9, ...), etc, until you only visit
 Question: What state are the doors in after the last pass? Which are open, which are closed?
 
 If you solve this problem on a piece of paper will see a two pattern:
-First- in fact when you open from 2-nd in 2-nd, from 3-rd in 3-rd door and so on,
+First-in fact when you open from 2-nd in 2-nd, from 3-rd in 3-rd door and so on,
 you mark as open/closed a door when door's number divide 2,3,4,5...
-that means you find door's number divisors. Than count how many divisors a number's door have
+that means you find door's number divisors. Then count how many divisors a number's door have
 and if this number is even the door is closed, if it is odd, the door is open
-Second- If from first pattern, you write door's number and status (open or close),
+Second-If from first pattern, you write door's number and status (open or close),
 you will notice that door which door's number is a perfect square number will be open
 that means doors with number 1, 4, 9,16... will be open.
 this Class will use odds or even divisors door's number.
  */
 public class OneHundredDoorUsingDivisorsNumber {
 
-    public static String[][] doorStatus(int[] myArray) {
+    public static String[][] doorStatus() {
         String[][] resultMatrix = new String[100][2];
-        for (int i = 0; i < myArray.length; i++) {
+        for (int i = 0; i < 100; i++) {
             resultMatrix[i][0] = Integer.toString(i + 1);
             resultMatrix[i][1] = FindDivisors(i + 1);
         }

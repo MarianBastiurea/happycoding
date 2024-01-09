@@ -4,7 +4,7 @@ package org.example.c03arrays;
 Write a program in Java to find the maximum and minimum elements in an array.
  */
 public class MaximumAndMinimumInArray {
-    public int[] MaximumAndMinimum(int[] myArray) {
+    public int[] maximumAndMinimum(int[] myArray) {
         int[] resultArray = new int[2];
         int max = myArray[0];
         int min = myArray[0];

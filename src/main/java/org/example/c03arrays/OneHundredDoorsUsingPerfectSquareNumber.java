@@ -20,11 +20,11 @@ this Class will use second pattern.
  */
 public class OneHundredDoorsUsingPerfectSquareNumber {
 
-    public static String[][] doorStatus(int[] myArray) {
+    public static String[][] doorStatus() {
         String[][] resultMatrix = new String[100][2];
-        resultMatrix[0][0]="1";
-        resultMatrix[0][1]="Open";
-        for (int i = 1; i < myArray.length; i++) {
+        resultMatrix[0][0] = "1";
+        resultMatrix[0][1] = "Open";
+        for (int i = 1; i < 100; i++) {
             resultMatrix[i][0] = Integer.toString(i + 1);
             resultMatrix[i][1] = FindSquareNumber(i + 1);
         }
@@ -35,8 +35,9 @@ public class OneHundredDoorsUsingPerfectSquareNumber {
         }
         return resultMatrix;
     }
+
     public static String FindSquareNumber(int number) {
-        String status="";
+        String status = "";
         for (int i = 1; i < number; i++) {
             if (number / i == i && number % i == 0) {
                 status = "Open";

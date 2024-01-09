@@ -4,29 +4,29 @@ package org.example.c03arrays;
 Write a program in Java to find the sum of rows and columns of a matrix.
  */
 public class SumOfRowsAndSumOfColumnsInMatrix {
-    public static int[][] SumInMatrix(int[][] myMatrix) {
-        int[] Sum_Of_Rows_Of_Matrix = new int[myMatrix[0].length];
-        int[] Sum_Of_Columns_Of_Matrix = new int[myMatrix.length];
-        int[][] Sum_Matrix = new int[2][myMatrix.length];
+    public static int[][] sumInMatrix(int[][] myMatrix) {
+        int[] sumOfRowsOfMatrix = new int[myMatrix[0].length];
+        int[] sumOfColumnsOfMatrix = new int[myMatrix.length];
+        int[][] sumMatrix = new int[2][myMatrix.length];
         for (int i = 0; i < myMatrix[0].length; i++) {
             for (int j = 0; j < myMatrix.length; j++) {
-                Sum_Of_Rows_Of_Matrix[i] = Sum_Of_Rows_Of_Matrix[i] + myMatrix[i][j];
+                sumOfRowsOfMatrix[i] = sumOfRowsOfMatrix[i] + myMatrix[i][j];
             }
         }
         for (int i = 0; i < myMatrix[0].length; i++) {
             for (int j = 0; j < myMatrix.length; j++) {
-                Sum_Of_Columns_Of_Matrix[j] = Sum_Of_Columns_Of_Matrix[j] + myMatrix[i][j];
+                sumOfColumnsOfMatrix[j] = sumOfColumnsOfMatrix[j] + myMatrix[i][j];
             }
         }
-        for (int i = 0; i < Sum_Matrix.length; i++) {
-            for (int j = 0; j < Sum_Matrix[i].length; j++) {
+        for (int i = 0; i < sumMatrix.length; i++) {
+            for (int j = 0; j < sumMatrix[i].length; j++) {
                 if (i == 0) {
-                    Sum_Matrix[i][j] = Sum_Of_Rows_Of_Matrix[j];
+                    sumMatrix[i][j] = sumOfRowsOfMatrix[j];
                 } else {
-                    Sum_Matrix[i][j] = Sum_Of_Columns_Of_Matrix[j];
+                    sumMatrix[i][j] = sumOfColumnsOfMatrix[j];
                 }
             }
         }
-        return Sum_Matrix;
+        return sumMatrix;
     }
 }

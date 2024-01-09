@@ -15,16 +15,16 @@ public class FindIfANumberIsAPerfectNumber {
         int sum = 0;
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter integer: ");
-        int givenNumber = sc.nextInt();
-        for (int i = 1; i < givenNumber; ++i) {
-            if (givenNumber % i == 0) {
+        int number = sc.nextInt();
+        for (int i = 1; i < number; i++) {
+            if (number % i == 0) {
                 System.out.print(i + " ");
                 sum = sum + i;
             }
         }
-        if (sum == givenNumber) {
+        if (sum == number) {
             System.out.println(" The sum is: " + sum);
-            System.out.println("Number " + givenNumber + " is perfect number");
+            System.out.println("Number " + number + " is perfect number");
         }
     }
 }

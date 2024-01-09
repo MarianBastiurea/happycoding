@@ -15,7 +15,7 @@ public class DisplaysNTermsOfFibonacciSeries {
         int x = 0;
         int y = 1;
         System.out.print(x + " " + y + " ");
-        for (int i = 2; i < numberOfTerms; ++i) {
+        for (int i = 2; i < numberOfTerms; i++) {
             int sum = x + y;
             System.out.print(sum + " ");
             x = y;

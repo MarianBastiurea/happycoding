@@ -18,13 +18,13 @@ public class DisplayAPatternLikeAPyramidWithNumberIncreasedBy1 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of rows: ");
         int numberOfRows = sc.nextInt();
-        int rows = numberOfRows - 1;
-        for (int i = 1; i <= numberOfRows; ++i) {
-            for (int j = rows; j > 0; j--) {
+        int identation = numberOfRows - 1;
+        for (int i = 1; i <= numberOfRows; i++) {
+            for (int j = identation; j > 0; j--) {
                 System.out.print(" ");
             }
-            rows = rows - 1;
-            for (int c = 1; c <= i; ++c) {
+            identation = identation - 1;
+            for (int j = 1; j <= i; j++) {
                 count = count + 1;
                 System.out.print(count + " ");
             }

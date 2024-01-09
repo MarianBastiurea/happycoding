@@ -17,13 +17,13 @@ public class DisplayAPatternLikeAPyramidUsingAsterisk {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of Rows: ");
         int numberOfRows = sc.nextInt();
-        int rows = numberOfRows - 1;
-        for (int i = 1; i <= numberOfRows; ++i) {
-            for (int j = rows; j > 0; j--) {
+        int indentation = numberOfRows - 1;
+        for (int i = 1; i <= numberOfRows; i++) {
+            for (int j = indentation; j > 0; j--) {
                 System.out.print(" ");
             }
-            rows = rows - 1;
-            for (int k = 1; k <= i; ++k) {
+            indentation = indentation - 1;
+            for (int k = 1; k <= i; k++) {
                 System.out.print(" *");
             }
             System.out.println();

@@ -11,17 +11,15 @@ search for odds value in array and sum all
 public class SumOfOddsValue {
     public static void main(String[] args) {
         int sum = 0;
-        int[] myArray = new int[5];
+        int[] numbers = new int[5];
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < 5; i++) {
             System.out.print("Enter number:");
-            myArray[i] = sc.nextInt();
+            numbers[i] = sc.nextInt();
         }
         for (int i = 0; i < 5; i++) {
-            if (myArray[i] % 2 == 0) {
-                sum = sum;
-            } else {
-                sum = sum + myArray[i];
+            if (numbers[i] % 2 == 1) {
+                sum = sum + numbers[i];
             }
         }
         System.out.println("Sum of all odds number is: " + sum);

@@ -2,9 +2,9 @@ package org.example.c03arrays;
 
 public class HowManyTimesAnElementsIsRepeatingInAnArray {
     public static int[][] howManyTimes(int[] myArray) {
-        int k = 0; //number of unique elements which it will find number of appearence
+        int k = 0; //number of unique elements which it will find number of appearance
         int count = 0; // how many times a number appears in an array
-        int countZero = 0; // how many times an unique number appears in first temporary matrix
+        int countZero = 0; // how many times unique number appears in first temporary matrix
         int TemporaryLength = myArray.length * myArray.length; // length of row's for first temporary matrix
         int[][] FirstTemporaryMatrix = new int[TemporaryLength][2];
         // in this matrix will count how many times number appears in array
@@ -23,41 +23,41 @@ public class HowManyTimesAnElementsIsRepeatingInAnArray {
             }
             count = 0;
         }
-        // Second Temporary Matrix will filter elements from First Temporary Matrix and it will
+        // Second Temporary Matrix will filter elements from First Temporary Matrix, it will
         // keep just higher value like {7,3}
         int[][] SecondTemporaryMatrix = new int[k][2];
-        for (int l = 0; l < k; l++) {
-            for (int m = 0; m <= 1; m++) {
-                SecondTemporaryMatrix[l][m] = FirstTemporaryMatrix[l][m];
+        for (int i = 0; i < k; i++) {
+            for (int j = 0; j <= 1; j++) {
+                SecondTemporaryMatrix[i][j] = FirstTemporaryMatrix[i][j];
             }
         }
-        //rows and columns like {7,2} and 7,1} will be changed in {0,0} to be eliminated in next step
-        for (int x = 0; x < k; x++) {
-            for (int y = x + 1; y < k; y++) {
-                if (SecondTemporaryMatrix[x][0] == SecondTemporaryMatrix[y][0]) {
-                    SecondTemporaryMatrix[y][0] = 0;
-                    SecondTemporaryMatrix[y][1] = 0;
+        //rows and columns like {7,2} and {7,1} will be changed in {0,0} to be eliminated in next step
+        for (int i = 0; i < k; i++) {
+            for (int j = i + 1; j < k; j++) {
+                if (SecondTemporaryMatrix[i][0] == SecondTemporaryMatrix[j][0]) {
+                    SecondTemporaryMatrix[j][0] = 0;
+                    SecondTemporaryMatrix[j][1] = 0;
                 }
             }
         }
         // count how many {0,0} it is in Second Temporary matrix
-        for (int x = 0; x < k; x++) {
-            if (SecondTemporaryMatrix[x][0] == 0 && SecondTemporaryMatrix[x][1] == 0) {
+        for (int i = 0; i < k; i++) {
+            if (SecondTemporaryMatrix[i][0] == 0 && SecondTemporaryMatrix[i][1] == 0) {
                 countZero++;
             }
 
         }
         // In Result Matrix will keep just how many times a number appears in array
         int[][] resultMatrix = new int[k - countZero][2];
-        int a = 0;
+        int countAppearance = 0;
         for (int i = 0; i < k; i++) {
             for (int j = 0; j <= 1; j++) {
                 if (SecondTemporaryMatrix[i][1] > 0) {
-                    resultMatrix[a][j] = SecondTemporaryMatrix[i][j];
+                    resultMatrix[countAppearance][j] = SecondTemporaryMatrix[i][j];
                 }
             }
-            if (resultMatrix[a][1] > 0 && k - countZero > 2) {
-                a++;
+            if (resultMatrix[countAppearance][1] > 0 && k - countZero > 2) {
+                countAppearance++;
             }
         }
         return resultMatrix;

@@ -27,17 +27,17 @@ Setting zero in lower triangular matrix
 0 0 9
  */
 public class ChangeElementsInLowerTriangularOfAMatrix {
-    public static int[][] ChangeElements(int[][] myMatrix) {
-        int[][] resultMatrix = new int[myMatrix[0].length][myMatrix.length];
-        for (int i = 0; i < myMatrix[0].length; i++) {
-            for (int j = 0; j < myMatrix.length; j++) {
+    public static int[][] ChangeElements(int[][] matrix) {
+        int[][] resultMatrix = new int[matrix[0].length][matrix.length];
+        for (int i = 0; i < matrix[0].length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
                 if (i == 0) {
-                    resultMatrix[i][j] = myMatrix[i][j];
+                    resultMatrix[i][j] = matrix[i][j];
                 }
                 if (j < i) {
                     resultMatrix[i][j] = 0;
                 } else {
-                    resultMatrix[i][j] = myMatrix[i][j];
+                    resultMatrix[i][j] = matrix[i][j];
                 }
             }
         }

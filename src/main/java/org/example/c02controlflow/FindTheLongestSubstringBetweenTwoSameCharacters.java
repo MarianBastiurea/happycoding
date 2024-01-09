@@ -1,19 +1,19 @@
 package org.example.c02controlflow;
 
 public class FindTheLongestSubstringBetweenTwoSameCharacters {
-    public static String FindLongestSubstring(String myString) {
+    public static String findLongestSubstring(String inputString) {
         // define a matrix where we store repeating element and distance between them
-        int[][] LongestSubstring = new int[myString.length()][2];
+        int[][] longestSubstring = new int[inputString.length()][2];
 
         // count position of LongestSubstring where we store data.
         int k = 0;
 
         // create matrix where will store repeating element and distance between them
-        for (int i = 0; i < myString.length(); i++) {
-            for (int j = i + 1; j < myString.length(); j++) {
-                if (myString.charAt(i) == myString.charAt(j)) {
-                    LongestSubstring[k][0] = i;
-                    LongestSubstring[k][1] = j - i + 1;
+        for (int i = 0; i < inputString.length(); i++) {
+            for (int j = i + 1; j < inputString.length(); j++) {
+                if (inputString.charAt(i) == inputString.charAt(j)) {
+                    longestSubstring[k][0] = i;
+                    longestSubstring[k][1] = j - i + 1;
                     k++;
                 }
             }
@@ -26,21 +26,21 @@ public class FindTheLongestSubstringBetweenTwoSameCharacters {
         // will be the last row in matrix
         for (int i = 0; i < k; i++) {
             for (int j = i + 1; j < k; j++) {
-                if (LongestSubstring[i][1] > LongestSubstring[j][1]) {
-                    tempJ = LongestSubstring[i][1];
-                    tempI = LongestSubstring[i][0];
+                if (longestSubstring[i][1] > longestSubstring[j][1]) {
+                    tempJ = longestSubstring[i][1];
+                    tempI = longestSubstring[i][0];
 
-                    LongestSubstring[i][1] = LongestSubstring[j][1];
-                    LongestSubstring[i][0] = LongestSubstring[j][0];
+                    longestSubstring[i][1] = longestSubstring[j][1];
+                    longestSubstring[i][0] = longestSubstring[j][0];
 
-                    LongestSubstring[j][1] = tempJ;
-                    LongestSubstring[j][0] = tempI;
+                    longestSubstring[j][1] = tempJ;
+                    longestSubstring[j][0] = tempI;
                 }
             }
         }
         // define two values start and end for longest substring
-        int start = LongestSubstring[k - 1][0];
-        int end = LongestSubstring[k - 1][1];
-        return myString.substring(start, end);
+        int start = longestSubstring[k - 1][0];
+        int end = longestSubstring[k - 1][1];
+        return inputString.substring(start, end);
     }
 }

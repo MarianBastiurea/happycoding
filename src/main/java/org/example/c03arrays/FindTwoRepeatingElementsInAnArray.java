@@ -3,7 +3,7 @@ package org.example.c03arrays;
 Write a program in Java to find the two repeating elements in a given array.
  */
 public class FindTwoRepeatingElementsInAnArray {
-    public static int[] FindTwo(int[] myArray) {
+    public static int[] findRepeatingElements(int[] myArray) {
         int[] resultArray = new int[2];
         int k = 0;
         for (int i = 0; i < myArray.length; i++) {

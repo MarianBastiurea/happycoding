@@ -8,17 +8,17 @@ Write a Java program that reads 5 numbers and counts the number of positive numb
 public class CountPositiveAndNegativeNumbers {
     public static void main(String[] args) {
         int negativeNumbers = 0, positiveNumbers = 0;
-        int[] myArray = new int[5];
+        int[] numbers = new int[5];
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < 5; i++) {
             System.out.println("Enter number:");
-            myArray[i] = sc.nextInt();
+            numbers[i] = sc.nextInt();
         }
         for (int i = 0; i < 5; i++) {
-            if (myArray[i] < 0) {
-                negativeNumbers = negativeNumbers + 1;
+            if (numbers[i] < 0) {
+                negativeNumbers++;
             } else {
-                positiveNumbers = positiveNumbers + 1;
+                positiveNumbers++;
             }
         }
         System.out.println("there are: " + positiveNumbers + " positive numbers");

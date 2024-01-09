@@ -10,7 +10,7 @@ public class CreateAnArrayWithFirstNNaturalNumbersUsingRecursionTest {
         int start = 0;
         int numberOfElements = 5;
         int[] resultArray = {1, 2, 3, 4, 5};
-        int[] result = CreateAnArrayWithFirstNNaturalNumbersUsingRecursion.CreateAnArray(start, numberOfElements);
+        int[] result = CreateAnArrayWithFirstNNaturalNumbersUsingRecursion.createAnArray(start, numberOfElements);
         assertArrayEquals(result, resultArray);
     }
 
@@ -19,7 +19,7 @@ public class CreateAnArrayWithFirstNNaturalNumbersUsingRecursionTest {
         int start = 0;
         int numberOfElements = 10;
         int[] resultArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int[] result = CreateAnArrayWithFirstNNaturalNumbersUsingRecursion.CreateAnArray(start, numberOfElements);
+        int[] result = CreateAnArrayWithFirstNNaturalNumbersUsingRecursion.createAnArray(start, numberOfElements);
         assertArrayEquals(result, resultArray);
     }
 }

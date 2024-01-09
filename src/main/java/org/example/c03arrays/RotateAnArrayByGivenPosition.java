@@ -10,7 +10,7 @@ After rotating from 4th position the array is:
 12 14 18 20 22 25 27 0 3 6 9
  */
 public class RotateAnArrayByGivenPosition {
-    public static int[] RotateArray(int[] myArray, int position) {
+    public static int[] rotateArray(int[] myArray, int position) {
         int[] resultArray = new int[myArray.length];
         for (int i = 0; i < myArray.length; i++) {
             if (i < position) {

@@ -14,11 +14,11 @@ public class DisplayNNaturalNumbersAndTheirSum {
         System.out.print("Enter number of integers: ");
         numberOfIntegers = sc.nextInt();
         System.out.print("First " + numberOfIntegers + " integers are: ");
-        for (int i = 1; i <= numberOfIntegers; ++i) {
+        for (int i = 1; i <= numberOfIntegers; i++) {
             System.out.print(i + " ");
         }
-        for (int j = 1; j <= numberOfIntegers; ++j) {
-            sum = sum + j;
+        for (int i = 1; i <= numberOfIntegers; i++) {
+            sum = sum + i;
         }
         System.out.println();
         System.out.println("Sum of first " + numberOfIntegers + " integers is: " + sum);

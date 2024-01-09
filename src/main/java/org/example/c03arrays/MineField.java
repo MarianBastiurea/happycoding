@@ -4,7 +4,7 @@ A field of N x M squares is represented by N lines of exactly M characters each.
   o) The character '*' represents a mine.
   o) The character '.' represents no-mine.
 
-Example input (a 3 x 4 mine-field of 12 squares, 2 of which are mines)
+Example input (a 3 x 4 minefield of 12 squares, 2 of which are mines)
 
 3 4
 *...
@@ -29,7 +29,7 @@ public class MineField {
         char[][] hintField = new char[rows][columns];
         char mine = '*';
 
-        // fill hintField with 0,1 or 2 depending how many mines are around hintField[i][j]
+        // fill hintField with 0,1 or 2 depending on how many mines are around hintField[i][j]
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 if (mineField[i][j] == mine) {

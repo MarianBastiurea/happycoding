@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class FindLCMOfTwoGivenNumbers {
     public static void main(String[] args) {
-        int c = 1;
+        int j = 1;
         int LCM;
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter first integer:");
@@ -22,10 +22,10 @@ public class FindLCMOfTwoGivenNumbers {
         int secondNumber = sc.nextInt();
         for (int i = 1; i <= firstNumber && i <= secondNumber; ++i) {
             if (firstNumber % i == 0 && secondNumber % i == 0) {
-                c = i;
+                j = i;
             }
         }
-        LCM = (firstNumber * secondNumber) / c;
+        LCM = (firstNumber * secondNumber) / j;
         System.out.println("The LCM of " + firstNumber + " and " + secondNumber + " is " + LCM);
     }
 }

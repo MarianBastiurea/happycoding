@@ -10,17 +10,16 @@ import java.util.Scanner;
 
 public class FindIfANumberIsDividedBy3or7 {
     public static void main(String[] args) {
-        int givenNumber;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter integer:");
-        givenNumber = sc.nextInt();
-        if ((givenNumber % 3 != 0) && (givenNumber % 7 != 0)) {
+        int number = sc.nextInt();
+        if ((number % 3 != 0) && (number % 7 != 0)) {
             System.out.println("Number is not divided by 3 or 7");
         }
-        if (givenNumber % 3 == 0) {
+        if (number % 3 == 0) {
             System.out.println("Number is divided by 3");
         }
-        if (givenNumber % 7 == 0) {
+        if (number % 7 == 0) {
             System.out.println("Number is divided by 7");
         }
     }

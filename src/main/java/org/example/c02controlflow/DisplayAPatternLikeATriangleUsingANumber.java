@@ -19,8 +19,8 @@ public class DisplayAPatternLikeATriangleUsingANumber {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of rows: ");
         int numberOfRows = sc.nextInt();
-        for (int i = 1; i <= numberOfRows; ++i) {
-            for (int j = 1; j <= i; ++j) {
+        for (int i = 1; i <= numberOfRows; i++) {
+            for (int j = 1; j <= i; j++) {
                 System.out.printf(j + " ");
             }
             System.out.println();

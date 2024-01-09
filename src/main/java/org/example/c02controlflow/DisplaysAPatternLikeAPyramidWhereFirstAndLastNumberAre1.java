@@ -16,8 +16,8 @@ public class DisplaysAPatternLikeAPyramidWhereFirstAndLastNumberAre1 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of rows: ");
         int numberOfRows = sc.nextInt();
-        for (int i = 1; i <= numberOfRows; ++i) {
-            for (int j = 0; j <= numberOfRows - i; ++j) {
+        for (int i = 1; i <= numberOfRows; i++) {
+            for (int j = 0; j <= numberOfRows - i; j++) {
                 System.out.print("  ");
             }
             for (int k = 1; k <= i; k++) {

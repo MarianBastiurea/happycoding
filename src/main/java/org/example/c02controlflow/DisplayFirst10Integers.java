@@ -5,11 +5,9 @@ package org.example.c02controlflow;
  */
 public class DisplayFirst10Integers {
     public static void main(String[] args) {
-        int count = 0;
         System.out.println("First 10 integers are:");
-        for (int i = 0; i < 10; ++i) {
-            count = count + 1;
-            System.out.print(count + " ");
+        for (int i = 1; i <= 10; i++) {
+            System.out.print(i + " ");
         }
     }
 }

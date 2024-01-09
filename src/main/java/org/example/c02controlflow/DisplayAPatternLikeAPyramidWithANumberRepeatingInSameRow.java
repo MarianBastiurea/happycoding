@@ -14,17 +14,17 @@ number which will repeat the number in the same row.
  */
 public class DisplayAPatternLikeAPyramidWithANumberRepeatingInSameRow {
     public static void main(String[] args) {
-        int rows;
+        int indentation;
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter integer: ");
         int numberOfRows = sc.nextInt();
-        rows = numberOfRows - 1;
-        for (int i = 1; i <= numberOfRows; ++i) {
-            for (int j = rows; j > 0; --j) {
+        indentation = numberOfRows - 1;
+        for (int i = 1; i <= numberOfRows; i++) {
+            for (int j = indentation; j > 0; j--) {
                 System.out.print(" ");
             }
-            rows = rows - 1;
-            for (int k = 1; k <= i; ++k) {
+            indentation = indentation - 1;
+            for (int k = 1; k <= i; k++) {
                 System.out.print(i + " ");
             }
             System.out.println();

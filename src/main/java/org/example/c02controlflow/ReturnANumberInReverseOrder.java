@@ -11,11 +11,11 @@ public class ReturnANumberInReverseOrder {
         int reverseNumber = 0;
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number to revert: ");
-        int givenNumber = sc.nextInt();
-        for (; givenNumber != 0; givenNumber = givenNumber / 10) {
-            int remainder = givenNumber % 10;
+        int number = sc.nextInt();
+        for (; number != 0; number = number / 10) {
+            int remainder = number % 10;
             reverseNumber = reverseNumber * 10 + remainder;
         }
-        System.out.println("The reverse of the given number is: " + reverseNumber);
+        System.out.println("The reverse of the number is: " + reverseNumber);
     }
 }

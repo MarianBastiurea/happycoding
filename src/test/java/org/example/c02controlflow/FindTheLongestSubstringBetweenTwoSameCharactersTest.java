@@ -9,14 +9,14 @@ public class FindTheLongestSubstringBetweenTwoSameCharactersTest {
     public void pickOutTheLongestSubstring() {
         String myString = "pickOutTheLongestSubstring";
         String resultString = "ickOutTheLongestSubstr";
-        String result = FindTheLongestSubstringBetweenTwoSameCharacters.FindLongestSubstring(myString);
+        String result = FindTheLongestSubstringBetweenTwoSameCharacters.findLongestSubstring(myString);
         assertEquals(result, resultString);
     }
     @Test
     public void substringuti() {
         String myString="substringuti";
         String resultString = "ubstring";
-        String result = FindTheLongestSubstringBetweenTwoSameCharacters.FindLongestSubstring(myString);
+        String result = FindTheLongestSubstringBetweenTwoSameCharacters.findLongestSubstring(myString);
         assertEquals(result, resultString);
     }
 }

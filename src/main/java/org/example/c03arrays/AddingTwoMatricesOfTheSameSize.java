@@ -4,13 +4,13 @@ package org.example.c03arrays;
 Write a program in Java for adding two matrices of the same size.
  */
 public class AddingTwoMatricesOfTheSameSize {
-    public static int[][] AddingTwoMatrices(int[][] FirstMatrices, int[][] SecondMatrices) {
-        int[][] AddTwoMatrices = new int[FirstMatrices.length][FirstMatrices.length];
-        for (int i = 0; i < 2; i++) {
-            for (int j = 0; j < 2; j++) {
-                AddTwoMatrices[i][j] = FirstMatrices[i][j] + SecondMatrices[i][j];
+    public static int[][] addingTwoMatrices(int[][] firstMatrix, int[][] secondMatrix) {
+        int[][] sum = new int[firstMatrix.length][firstMatrix.length];
+        for (int i = 0; i < firstMatrix.length; i++) {
+            for (int j = 0; j < firstMatrix[0].length; j++) {
+                sum[i][j] = firstMatrix[i][j] + secondMatrix[i][j];
             }
         }
-        return AddTwoMatrices;
+        return sum;
     }
 }

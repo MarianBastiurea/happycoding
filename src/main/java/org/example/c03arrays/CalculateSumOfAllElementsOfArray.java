@@ -13,7 +13,7 @@ public class CalculateSumOfAllElementsOfArray {
         System.out.print("Input number of array's element: ");
         int numberOfElements = sc.nextInt();
         int[] myArray = new int[numberOfElements];
-        for (int i = 0; i < numberOfElements; ++i) {
+        for (int i = 0; i < numberOfElements; i++) {
             System.out.print("Input " + i + " element of array: ");
             myArray[i] = sc.nextInt();
             sum = sum + myArray[i];

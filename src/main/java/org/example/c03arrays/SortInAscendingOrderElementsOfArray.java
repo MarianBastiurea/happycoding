@@ -5,7 +5,7 @@ Write a program in Java to sort elements of an array in ascending order.
  */
 
 public class SortInAscendingOrderElementsOfArray {
-    public static int[] SortInAscendingOrder(int[] myArray) {
+    public static int[] sortInAscendingOrder(int[] myArray) {
         int temp;
         for (int i = 0; i < myArray.length; i++) {
             for (int j = i + 1; j < myArray.length; j++) {

@@ -15,7 +15,7 @@ public class CalculatingSumOfANOfEvenTerms {
         int numberOfEvenTerms = sc.nextInt();
         System.out.println();
         System.out.print("First even terms are: ");
-        for (int i = 1; i <= numberOfEvenTerms; ++i) {
+        for (int i = 1; i <= numberOfEvenTerms; i++) {
             count = count + 2;
             System.out.print(count + " ");
             sum = sum + count;

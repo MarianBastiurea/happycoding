@@ -1,32 +1,31 @@
 package org.example.c02controlflow;
 
-import org.example.c02controlflow.convertADecimalToBinaryNumber;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class convertADecimalToABinaryNumberTest {
     @Test
-    public void FortySeven() {
-        int Number = 47;
+    public void fortySeven() {
+        int number = 47;
         int resultNumber = 101111;
-        int result = convertADecimalToBinaryNumber.ConvertDecimalToBinary(Number);
+        int result = ConvertADecimalNumberToBinaryNumber.convertDecimalToBinary(number);
         assertEquals(result, resultNumber);
     }
 
     @Test
-    public void Ten() {
-        int Number = 10;
+    public void ten() {
+        int number = 10;
         int resultNumber = 1010;
-        int result = convertADecimalToBinaryNumber.ConvertDecimalToBinary(Number);
+        int result = ConvertADecimalNumberToBinaryNumber.convertDecimalToBinary(number);
         assertEquals(result, resultNumber);
     }
 
     @Test
-    public void TwentyOne() {
-        int Number = 21;
+    public void twentyOne() {
+        int number = 21;
         int resultNumber = 10101;
-        int result = convertADecimalToBinaryNumber.ConvertDecimalToBinary(Number);
+        int result = ConvertADecimalNumberToBinaryNumber.convertDecimalToBinary(number);
         assertEquals(result, resultNumber);
     }
 }

@@ -9,15 +9,17 @@ public class CheckIfANumberIsPrime {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter integer: ");
-        int givenNumber = sc.nextInt();
-        for (int i = 2; i < givenNumber; ++i) {
-            if (givenNumber % i == 0) {
-                System.out.println("Number " + givenNumber + " is not  prime number");
-                break;
-            } else {
-                System.out.println("Number " + givenNumber + " is  prime number");
-                break;
+        int number = sc.nextInt();
+        int divisors = 1;// give divisors value 1 is for division by 1
+        for (int i = 2; i <= number; i++) {
+            if (number % i == 0) {
+                divisors++;
             }
+        }
+        if (divisors > 2) {
+            System.out.println("Number " + number + " is not  prime number");
+        } else {
+            System.out.println("Number " + number + " is  prime number");
         }
     }
 }
