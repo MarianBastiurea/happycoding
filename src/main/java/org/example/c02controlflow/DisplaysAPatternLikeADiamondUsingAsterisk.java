@@ -37,7 +37,7 @@ public class DisplaysAPatternLikeADiamondUsingAsterisk {
         //print lower half of diamond
         int i = 1;
         identation = numberOfRows - 1;
-        for (int k = numberOfRows + i; k <= (2 * numberOfRows - 1); ++k) {
+        for (int k = numberOfRows + i; k <= (2 * numberOfRows - 1); k++) {
             System.out.print(space.repeat(i));
             i = i + 1;
             for (int j = identation; j > 0; j--) {

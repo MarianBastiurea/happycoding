@@ -24,7 +24,7 @@ public class FindSumOfASeries {
         x = sc.nextInt();
         System.out.print("Enter number of terms: ");
         numberOfTerms = sc.nextInt();
-        for (int i = 2; i <= numberOfTerms; ++i) {
+        for (int i = 2; i <= numberOfTerms; i++) {
             int fact = 1;
             powerOfX = powerOfX + 2;
             if (i % 2 == 0) {
@@ -32,7 +32,7 @@ public class FindSumOfASeries {
             } else {
                 b = 1;
             }
-            for (int j = 1; j <= powerOfX; ++j) {
+            for (int j = 1; j <= powerOfX; j++) {
                 fact = fact * j;
             }
             sum = Math.pow(x, powerOfX) / fact * b;

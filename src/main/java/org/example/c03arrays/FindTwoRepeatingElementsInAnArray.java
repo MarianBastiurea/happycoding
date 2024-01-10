@@ -1,4 +1,5 @@
 package org.example.c03arrays;
+
 /*
 Write a program in Java to find the two repeating elements in a given array.
  */
@@ -13,7 +14,6 @@ public class FindTwoRepeatingElementsInAnArray {
                     k++;
                     if (k == 2) {
                         i = myArray.length;
-                        j = myArray.length;
                     }
                     break;
                 }

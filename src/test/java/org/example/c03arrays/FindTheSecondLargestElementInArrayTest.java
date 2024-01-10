@@ -8,23 +8,23 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class FindTheSecondLargestElementInArrayTest {
     @Test
-    public void FiveElements() {
+    public void fiveElements() {
         int[] myArray = {2, 9, 1, 4, 6};
-        int result = FindTheSecondLargestElementInArray.findSecondLargestElementInArray(myArray);
+        int result = FindTheSecondLargestElementInArray.findSecondLargestElement(myArray);
         assertEquals(result, 6);
     }
 
     @Test
-    public void TwoElements() {
+    public void twoElements() {
         int[] myArray = {100, 2};
-        int result = FindTheSecondLargestElementInArray.findSecondLargestElementInArray(myArray);
+        int result = FindTheSecondLargestElementInArray.findSecondLargestElement(myArray);
         assertEquals(result, 2);
     }
 
     @Test
-    public void ThreeElements() {
+    public void threeElements() {
         int[] myArray = {100, 9, -2};
-        int result = FindTheSecondLargestElementInArray.findSecondLargestElementInArray(myArray);
+        int result = FindTheSecondLargestElementInArray.findSecondLargestElement(myArray);
         assertEquals(result, 9);
     }
 }

@@ -8,15 +8,16 @@ public class MaximumAndMinimumInArrayTest {
     @Test
     public void threeElements() {
         MaximumAndMinimumInArray obj = new MaximumAndMinimumInArray();
-        int[] myArray ={45,25,21};
+        int[] myArray = {45, 25, 21};
         int[] result = obj.maximumAndMinimum(myArray);
         assertArrayEquals(result, new int[]{45, 21});
     }
+
     @Test
     public void sameElements() {
         MaximumAndMinimumInArray obj = new MaximumAndMinimumInArray();
-        int[] myArray ={1,1,1,1,1,1};
+        int[] myArray = {1, 1, 1, 1, 1, 1};
         int[] result = obj.maximumAndMinimum(myArray);
-        assertArrayEquals(result, new int[]{1,1});
+        assertArrayEquals(result, new int[]{1, 1});
     }
 }

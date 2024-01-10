@@ -2,7 +2,6 @@ package org.example.c06sorting;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-import org.example.c06sorting.SortAnArrayUsingQuickSortAlgorithm;
 import org.junit.jupiter.api.Test;
 
 public class SortAnArrayUsingQuickSortAlgorithmTest {

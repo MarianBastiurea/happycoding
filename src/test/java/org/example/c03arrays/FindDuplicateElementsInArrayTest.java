@@ -22,17 +22,17 @@ public class FindDuplicateElementsInArrayTest {
     }
 
     @Test
-    public void allDuplicatesElements() {
-        int[] myArray = {2,1, 1, 1, 1};
-        int numberOfDuplicates = 4;
+    public void threeDuplicatesElements() {
+        int[] myArray = {2, 1, 1, 1, 1};
+        int numberOfDuplicates = 3;
         int result = FindDuplicateElementsInArray.findDuplicate(myArray);
         assertEquals(numberOfDuplicates, result);
     }
 
     @Test
-    public void threeDuplicatesElements() {
+    public void twoDuplicatesElements() {
         int[] myArray = {1, 1, 1, 6, 8, 9};
-        int numberOfDuplicates = 3;
+        int numberOfDuplicates = 2;
         int result = FindDuplicateElementsInArray.findDuplicate(myArray);
         assertEquals(numberOfDuplicates, result);
     }

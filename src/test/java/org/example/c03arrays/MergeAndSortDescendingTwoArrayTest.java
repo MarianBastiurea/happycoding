@@ -8,10 +8,10 @@ public class MergeAndSortDescendingTwoArrayTest {
     @Test
     public void mergeAndSortTwoArray() {
         MergeAndSortDescendingTwoArray obj = new MergeAndSortDescendingTwoArray();
-        int[] FirstArray = {1, 2, 3};
-        int[] SecondArray = {-1, 0, 4};
+        int[] firstArray = {1, 2, 3};
+        int[] secondArray = {-1, 0, 4};
         int[] resultArray = {4, 3, 2, 1, 0, -1};
-        int[] result = obj.mergeAndSort(FirstArray, SecondArray);
+        int[] result = obj.mergeAndSort(firstArray, secondArray);
         assertArrayEquals(result, resultArray);
     }
 }

@@ -6,9 +6,9 @@ Write a program in Java to delete an element at a desired position from an array
 
 public class DeleteAnElementInDesiredPositionInAnArray {
     public static int[] deleteElementAtPosition(int[] array, int position) {
-        int LengthOfResultArray = array.length - 1;
-        int[] resultArray = new int[LengthOfResultArray];
-        for (int i = 0; i < LengthOfResultArray; i++) {
+        int lengthOfResultArray = array.length - 1;
+        int[] resultArray = new int[lengthOfResultArray];
+        for (int i = 0; i < lengthOfResultArray; i++) {
             if (i < position)
                 resultArray[i] = array[i];
             else

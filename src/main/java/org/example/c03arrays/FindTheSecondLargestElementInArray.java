@@ -4,7 +4,7 @@ package org.example.c03arrays;
 Write a program in Java to find the second largest element in an array.
  */
 public class FindTheSecondLargestElementInArray {
-    public static int findSecondLargestElementInArray(int[] myArray) {
+    public static int findSecondLargestElement(int[] myArray) {
         int result,temp;
         for (int i = 0; i < myArray.length - 1; i++) {
             for (int j = i + 1; j < myArray.length; j++) {

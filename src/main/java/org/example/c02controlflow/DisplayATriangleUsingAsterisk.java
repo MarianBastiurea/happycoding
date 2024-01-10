@@ -19,7 +19,7 @@ public class DisplayATriangleUsingAsterisk {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of rows:");
         int numberOfRows = sc.nextInt();
-        for (int i = 1; i <= numberOfRows; ++i) {
+        for (int i = 1; i <= numberOfRows; i++) {
             System.out.println(asterix.repeat(i)+" ");
         }
     }

@@ -25,7 +25,6 @@ public class OneHundredDoorsTest {
                 {"90", "Closed"}, {"91", "Closed"}, {"92", "Closed"}, {"93", "Closed"}, {"94", "Closed"}, {"95", "Closed"},
                 {"96", "Closed"}, {"97", "Closed"}, {"98", "Closed"}, {"99", "Closed"}, {"100", "Open"}};
 
-
         String[][] result = OneHundredDoors.toggle100Doors();
         assertArrayEquals(result, resultString);
     }

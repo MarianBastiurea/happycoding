@@ -1,6 +1,5 @@
 package org.example.c06sorting;
 
-import org.example.c06sorting.FindMaximumInAnArrayUsingSelectionSortAlgorithm;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

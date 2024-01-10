@@ -13,12 +13,10 @@ public class FindDuplicateElementsInArray {
             for (int j = i + 1; j < myArray.length; j++) {
                 if (myArray[i] == myArray[j]) {
                     count++;
+                    break;
                 }
             }
         }
-        /*if (count > myArray.length) {
-            count = myArray.length;
-        }*/
         return count;
     }
 }

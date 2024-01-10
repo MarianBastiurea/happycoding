@@ -12,9 +12,9 @@ public class DaysToYearsWeeksAndDays {
         System.out.print("Enter number of days:");
         int numberOfDays = sc.nextInt();
         int years, weeks, days, leapYear;
-        years = (int) numberOfDays / 365;
+        years = numberOfDays / 365;
         //we will keep count of leap year by split by 4 number of year
-        leapYear = (int) years / 4;
+        leapYear = years / 4;
         weeks = (numberOfDays - years * 365 - leapYear) / 7;
         days = numberOfDays - years * 365 - weeks * 7 - leapYear;
         System.out.println("number of leap year: " + leapYear);

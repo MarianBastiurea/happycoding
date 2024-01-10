@@ -20,7 +20,7 @@ public class FindLCMOfTwoGivenNumbers {
         int firstNumber = sc.nextInt();
         System.out.print("Enter second integer:");
         int secondNumber = sc.nextInt();
-        for (int i = 1; i <= firstNumber && i <= secondNumber; ++i) {
+        for (int i = 1; i <= firstNumber && i <= secondNumber; i++) {
             if (firstNumber % i == 0 && secondNumber % i == 0) {
                 j = i;
             }

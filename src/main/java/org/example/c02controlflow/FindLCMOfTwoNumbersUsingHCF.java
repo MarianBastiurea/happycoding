@@ -12,7 +12,7 @@ The LCM of 15 and 20 is : 60
  */
 
 public class FindLCMOfTwoNumbersUsingHCF {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int x, y, temp, HCF, LCM;
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter First Number: ");

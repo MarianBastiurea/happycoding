@@ -26,7 +26,7 @@ public class OneHundredDoorsUsingPerfectSquareNumber {
         resultMatrix[0][1] = "Open";
         for (int i = 1; i < 100; i++) {
             resultMatrix[i][0] = Integer.toString(i + 1);
-            resultMatrix[i][1] = FindSquareNumber(i + 1);
+            resultMatrix[i][1] = findSquareNumber(i + 1);
         }
         for (int i = 0; i < 100; i++) {
             for (int j = 0; j < 2; j++) {
@@ -36,7 +36,7 @@ public class OneHundredDoorsUsingPerfectSquareNumber {
         return resultMatrix;
     }
 
-    public static String FindSquareNumber(int number) {
+    public static String findSquareNumber(int number) {
         String status = "";
         for (int i = 1; i < number; i++) {
             if (number / i == i && number % i == 0) {

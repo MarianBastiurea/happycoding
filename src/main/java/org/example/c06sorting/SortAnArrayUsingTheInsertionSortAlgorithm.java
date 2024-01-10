@@ -5,7 +5,7 @@ Write a Java program to sort a list of elements using the insertion sort algorit
  */
 public class SortAnArrayUsingTheInsertionSortAlgorithm {
     public static int[] sortUsingInsertion(int[] myArray) {
-        for (int i = 1; i < myArray.length; ++i) {
+        for (int i = 1; i < myArray.length; i++) {
             int key = myArray[i];
             int j = i - 1;
             while (j >= 0 && myArray[j] > key) {

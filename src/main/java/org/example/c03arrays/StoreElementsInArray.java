@@ -10,7 +10,7 @@ public class StoreElementsInArray {
         for (int i = 1; i <= 9; i++) {
             myArray[i] = i;
         }
-        for (int i = 0; i <= 9; ++i) {
+        for (int i = 0; i <= 9; i++) {
             System.out.print(myArray[i] + " ");
         }
     }
