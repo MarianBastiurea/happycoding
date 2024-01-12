@@ -17,10 +17,22 @@ For example:
 {()}[[{}]] is balanced
  */
 
-/*public class BalancedParentheses {
-    public static String checkBalance( String myString){
-return;
-    }
+public class BalancedParentheses {
 
+    public static boolean areParenthesesBalanced(String expression) {
+        int balance = 0;
+
+        for (char bracket : expression.toCharArray()) {
+            if (bracket == '(' || bracket == '[' || bracket == '{') {
+                balance++;
+            } else if (bracket == ')' || bracket == ']' || bracket == '}') {
+                balance--;
+                if (balance < 0) {
+                    return false; // More closing brackets than opening brackets
+                }
+            }
+        }
+
+        return balance == 0; // Balance should be zero if all brackets are balanced
+    }
 }
-*/
