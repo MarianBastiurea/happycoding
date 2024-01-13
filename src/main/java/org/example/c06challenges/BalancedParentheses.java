@@ -20,19 +20,34 @@ For example:
 public class BalancedParentheses {
 
     public static boolean areParenthesesBalanced(String expression) {
-        int balance = 0;
+        int index = 0;
+        char[] symbol = new char[expression.length()];
 
         for (char bracket : expression.toCharArray()) {
-            if (bracket == '(' || bracket == '[' || bracket == '{') {
-                balance++;
-            } else if (bracket == ')' || bracket == ']' || bracket == '}') {
-                balance--;
-                if (balance < 0) {
-                    return false; // More closing brackets than opening brackets
-                }
+            switch (bracket) {
+                case '(':
+                case '[':
+                case '{':
+                    symbol[index++] = bracket;
+                    break;
+                case ')':
+                    if (index == 0 || symbol[--index] != '(') {
+                        return false;
+                    }
+                    break;
+                case ']':
+                    if (index == 0 || symbol[--index] != '[') {
+                        return false;
+                    }
+                    break;
+                case '}':
+                    if (index == 0 || symbol[--index] != '{') {
+                        return false;
+                    }
+                    break;
             }
         }
-
-        return balance == 0; // Balance should be zero if all brackets are balanced
+        return index == 0;
     }
+
 }
