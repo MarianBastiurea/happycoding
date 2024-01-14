@@ -1,9 +1,7 @@
 package org.example.c02controlflow.calculate;
 
-import java.util.Scanner;
-
 /*
-Write a C program to find the HCF (Highest Common Factor) of two numbers.
+Write a Java program to find the HCF (Highest Common Factor) of two numbers.
 Test Data :
 Input 1st number for HCF: 24
 Input 2nd number for HCF: 28
@@ -12,17 +10,12 @@ HCF of 24 and 28 is : 4
  */
 
 public class HighestCommonFactorOfTwoNumbers {
-    public static void main(String[] args) {
-        int commonFactor = 1;
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter first integer: ");
-        int firstInteger = sc.nextInt();
-        System.out.print("Enter second integer: ");
-        int secondInteger = sc.nextInt();
-        for (int i = 1; i <= firstInteger && i <= secondInteger; i++) {
-            if (firstInteger % i == 0 && secondInteger % i == 0)
-                commonFactor = i;
+    public static int findHCF(int firstInteger, int secondInteger) {
+        while (secondInteger != 0) {
+            int temp = secondInteger;
+            secondInteger = firstInteger % secondInteger;
+            firstInteger = temp;
         }
-        System.out.printf("HCF of " + firstInteger + " and " + secondInteger + " is " + commonFactor);
+        return firstInteger;
     }
 }

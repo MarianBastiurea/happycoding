@@ -1,27 +1,22 @@
 package org.example.c02controlflow.calculate;
 
-import java.util.Scanner;
 
 /*
 Write a Java program that reads 5 numbers and counts the number of positive numbers and negative numbers.
 */
 public class CountPositiveAndNegativeNumbers {
-    public static void main(String[] args) {
+    public static int[] count(int[] myArray) {
         int negativeNumbers = 0, positiveNumbers = 0;
-        int[] numbers = new int[5];
-        Scanner sc = new Scanner(System.in);
-        for (int i = 0; i < 5; i++) {
-            System.out.println("Enter number:");
-            numbers[i] = sc.nextInt();
-        }
-        for (int i = 0; i < 5; i++) {
-            if (numbers[i] < 0) {
+        int[] result = new int[2];
+        for (int i : myArray) {
+            if (i < 0) {
                 negativeNumbers++;
             } else {
                 positiveNumbers++;
             }
         }
-        System.out.println("there are: " + positiveNumbers + " positive numbers");
-        System.out.println("there are: " + negativeNumbers + " negative numbers");
+        result[0] = positiveNumbers;
+        result[1] = negativeNumbers;
+        return result;
     }
 }

@@ -1,24 +1,16 @@
 package org.example.c02controlflow.calculate;
 
-import java.util.Scanner;
 
 /*
 Write a Java program to display the n terms of odd natural numbers and their sum.
  */
 
 public class NOddNumbersAndTheirSum {
-    public static void main(String[] args) {
+    public static int findSum(int[] myArray) {
         int sum = 0;
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter number: ");
-        int numberOfOddNumbers = sc.nextInt();
-        int count=0;
-        for (int oddNumber = 1; count < numberOfOddNumbers; oddNumber+=2) {
-            System.out.print(oddNumber + " ");
-            sum = sum + oddNumber;
-            count++;
+        for (int i : myArray) {
+            sum = sum + i;
         }
-        System.out.println();
-        System.out.println("Sum is: " + sum);
+        return sum;
     }
 }
