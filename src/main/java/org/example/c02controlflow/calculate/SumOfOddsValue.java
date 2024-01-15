@@ -3,25 +3,16 @@ package org.example.c02controlflow.calculate;
 import java.util.Scanner;
 
 /*
-Write a Java program that reads 5 numbers and sums all odd values between them.
-
-We store all five elements in an array and
-search for odds value in array and sum all
+Write a Java program that reads 10 numbers and sums all odd values between them.
  */
 public class SumOfOddsValue {
-    public static void main(String[] args) {
+    public static int findSum(int[] myArray) {
         int sum = 0;
-        int[] numbers = new int[5];
-        Scanner sc = new Scanner(System.in);
-        for (int i = 0; i < 5; i++) {
-            System.out.print("Enter number:");
-            numbers[i] = sc.nextInt();
-        }
-        for (int i = 0; i < 5; i++) {
-            if (numbers[i] % 2 == 1) {
-                sum = sum + numbers[i];
+        for (int i = 0; i < myArray.length; i++) {
+            if (myArray[i] % 2 == 1) {
+                sum = sum + myArray[i];
             }
         }
-        System.out.println("Sum of all odds number is: " + sum);
+        return sum;
     }
 }

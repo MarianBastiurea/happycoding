@@ -13,10 +13,9 @@ value of x = 2.000000
  */
 
 public class SumOfASeries {
-    public static String findSum(int x, int n) {
+    public static double findSum(int x, int n) {
         int powerOfX = 0;
         double result = 1;
-        String resultString;
         double b, sum; // b have values -1 and 1 give the sign of series term
         for (int i = 2; i <= n; i++) {
             int fact = 1;
@@ -32,9 +31,6 @@ public class SumOfASeries {
             sum = Math.pow(x, powerOfX) / fact * b;
             result = sum + result;
         }
-        resultString = String.format("%.3f", result);
-        // just to compare result with sum value from test, I changed "result" from double in
-        //resultString and keep just first 3 decimals.
-        return resultString;
+        return result;
     }
 }
