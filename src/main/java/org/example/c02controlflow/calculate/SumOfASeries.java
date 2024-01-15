@@ -1,6 +1,5 @@
 package org.example.c02controlflow.calculate;
 
-import java.util.Scanner;
 /*
 Write a program in Java to find the sum of the series [ 1-X^2/2!+X^4/4!- .........].
 Test Data :
@@ -14,17 +13,12 @@ value of x = 2.000000
  */
 
 public class SumOfASeries {
-    public static void main(String[] args) {
-        int numberOfTerms, x;
+    public static String findSum(int x, int n) {
         int powerOfX = 0;
-        double b, sum; // b have values -1 and 1 give the sign of series term
         double result = 1;
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter value of X: ");
-        x = sc.nextInt();
-        System.out.print("Enter number of terms: ");
-        numberOfTerms = sc.nextInt();
-        for (int i = 2; i <= numberOfTerms; i++) {
+        String resultString;
+        double b, sum; // b have values -1 and 1 give the sign of series term
+        for (int i = 2; i <= n; i++) {
             int fact = 1;
             powerOfX = powerOfX + 2;
             if (i % 2 == 0) {
@@ -36,8 +30,11 @@ public class SumOfASeries {
                 fact = fact * j;
             }
             sum = Math.pow(x, powerOfX) / fact * b;
-            result = result + sum;
+            result = sum + result;
         }
-        System.out.println(" value of sum is: " + result);
+        resultString = String.format("%.3f", result);
+        // just to compare result with sum value from test, I changed "result" from double in
+        //resultString and keep just first 3 decimals.
+        return resultString;
     }
 }
