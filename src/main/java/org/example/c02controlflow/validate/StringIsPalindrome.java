@@ -1,7 +1,7 @@
 package org.example.c02controlflow.validate;
 
 /*
- Write a C program to check whether a number is a palindrome or not.
+ Write a Java program to check whether a number is a palindrome or not.
  */
 
 public class StringIsPalindrome {
