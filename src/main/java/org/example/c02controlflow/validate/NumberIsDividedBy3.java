@@ -7,11 +7,15 @@ Write a Java program that checks if a given non-negative number is a multiple of
 */
 public class NumberIsDividedBy3 {
 
-    public static boolean findNumber(int number) {
-        boolean result = false;
+    public static void main(String[] args) {
+        int number;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter integer:");
+        number = sc.nextInt();
         if (number % 3 == 0) {
-            result = true;
+            System.out.println("Number is divided by 3");
+        } else {
+            System.out.println("Number is not divided by 3");
         }
-        return result;
     }
 }
