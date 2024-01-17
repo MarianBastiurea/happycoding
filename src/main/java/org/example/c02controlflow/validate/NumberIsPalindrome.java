@@ -6,20 +6,17 @@ Write a Java program to check whether a number is a palindrome or not.
  */
 
 public class NumberIsPalindrome {
-    public static void main(String[] args) {
+    public static boolean checkNumber(int number) {
         int reverseNumber = 0;
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter number to check if it is a palindrome: ");
-        int number = sc.nextInt();
+        boolean result = false;
         int originalNumber = number;
         for (; number != 0; number = number / 10) {
             int remainder = number % 10;
             reverseNumber = reverseNumber * 10 + remainder;
         }
         if (originalNumber == reverseNumber) {
-            System.out.println("The number " + originalNumber + " is a palindrome");
-        } else {
-            System.out.println("The number " + originalNumber + " is not a palindrome");
+            result = true;
         }
+        return result;
     }
 }
