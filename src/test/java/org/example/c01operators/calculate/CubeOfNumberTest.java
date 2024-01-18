@@ -28,5 +28,4 @@ public class CubeOfNumberTest {
         int result = CubeOfNumber.findCube(number);
         assertEquals(cubeOfNumber, result);
     }
-
 }
