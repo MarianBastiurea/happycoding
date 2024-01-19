@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class HighestCommonFactorOfTwoNumbersTest {
     @Test
-    public void negativeFour() {
+    public void bothNegativeNumbers() {
         int firstInteger = -24;
         int secondInteger = -28;
         int HCF = -4;
@@ -15,7 +15,7 @@ public class HighestCommonFactorOfTwoNumbersTest {
     }
 
     @Test
-    public void one() {
+    public void oneNumberIs0() {
         int firstInteger = 0;
         int secondInteger = 1;
         int HCF = 1;
@@ -24,7 +24,7 @@ public class HighestCommonFactorOfTwoNumbersTest {
     }
 
     @Test
-    public void five() {
+    public void bothPositiveNumber() {
         int firstInteger = 15;
         int secondInteger = 10;
         int HCF = 5;
@@ -33,7 +33,7 @@ public class HighestCommonFactorOfTwoNumbersTest {
     }
 
     @Test
-    public void negativeFive() {
+    public void oneNegativeNumberAndOtherPositiveNumber() {
         int firstInteger = -15;
         int secondInteger = 10;
         int HCF = -5;
