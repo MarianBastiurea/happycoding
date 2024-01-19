@@ -6,18 +6,18 @@ import org.junit.jupiter.api.Test;
 
 public class RectanglePerimeterAndAreaTest {
     @Test
-    public void rectangle() {
-        int height = 7, width = 5;
-        int[] perimeterArea = {24, 35};
-        int[] result = RectanglePerimeterAndArea.findAreaAndPerimeter(height, width);
-        assertArrayEquals(result, perimeterArea);
+    public void rectangleShape() {
+        double height = 7.5, width = 5.5;
+        double[] perimeterArea = {41.25d, 26d};
+        double[] result = RectanglePerimeterAndArea.findAreaAndPerimeter(height, width);
+        assertArrayEquals(result, perimeterArea, 0.01);
     }
 
     @Test
-    public void square() {
-        int height = 7, width = 7;
-        int[] perimeterArea = {28, 49};
-        int[] result = RectanglePerimeterAndArea.findAreaAndPerimeter(height, width);
-        assertArrayEquals(result, perimeterArea);
+    public void squareShape() {
+        double height = 7.5, width = 7.5;
+        double[] perimeterArea = {56.25, 30};
+        double[] result = RectanglePerimeterAndArea.findAreaAndPerimeter(height, width);
+        assertArrayEquals(result, perimeterArea, 0.01);
     }
 }

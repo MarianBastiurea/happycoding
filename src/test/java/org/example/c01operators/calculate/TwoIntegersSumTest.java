@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TwoIntegersSumTest {
     @Test
-    public void zero() {
+    public void samePositiveAndNegativeNumbers() {
         int firstInteger = -2, secondInteger = 2;
         int sum = 0;
         int result = TwoIntegersSum.findSum(firstInteger, secondInteger);
@@ -14,7 +14,7 @@ public class TwoIntegersSumTest {
     }
 
     @Test
-    public void four() {
+    public void OneNumberIs0() {
         int firstInteger = 0, secondInteger = 4;
         int sum = 4;
         int result = TwoIntegersSum.findSum(firstInteger, secondInteger);
@@ -22,9 +22,9 @@ public class TwoIntegersSumTest {
     }
 
     @Test
-    public void ten() {
-        int firstInteger = 1, secondInteger = 9;
-        int sum = 10;
+    public void onePositiveAndOneNegativeNumber() {
+        int firstInteger = 1, secondInteger = -9;
+        int sum = -8;
         int result = TwoIntegersSum.findSum(firstInteger, secondInteger);
         assertEquals(result, sum);
     }
