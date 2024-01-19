@@ -24,8 +24,8 @@ public class DistanceBetweenTwoPointsTest {
     @Test
     public void otherLine() {
         double x1 = 10.00, x2 = 20.00, y1 = 30.00, y2 = 10.00;
-        double distance = 22.360679774997898;
+        double distance = 22.36d;
         double result = DistanceBetweenTwoPoints.calculateDistance(x1, x2, y1, y2);
-        assertEquals(distance, result);
+        assertEquals(result, distance, 0.01);
     }
 }

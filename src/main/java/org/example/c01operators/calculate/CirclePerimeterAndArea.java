@@ -5,15 +5,15 @@ Write a Java program to compute the perimeter and area of a circle with a given 
 */
 class CirclePerimeterAndArea {
 
-    public static double getArea(double PI, int radius) {
+    public static double[] getAreaAndPerimeter(double radius) {
         double area;
-        area = PI * radius * radius;
-        return area;
-    }
-
-    public static double getPerimeter(double PI, int radius) {
         double perimeter;
+        double PI = 3.14;
+        double[] result = new double[2];
+        area = PI * radius * radius;
         perimeter = 2 * PI * radius;
-        return perimeter;
+        result[0] = area;
+        result[1] = perimeter;
+        return result;
     }
 }
