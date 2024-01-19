@@ -22,6 +22,7 @@ public class MaxOfThreeNumbersTest {
         assertEquals(result, max);
 
     }
+
     @Test
     public void firstNumberIsMaxNumber() {
         int firstNumber = 100, secondNumber = 0, thirdNumber = 1;
