@@ -6,17 +6,20 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MultiplicationTableOfAGivenIntegerTest {
     @Test
-    public void multiplicationTableFor5(){
-        int number=5;
-        int[] myArray={5,10,15,20,25,30,35,40,45,50};
-        int[] result=MultiplicationTableOfAGivenInteger.displayMultiplicationTable(number);
-        assertArrayEquals(result,myArray);
-    }
-    @Test
-    public void multiplicationTableFor0(){
-        int number=0;
-        int[] myArray={0,0,0,0,0,0,0,0,0,0};
-        int[] result=MultiplicationTableOfAGivenInteger.displayMultiplicationTable(number);
-        assertArrayEquals(result,myArray);
+    public void multiplicationTableFor5() {
+        int number = 5;
+        String result = MultiplicationTableOfAGivenInteger.displayMultiplicationTable(number);
+        assertEquals("""
+                5x1=5
+                5x2=10
+                5x3=15
+                5x4=20
+                5x5=25
+                5x6=30
+                5x7=35
+                5x8=40
+                5x9=45
+                5x10=50
+                """, result);
     }
 }

@@ -2,13 +2,13 @@ package org.example.c02controlflow.generate;
 
 
 public class MultiplicationTableOfAGivenInteger {
-    public static int[] displayMultiplicationTable(int number) {
-        int[] result=new int[10];
-        int k=0;
+    public static String displayMultiplicationTable(int number) {
+        String result = "";
+        int k = 0;
         for (int i = 1; i <= 10; i++) {
-           result[k] = number * i;
-           k++;
+            result += number + "x" + i + "=" + number * i;
+            result += "\n";
         }
-        return  result;
+        return result;
     }
 }

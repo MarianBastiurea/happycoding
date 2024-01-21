@@ -1,7 +1,8 @@
 package org.example.c02controlflow.generate;
 
 /*
- Write a program in Java to display the first 10 natural numbers.
+ Write a program in Java to display the first n natural numbers.
+Fix the implementation to display n natural numbers instead of number + 10.
  */
 public class Display10Integers {
     public static int[] find10Integer(int number) {
