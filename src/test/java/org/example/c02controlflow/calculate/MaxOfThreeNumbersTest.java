@@ -22,4 +22,13 @@ public class MaxOfThreeNumbersTest {
         assertEquals(result, max);
 
     }
+
+    @Test
+    public void firstNumberIsMaxNumber() {
+        int firstNumber = 100, secondNumber = 0, thirdNumber = 1;
+        int max = 100;
+        int result = MaxOfThreeNumbers.findMax(firstNumber, secondNumber, thirdNumber);
+        assertEquals(result, max);
+
+    }
 }

@@ -1,6 +1,5 @@
 ![Coverage](.github/badges/jacoco.svg)
-
-1. Declarations and expressions
+1.Declarations and expressions
    * Rectangle perimeter and area
    * Circle perimeter and area
    * Variables types
