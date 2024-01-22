@@ -20,7 +20,7 @@ public class FindIfANumberIsDividedBy3or7Test {
     }
 
     @Test
-    public void IsDividedBy3() {
+    public void threeIsDividedBy3() {
         int number = 3;
         boolean result = FindIfANumberIsDividedBy3or7.findNumber(number);
         assertTrue(result);

@@ -14,13 +14,13 @@ The pattern like :
  */
 
 public class TriangleUsingAsterisk {
-    public static void main(String[] args) {
+    public static String generateTriangle(int number) {
         String asterix = "*";
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter number of rows:");
-        int numberOfRows = sc.nextInt();
-        for (int i = 1; i <= numberOfRows; i++) {
-            System.out.println(asterix.repeat(i)+" ");
+        String result = "";
+        for (int i = 1; i <= number; i++) {
+            result += asterix.repeat(i);
+            result += "\n";
         }
+        return result;
     }
 }

@@ -15,7 +15,6 @@ public class FindIfANumberIsAPerfectNumber {
         boolean result = false;
         for (int i = 1; i < number; i++) {
             if (number % i == 0) {
-                System.out.print(i + " ");
                 sum = sum + i;
             }
         }

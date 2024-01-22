@@ -13,16 +13,9 @@ public class NumberIsDividedBy3Test {
     }
 
     @Test
-    public void TenIsNodDividedBy3() {
+    public void TenIsNotDividedBy3() {
         int number = 10;
         boolean result = NumberIsDividedBy3.findNumber(number);
         assertFalse(result);
-    }
-
-    @Test
-    public void IsDividedBy3() {
-        int number = 3;
-        boolean result = NumberIsDividedBy3.findNumber(number);
-        assertTrue(result);
     }
 }

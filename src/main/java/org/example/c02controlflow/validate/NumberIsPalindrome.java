@@ -1,6 +1,5 @@
 package org.example.c02controlflow.validate;
 
-import java.util.Scanner;
 /*
 Write a Java program to check whether a number is a palindrome or not.
  */
