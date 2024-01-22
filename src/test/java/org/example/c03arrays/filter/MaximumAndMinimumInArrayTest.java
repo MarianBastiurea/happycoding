@@ -1,4 +1,4 @@
-package org.example.c03arrays.calculate;
+package org.example.c03arrays.filter;
 
 import org.example.c03arrays.filter.MaximumAndMinimumInArray;
 import org.junit.jupiter.api.Test;
