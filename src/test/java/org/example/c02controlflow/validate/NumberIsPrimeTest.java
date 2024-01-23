@@ -9,4 +9,16 @@ public class NumberIsPrimeTest {
         boolean result=NumberIsPrime.checkNumber(number);
         assertFalse(result);
     }
+    @Test
+    public void threeIsPrimeNumber(){
+        int number=3;
+        boolean result=NumberIsPrime.checkNumber(number);
+        assertTrue(result);
+    }
+    @Test
+    public void oneHundredElevenIsNotPrimeNumber(){
+        int number=111;
+        boolean result=NumberIsPrime.checkNumber(number);
+        assertFalse(result);
+    }
 }
