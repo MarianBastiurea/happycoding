@@ -15,20 +15,21 @@ Expected Output :
  */
 
 public class PascalTriangle {
-    public static String generateTriangle(int number) {
-        String result = "";
+    public static String builtTriangle(int number) {
+        String triangle = "";
         for (int i = 1; i <= number; i++) {
             for (int j = 0; j <= number - i; j++) {
-                result += " ";
+                triangle += " ";
             }
             int l = 1;
             for (int k = 1; k <= i; k++) {
-                result += l + " ";
+                triangle += l + " ";
                 l = l * (i - k) / k;
             }
-            result = result.substring(0, result.length() - 1);
-            result += "\n";
+            triangle = triangle.substring(0, triangle.length() - 1);
+            triangle += "\n";
         }
-        return result;
+        return triangle;
+
     }
 }

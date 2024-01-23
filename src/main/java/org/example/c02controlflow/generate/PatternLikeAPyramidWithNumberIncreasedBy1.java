@@ -1,7 +1,5 @@
 package org.example.c02controlflow.generate;
 
-import java.util.Scanner;
-
 /*
 Write a program in Java to make a pyramid pattern with numbers increased by 1.
 
@@ -13,22 +11,22 @@ Write a program in Java to make a pyramid pattern with numbers increased by 1.
  */
 
 public class PatternLikeAPyramidWithNumberIncreasedBy1 {
-    public static void main(String[] args) {
-        int count = 0;
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter number of rows: ");
-        int numberOfRows = sc.nextInt();
-        int identation = numberOfRows - 1;
-        for (int i = 1; i <= numberOfRows; i++) {
+    public static String generatePyramid(int number) {
+        String pyramid="";
+        int count=0;
+        int identation = number - 1;
+        for (int i = 1; i <= number; i++) {
             for (int j = identation; j > 0; j--) {
-                System.out.print(" ");
+                pyramid+=" ";
             }
             identation = identation - 1;
-            for (int j = 1; j <= i; j++) {
+            for (int k = 1; k <= i; k++) {
                 count = count + 1;
-                System.out.print(count + " ");
+                pyramid+=count + " ";
             }
-            System.out.println();
+            pyramid=pyramid.substring(0,pyramid.length()-1);
+            pyramid+="\n";
         }
+        return  pyramid;
     }
 }

@@ -3,7 +3,7 @@ package org.example.c02controlflow.generate;
 import java.util.Scanner;
 
 /*
-Write a C program to display a such a pattern for n rows using a number that starts with 1 and each row will have a 1 as the first and last number.
+Write a Java program to display a such a pattern for n rows using a number that starts with 1 and each row will have a 1 as the first and last number.
 
   1
  121
@@ -12,21 +12,21 @@ Write a C program to display a such a pattern for n rows using a number that sta
  */
 
 public class PatternLikeAPyramidWhereFirstAndLastNumberAre1 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter number of rows: ");
-        int numberOfRows = sc.nextInt();
-        for (int i = 1; i <= numberOfRows; i++) {
-            for (int j = 0; j <= numberOfRows - i; j++) {
-                System.out.print("  ");
+    public static String generatePyramid(int number) {
+        String pyramid="";
+        for (int i = 1; i <= number; i++) {
+            for (int j = 1; j <= number - i; j++) {
+                pyramid+="  ";
             }
             for (int k = 1; k <= i; k++) {
-                System.out.print(k + " ");
+                pyramid+=k + " ";
             }
             for (int l = i - 1; l >= 1; l--) {
-                System.out.print(l + " ");
+                pyramid+=l + " ";
             }
-            System.out.println();
+            pyramid=pyramid.substring(0,pyramid.length() - 1);
+            pyramid+="\n";
         }
+        return pyramid;
     }
 }
