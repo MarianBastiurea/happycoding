@@ -6,21 +6,24 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class NumberIsDividedBy3Test {
     @Test
-    public void TwentyOneIsDividedBy3() {
+    public void twentyOneIsDividedBy3() {
         int number = 21;
         boolean result = NumberIsDividedBy3.findNumber(number);
         assertTrue(result);
     }
 
     @Test
-    public void TenIsNodDividedBy3() {
+
+    
+
+    public void tenIsNotDividedBy3() {
         int number = 10;
         boolean result = NumberIsDividedBy3.findNumber(number);
         assertFalse(result);
     }
 
     @Test
-    public void IsDividedBy3() {
+    public void threeIsDividedBy3() {
         int number = 3;
         boolean result = NumberIsDividedBy3.findNumber(number);
         assertTrue(result);

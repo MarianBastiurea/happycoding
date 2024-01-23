@@ -30,5 +30,6 @@ public class PascalTriangle {
             triangle += "\n";
         }
         return triangle;
+
     }
 }

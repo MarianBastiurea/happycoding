@@ -13,21 +13,21 @@ number which will repeat the number in the same row.
 
  */
 public class PatternLikePyramidWithANumberRepeatingInSameRow {
-    public static void main(String[] args) {
+    public static String generatePyramid(int number) {
         int indentation;
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter integer: ");
-        int numberOfRows = sc.nextInt();
-        indentation = numberOfRows - 1;
-        for (int i = 1; i <= numberOfRows; i++) {
+        String result = "";
+        indentation = number - 1;
+        for (int i = 1; i <= number; i++) {
             for (int j = indentation; j > 0; j--) {
-                System.out.print(" ");
+                result += " ";
             }
             indentation = indentation - 1;
             for (int k = 1; k <= i; k++) {
-                System.out.print(i + " ");
+                result += i + " ";
             }
-            System.out.println();
+            result = result.substring(0, result.length() - 1);
+            result += "\n";
         }
+        return result;
     }
 }

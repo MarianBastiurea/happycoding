@@ -1,7 +1,7 @@
 package org.example.c02controlflow.transform;
 
 /*
-Write a program in C to display the number in reverse order.
+Write a program in Java to display the number in reverse order.
  */
 
 public class ReverseANumber {

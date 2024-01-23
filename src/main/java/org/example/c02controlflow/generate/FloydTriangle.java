@@ -1,7 +1,5 @@
 package org.example.c02controlflow.generate;
 
-import java.util.Scanner;
-
 /*
 Write a program in Java to print Floyd's Triangle.
 
@@ -14,29 +12,30 @@ Write a program in Java to print Floyd's Triangle.
  */
 
 public class FloydTriangle {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter number of rows: ");
-        int numberOfRows = sc.nextInt();
-        for (int i = 1; i <= numberOfRows; i++) {
+    public static String generateTriangle(int number) {
+       String triangle="";
+       String space=" ";
+        for (int i = 1; i <= number; i++) {
             if (i % 2 == 0) {
                 for (int j = 1; j <= i; j++) {
                     if (j % 2 == 0) {
-                        System.out.print("1 ");
+                        triangle+="1"+space;
                     } else {
-                        System.out.print("0 ");
+                        triangle+="0"+space;
                     }
                 }
             } else {
                 for (int j = 1; j <= i; j++) {
                     if (j % 2 == 0) {
-                        System.out.print("0 ");
+                        triangle+="0"+space;
                     } else {
-                        System.out.print("1 ");
+                        triangle+="1"+space;
                     }
                 }
             }
-            System.out.println();
+            triangle=triangle.substring(0, triangle.length() - 1);
+            triangle+="\n";
         }
+        return triangle;
     }
 }

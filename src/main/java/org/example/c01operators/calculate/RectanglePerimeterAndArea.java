@@ -5,9 +5,9 @@ Write a Java program to compute the perimeter and area of a rectangle or square.
 */
 class RectanglePerimeterAndArea {
 
-    public static double[] findAreaAndPerimeter(double height, double width) {
-        double area, perimeter;
-        double[] result = new double[2];
+    public static int[] findAreaAndPerimeter(int height, int width) {
+        int area, perimeter;
+        int [] result = new int[2];
         area = height * width;
         perimeter = (height + width) * 2;
         result[0] = area;
