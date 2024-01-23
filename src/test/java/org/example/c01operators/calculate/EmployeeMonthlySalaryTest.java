@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class EmployeeMonthlySalaryTest {
 
     @Test
-    void calculateSalary() {
+    void given10AsHourlySalryAnd5WorkedHoursSalaryShouldBe50() {
         double hourlySalary = 10D;
         double workedHours = 5D;
 

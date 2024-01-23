@@ -13,6 +13,9 @@ public class NumberIsDividedBy3Test {
     }
 
     @Test
+
+    
+
     public void tenIsNotDividedBy3() {
         int number = 10;
         boolean result = NumberIsDividedBy3.findNumber(number);
