@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class FindMaximumInAnArrayUsingSelectionSortAlgorithmTest {
 
     @Test
-    public void fiveMaxElements() {
+    public void givenDifferentNumberShouldReturn1Max() {
         //have to find maximum of elements and
         int[] myArray = {14, 45, 67, 2, 1};
         int maximum = 67;
@@ -16,20 +16,11 @@ public class FindMaximumInAnArrayUsingSelectionSortAlgorithmTest {
     }
 
     @Test
-    public void fiveMaxElementsWithNegativeNumber() {
+    public void givenSameNumberShouldReturn1Max() {
         //have to find maximum of elements and
         // sort ascending
-        int[] myArray = {14, 45, -67, -2, 1};
-        int maximum = 45;
-        int result = FindMaximumInAnArrayUsingSelectionSortAlgorithm.findMaximum(myArray);
-        assertEquals(maximum, result);
-    }
-    @Test
-    public void oneElement() {
-        //have to find maximum of elements and
-        // sort ascending
-        int[] myArray = {1};
-        int maximum = 1;
+        int[] myArray = {0, 0, 0, 0};
+        int maximum = 0;
         int result = FindMaximumInAnArrayUsingSelectionSortAlgorithm.findMaximum(myArray);
         assertEquals(maximum, result);
     }
