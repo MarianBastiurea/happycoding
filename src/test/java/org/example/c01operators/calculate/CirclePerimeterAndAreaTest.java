@@ -7,10 +7,18 @@ import static org.junit.jupiter.api.Assertions.*;
 class CirclePerimeterAndAreaTest {
 
     @Test
-    public void givenRadiusOneAreaShouldBeNumericValueOfPiAndPerimeterShouldBeDoubleNumericValueOfPi() {
+    public void givenRadiusOneAreaShouldBeNumericValueOfPi() {
         double radius = 1;
-        double[] areaAndPerimeter = {3.14d, 6.28d};
+        double area= 3.14d;
         double[] result = CirclePerimeterAndArea.getAreaAndPerimeter(radius);
-        assertArrayEquals(result, areaAndPerimeter, 0.01);
+        assertEquals(result[0], area, 0.01);
+    }
+
+    @Test
+    public void givenRadiusOnePerimeterShouldBeDoubleNumericValueOfPi() {
+        double radius = 1;
+        double Perimeter = 6.28d;
+        double[] result = CirclePerimeterAndArea.getAreaAndPerimeter(radius);
+        assertEquals(result[1], Perimeter, 0.01);
     }
 }

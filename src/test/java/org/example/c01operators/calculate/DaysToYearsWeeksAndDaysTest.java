@@ -13,25 +13,25 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class DaysToYearsWeeksAndDaysTest {
     @Test
-    public void given3660AsNumberOfDaysShouldBeTenLeapYear() {
-        int numberOfDays = 3660;
-        int[] resultYearsWeeksDays = {10, 0, 0};
+    public void given366AsNumberOfDaysShouldBeOneYearAndOneDay() {
+        int numberOfDays = 366;
+        int[] resultYearsWeeksDays = {1, 0, 0};
         int[] result = DaysToYearsWeeksAndDays.findYearsWeeksDays(numberOfDays);
         assertArrayEquals(result, resultYearsWeeksDays);
     }
 
     @Test
-    public void given900AsNumberOfDaysShouldBe2Years24WeeksAnd2Days() {
-        int numberOfDays = 900;
-        int[] resultYearsWeeksDays = {2, 24, 2};
+    public void given8AsNumberOfDaysShouldBe0Years1WeeksAnd1Days() {
+        int numberOfDays = 8;
+        int[] resultYearsWeeksDays = {0, 1, 1};
         int[] result = DaysToYearsWeeksAndDays.findYearsWeeksDays(numberOfDays);
         assertArrayEquals(result, resultYearsWeeksDays);
     }
 
     @Test
-    public void given100AsNumberOfDaysShoulBe14WeeksAnd2Days() {
-        int numberOfDays = 100;
-        int[] resultYearsWeeksDays = {0, 14, 2};
+    public void given1461AsNumberOfDaysShouldBe4Years0WeeksAnd0Days() {
+        int numberOfDays = 1461;
+        int[] resultYearsWeeksDays = {4, 0, 0};
         int[] result = DaysToYearsWeeksAndDays.findYearsWeeksDays(numberOfDays);
         assertArrayEquals(result, resultYearsWeeksDays);
     }

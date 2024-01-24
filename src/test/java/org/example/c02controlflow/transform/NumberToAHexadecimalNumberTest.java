@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class NumberToAHexadecimalNumberTest {
     @Test
-    public void decimalNumberCouldHaveNumberBetween0to9AndCharactersBetweenAAndF() {
+    public void hexadecimalNumberHasNumberBetween0to9AndCharactersBetweenAAndF() {
         int Number = 10;
         String resultHexadecimal = "A";
         String result = NumberToAHexadecimalNumber.decimalToHexadecimal(Number);

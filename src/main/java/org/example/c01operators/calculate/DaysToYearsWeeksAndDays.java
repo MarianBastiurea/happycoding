@@ -7,13 +7,13 @@ Write a Java program to convert specified days into years, weeks and days.
 public class DaysToYearsWeeksAndDays {
 
     public static int[] findYearsWeeksDays(int numberOfDays) {
-        int years, weeks, days, leapYear;
+        int years=0, weeks=0, days=0, leapYear=0;
         int[] result = new int[3];
-        if (numberOfDays % 366 == 0) {
-            years = numberOfDays / 366;
-            weeks = 0;
-            days = 0;
-        } else {
+        if (numberOfDays==366) {
+            years =1;
+            weeks=0;
+            days=0;
+        } else{
             years = numberOfDays / 365;
             //we will keep count of leap year by split by 4 number of year
             leapYear = years / 4;
