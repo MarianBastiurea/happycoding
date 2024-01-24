@@ -15,7 +15,7 @@ public class DaysToYearsWeeksAndDaysTest {
     @Test
     public void given366AsNumberOfDaysShouldBeOneYearAndOneDay() {
         int numberOfDays = 366;
-        int[] resultYearsWeeksDays = {1, 0, 0};
+        int[] resultYearsWeeksDays = {1, 0, 1};
         int[] result = DaysToYearsWeeksAndDays.findYearsWeeksDays(numberOfDays);
         assertArrayEquals(result, resultYearsWeeksDays);
     }
