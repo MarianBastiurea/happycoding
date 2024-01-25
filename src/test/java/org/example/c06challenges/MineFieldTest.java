@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class MineFieldTest {
     @Test
-    void oneMineInField() {
+    void givenOneMineInFieldHintFieldWith2ElementsShouldContainAsANumberOnly1() {
         char[][] mineField = {{'*', '.'}};
         char[][] hintField = {{'*', '1'}};
         char[][] result = MineField.hintField(mineField);
@@ -14,7 +14,7 @@ public class MineFieldTest {
     }
 
     @Test
-    public void threeOrFour() {
+    public void given2MinesIn12ElementsFieldHintFieldShouldContainsOnly0And1And2AsNumber() {
         char[][] mineField = {
                 {'*', '.', '.', '.'},
                 {'.', '.', '*', '.'},
@@ -28,7 +28,7 @@ public class MineFieldTest {
     }
 
     @Test
-    public void fourOrFive() {
+    public void given5MinesInMineFieldShouldBeInHitFieldOnlyNumbersFrom0To4() {
         char[][] mineField = {
                 {'.', '.', '.', '*', '.'},
                 {'.', '*', '.', '.', '*'},

@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class MergeAndSortDescendingTwoArrayTest {
     @Test
-    public void mergeAndSortTwoArray() {
+    public void given2ArraysAscendingSortedShouldReturnAnArrayDescendingSorted() {
         MergeAndSortDescendingTwoArray obj = new MergeAndSortDescendingTwoArray();
         int[] firstArray = {1, 2, 3};
         int[] secondArray = {-1, 0, 4};
