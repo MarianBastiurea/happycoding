@@ -14,7 +14,7 @@ public class DeleteElementAtPositionInArrayTest {
     }
 
     @Test
-    public void givenPosition1ToBeDeletedPositionIs0() {
+    public void givenPositionToBeDeletedIs0() {
         int[] myArray = {1};
         int positionToDeleteAnElement = 0;
         int[] result = DeleteElementAtPositionInArray.deleteElementAtPosition(myArray, positionToDeleteAnElement);
