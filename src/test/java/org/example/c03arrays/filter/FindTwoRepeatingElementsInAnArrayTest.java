@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class FindTwoRepeatingElementsInAnArrayTest {
     @Test
-    public void GivenMoreThan2RepeatingElementShouldReturnFirst2repeatingElements() {
-        int[] myArray = {2, 7, 4, 7, 8, 3, 4};
+    public void Given2RepeatingElementShouldReturnThem() {
+        int[] myArray = {2, 7, 4, 7, 8, 3, 9,4};
         int[] resultArray = {7, 4};
         int[] result = FindTwoRepeatingElementsInAnArray.findRepeatingElements(myArray);
         assertArrayEquals(resultArray, result);

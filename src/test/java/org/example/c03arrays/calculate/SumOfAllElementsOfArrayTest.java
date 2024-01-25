@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 public class SumOfAllElementsOfArrayTest {
     @Test
-    public void sumNullBecauseEmptyArray() {
+    public void sum0BecauseEmptyArray() {
         int[] myArray = {};
         int sum = 0;
         int result = SumOfAllElementsOfArray.findSum(myArray);
@@ -14,7 +14,7 @@ public class SumOfAllElementsOfArrayTest {
     }
 
     @Test
-    public void sumNullBecauseSameNegativeAndPositiveElements() {
+    public void sum0BecauseSameNegativeAndPositiveElements() {
         int[] myArray = {-2, -1, 0, 1, 2};
         int sum = 0;
         int result = SumOfAllElementsOfArray.findSum(myArray);
