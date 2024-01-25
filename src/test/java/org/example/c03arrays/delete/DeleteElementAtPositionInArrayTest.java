@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class DeleteElementAtPositionInArrayTest {
     @Test
-    public void fiveElements() {
+    public void givenPosition2ForDeleting3ShouldDisappeared() {
         int[] myArray = {1, 2, 3, 4, 5};
         int positionToDeleteAnElement = 2;
         int[] result = DeleteElementAtPositionInArray.deleteElementAtPosition(myArray, positionToDeleteAnElement);
@@ -14,7 +14,7 @@ public class DeleteElementAtPositionInArrayTest {
     }
 
     @Test
-    public void oneElements() {
+    public void givenPositionToBeDeletedIs0() {
         int[] myArray = {1};
         int positionToDeleteAnElement = 0;
         int[] result = DeleteElementAtPositionInArray.deleteElementAtPosition(myArray, positionToDeleteAnElement);

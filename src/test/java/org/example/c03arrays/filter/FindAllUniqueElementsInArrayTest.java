@@ -6,15 +6,16 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class FindAllUniqueElementsInArrayTest {
     @Test
-    public void twoUniqueElements() {
-        int[] myArray={3,2,2,-5,0};
+    public void given2sameElementsInAnArrayWith5ElementsShouldReturn3UniqueElements() {
+        int[] myArray = {3, 2, 2, -5, 0};
         int[] result = FindAllUniqueElementsInArray.uniqueElement(myArray);
-        assertArrayEquals(result,new int[] {3,-5,0});
+        assertArrayEquals(result, new int[]{3, -5, 0});
     }
+
     @Test
-    public void noUniqueElements() {
-        int[] myArray={2,2,2,2,};
+    public void givenSameElementsInAnArrayShouldReturn0UniqueElements() {
+        int[] myArray = {2, 2, 2, 2,};
         int[] result = FindAllUniqueElementsInArray.uniqueElement(myArray);
-        assertArrayEquals(result,new int[] {});
+        assertArrayEquals(result, new int[]{});
     }
 }

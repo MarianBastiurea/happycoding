@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class MaximumAndMinimumInArrayTest {
     @Test
-    public void threeElements() {
+    public void givenDifferentElementsShouldReturnMaxAndMinAsDifferentNumber() {
         MaximumAndMinimumInArray obj = new MaximumAndMinimumInArray();
         int[] myArray = {45, 25, 21};
         int[] result = obj.maximumAndMinimum(myArray);
@@ -15,7 +15,7 @@ public class MaximumAndMinimumInArrayTest {
     }
 
     @Test
-    public void sameElements() {
+    public void givenSameElementsShouldReturnSameNumberAsMaxAndMin() {
         MaximumAndMinimumInArray obj = new MaximumAndMinimumInArray();
         int[] myArray = {1, 1, 1, 1, 1, 1};
         int[] result = obj.maximumAndMinimum(myArray);
