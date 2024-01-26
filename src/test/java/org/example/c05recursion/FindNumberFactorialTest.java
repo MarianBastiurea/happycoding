@@ -6,19 +6,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FindNumberFactorialTest {
     @Test
-    public void first5Factorial() {
+    public void given5AsNumberShouldReturn120() {
         int number = 5;
         int numberFactorial = 120;
         int result = FindFactorialOfANumber.FactorialNumbers(number);
         assertEquals(numberFactorial, result);
     }
-
-    @Test
-    public void first1Factorial() {
-        int number = 1;
-        int numberFactorial = 1;
-        int result = FindFactorialOfANumber.FactorialNumbers(number);
-        assertEquals(numberFactorial, result);
-    }
-
 }

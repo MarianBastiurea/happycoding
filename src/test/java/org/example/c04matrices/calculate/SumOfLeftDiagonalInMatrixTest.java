@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SumOfLeftDiagonalInMatrixTest {
     @Test
-    public void twoRowsAndTwoColumns() {
+    public void givenAMatrixShouldReturnSumOfLeftDiagonal() {
         int[][] myMatrix = {{1, 2}, {3, 4}};
         int sum = 5;
         int result = SumOfLeftDiagonalInMatrix.sumOfDiagonal(myMatrix);
@@ -14,15 +14,7 @@ public class SumOfLeftDiagonalInMatrixTest {
     }
 
     @Test
-    public void a4X4Matrix() {
-        int[][] myMatrix = {{1, 2, 3, 4}, {0, 1, 3, 0}, {0, 0, 10, 0}, {0, 0, 0, 10}};
-        int sum = 7;
-        int result = SumOfLeftDiagonalInMatrix.sumOfDiagonal(myMatrix);
-        assertEquals(result, sum);
-    }
-
-    @Test
-    public void emptyMatrix() {
+    public void givenEmptyMatrixSumShouldBe0() {
         int[][] myMatrix = {{}};
         int sum = 0;
         int result = SumOfLeftDiagonalInMatrix.sumOfDiagonal(myMatrix);

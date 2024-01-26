@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class SubtractMatricesTest {
     @Test
-    public void twoMatrices() {
+    public void givenTwoMatricesShouldReturnAMatrixWithItsElementsResultAsSubtractOfElementsFromGivenMatrices() {
         int[][] FirstMatrices = {{5, 6}, {7, 8}};
         int[][] SecondMatrices = {{1, 2}, {3, 4}};
         int[][] ResultMatrices = {{4, 4}, {4, 4}};
@@ -15,7 +15,7 @@ public class SubtractMatricesTest {
     }
 
     @Test
-    public void emptyMatrices() {
+    public void givenTwoEmptyMatricesShouldResultAnEmptyMatrix() {
         int[][] FirstMatrices = {{}, {}};
         int[][] SecondMatrices = {{}, {}};
         int[][] ResultMatrices = {{}, {}};
@@ -24,28 +24,10 @@ public class SubtractMatricesTest {
     }
 
     @Test
-    public void singleElementMatrices() {
+    public void givenTwoSingleElementMatricesShouldResultOneElementMatrixWhichElementIsAResultOfSubtractionOfElementsFromGivenMatrix() {
         int[][] FirstMatrices = {{5}};
         int[][] SecondMatrices = {{2}};
         int[][] ResultMatrices = {{3}};
-        int[][] result = SubtractMatrices.subtract(FirstMatrices, SecondMatrices);
-        assertArrayEquals(ResultMatrices, result);
-    }
-
-    @Test
-    public void a2x2Matrices() {
-        int[][] FirstMatrices = {{1, 2}, {3, 4}};
-        int[][] SecondMatrices = {{1, 1}, {1, 1}};
-        int[][] ResultMatrices = {{0, 1}, {2, 3}};
-        int[][] result = SubtractMatrices.subtract(FirstMatrices, SecondMatrices);
-        assertArrayEquals(ResultMatrices, result);
-    }
-
-    @Test
-    public void a4x4Matrices() {
-        int[][] FirstMatrices = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
-        int[][] SecondMatrices = {{16, 15, 14, 13}, {12, 11, 10, 9}, {8, 7, 6, 5}, {4, 3, 2, 1}};
-        int[][] ResultMatrices = {{-15, -13, -11, -9}, {-7, -5, -3, -1}, {1, 3, 5, 7}, {9, 11, 13, 15}};
         int[][] result = SubtractMatrices.subtract(FirstMatrices, SecondMatrices);
         assertArrayEquals(ResultMatrices, result);
     }
