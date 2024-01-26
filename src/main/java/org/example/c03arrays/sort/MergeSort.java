@@ -36,14 +36,14 @@ public class MergeSort {
             i++;
         }
         while (j < rightArray.length) {
-            resultArray[k] = rightArray[i];
+            resultArray[k] = rightArray[j];
             k++;
             j++;
         }
         return resultArray;
     }
 
-   public static int[] sortArray(int[] array) {
+    public static int[] sortArray(int[] array) {
         int temp;
         for (int k = 0; k < array.length; k++) {
             for (int l = k + 1; l < array.length; l++) {
