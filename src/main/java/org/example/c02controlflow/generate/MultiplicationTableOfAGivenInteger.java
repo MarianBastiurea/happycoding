@@ -2,6 +2,8 @@ package org.example.c02controlflow.generate;
 
 
 public class MultiplicationTableOfAGivenInteger {
+    private MultiplicationTableOfAGivenInteger () {}
+
     public static String displayMultiplicationTable(int number) {
         String result = "";
         int k = 0;

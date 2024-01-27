@@ -8,30 +8,27 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class StringIsPalindromeTest {
     @Test
     public void nullNotPalindrome() {
-        StringIsPalindrome stringIsPalindrome = new StringIsPalindrome();
         char[] string = null;
 
-        boolean result = stringIsPalindrome.isPalindrome(string);
+        boolean result = StringIsPalindrome.isPalindrome(string);
 
         assertFalse(result);
     }
 
     @Test
     public void emptyStringIsNotPalindrome() {
-        StringIsPalindrome stringIsPalindrome = new StringIsPalindrome();
         char[] string = {};
 
-        boolean result = stringIsPalindrome.isPalindrome(string);
+        boolean result = StringIsPalindrome.isPalindrome(string);
 
         assertFalse(result);
     }
 
     @Test
     public void oneCharIsPalindrome() {
-        StringIsPalindrome stringIsPalindrome = new StringIsPalindrome();
         char[] string = {'a'};
 
-        boolean result = stringIsPalindrome.isPalindrome(string);
+        boolean result = StringIsPalindrome.isPalindrome(string);
 
         assertTrue(result);
     }
@@ -39,11 +36,10 @@ public class StringIsPalindromeTest {
     @Test
     public void twoDifferentCharsIsNotPalindrome() {
         //Arrange
-        StringIsPalindrome stringIsPalindrome = new StringIsPalindrome();
         char[] string = {'a', 'b'};
 
         //Act
-        boolean result = stringIsPalindrome.isPalindrome(string);
+        boolean result = StringIsPalindrome.isPalindrome(string);
 
         //Assert
         assertFalse(result);
@@ -52,11 +48,10 @@ public class StringIsPalindromeTest {
     @Test
     public void twoSameCharsIsPalindrome() {
         //Given
-        StringIsPalindrome stringIsPalindrome = new StringIsPalindrome();
         char[] string = {'a', 'a'};
 
         //When
-        boolean result = stringIsPalindrome.isPalindrome(string);
+        boolean result = StringIsPalindrome.isPalindrome(string);
 
         //Then
         assertTrue(result);
@@ -65,11 +60,10 @@ public class StringIsPalindromeTest {
     @Test
     public void threeDifferentCharsIsNotPalindrome() {
         //Given
-        StringIsPalindrome stringIsPalindrome = new StringIsPalindrome();
         char[] string = {'a', 'a', 'b'};
 
         //When
-        boolean result = stringIsPalindrome.isPalindrome(string);
+        boolean result = StringIsPalindrome.isPalindrome(string);
 
         //Then
         assertFalse(result);
@@ -78,11 +72,10 @@ public class StringIsPalindromeTest {
     @Test
     public void threeCharsSameAsTheirReverseIsPalindrome() {
         //Given
-        StringIsPalindrome stringIsPalindrome = new StringIsPalindrome();
         char[] string = {'a', 'b', 'a'};
 
         //When
-        boolean result = stringIsPalindrome.isPalindrome(string);
+        boolean result = StringIsPalindrome.isPalindrome(string);
 
         //Then
         assertTrue(result);
@@ -91,11 +84,10 @@ public class StringIsPalindromeTest {
     @Test
     public void fourCharsSameAsTheirReverseIsPalindrome() {
         //Given
-        StringIsPalindrome stringIsPalindrome = new StringIsPalindrome();
         char[] string = {'a', 'b', 'b', 'a'};
 
         //When
-        boolean result = stringIsPalindrome.isPalindrome(string);
+        boolean result = StringIsPalindrome.isPalindrome(string);
 
         //Then
         assertTrue(result);
@@ -104,11 +96,10 @@ public class StringIsPalindromeTest {
     @Test
     public void fourDifferentCharsIsNotPalindrome() {
         //Given
-        StringIsPalindrome stringIsPalindrome = new StringIsPalindrome();
         char[] string = {'a', 'a', 'b', 'a'};
 
         //When
-        boolean result = stringIsPalindrome.isPalindrome(string);
+        boolean result = StringIsPalindrome.isPalindrome(string);
 
         //Then
         assertFalse(result);

@@ -12,6 +12,8 @@ The LCM of 15 and 20 is : 60
 import java.util.Scanner;
 
 public class LeastCommonMultipleOfTwoGivenNumbers {
+    private LeastCommonMultipleOfTwoGivenNumbers () {}
+
     public static int findLCM(int firstNumber, int secondNumber) {
         if (firstNumber == 0 || secondNumber == 0) {
             return 0;  // LCM is 0 if one of the numbers is 0

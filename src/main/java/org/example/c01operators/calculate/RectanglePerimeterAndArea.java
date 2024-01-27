@@ -4,6 +4,8 @@ package org.example.c01operators.calculate;
 Write a Java program to compute the perimeter and area of a rectangle or square.
 */
 class RectanglePerimeterAndArea {
+    private RectanglePerimeterAndArea () {}
+
 
     public static int[] findAreaAndPerimeter(int height, int width) {
         int area, perimeter;

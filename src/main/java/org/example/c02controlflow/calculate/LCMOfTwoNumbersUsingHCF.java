@@ -11,6 +11,8 @@ The LCM of 15 and 20 is : 60
  */
 
 public class LCMOfTwoNumbersUsingHCF {
+    private LCMOfTwoNumbersUsingHCF () {}
+
     public static int findLCM(int firstInteger, int secondInteger) {
         int x, y, temp, HCF, LCM;
         x = Math.abs(firstInteger);

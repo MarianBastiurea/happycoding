@@ -4,6 +4,8 @@ package org.example.c04matrices.transform;
 Write a program in Java to find the transpose of a given matrix.
  */
 public class TransposeMatrix {
+    private TransposeMatrix () {}
+
     public static int[][] transposeAMatrix(int[][] myMatrix) {
         int rows = myMatrix.length;
         int columns = myMatrix[0].length;

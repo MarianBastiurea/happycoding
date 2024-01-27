@@ -4,6 +4,8 @@ Write a program in Java to find the second smallest element in an array.
  */
 
 public class FindTheSecondSmallestElementInArray {
+    private FindTheSecondSmallestElementInArray () {}
+
     public static int secondSmallestElement(int[] myArray) {
         int temp;
         for (int i = 0; i < myArray.length; i++) {

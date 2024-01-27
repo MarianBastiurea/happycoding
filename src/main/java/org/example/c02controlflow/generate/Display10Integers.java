@@ -5,6 +5,8 @@ package org.example.c02controlflow.generate;
 Fix the implementation to display n natural numbers instead of number + 10.
  */
 public class Display10Integers {
+    private Display10Integers () {}
+
     public static int[] find10Integer(int number) {
         // Display 10 integer starting with number given by test class
         int[] result = new int[10];

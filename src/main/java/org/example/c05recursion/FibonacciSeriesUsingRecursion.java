@@ -4,6 +4,8 @@ package org.example.c05recursion;
 Write a program in Java to print the Fibonacci Series using recursion.
  */
 public class FibonacciSeriesUsingRecursion {
+    private FibonacciSeriesUsingRecursion () {}
+
 
     public static int[] firstNElements(int NumberOfElements) {
         int[] myArray = new int[NumberOfElements];

@@ -19,6 +19,8 @@ that means doors with number 1, 4, 9,16... will be open.
 this Class will use odds or even divisors door's number.
  */
 public class OneHundredDoorUsingDivisorsNumber {
+    private OneHundredDoorUsingDivisorsNumber () {}
+
 
     public static String[][] doorStatus() {
         String[][] resultMatrix = new String[100][2];

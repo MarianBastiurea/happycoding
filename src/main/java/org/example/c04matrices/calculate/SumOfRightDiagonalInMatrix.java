@@ -4,6 +4,8 @@ package org.example.c04matrices.calculate;
 Write a program in Java to find the sum of the right diagonals of a matrix.
  */
 public class SumOfRightDiagonalInMatrix {
+    private SumOfRightDiagonalInMatrix () {}
+
     public static int sumOfDiagonal(int[][] myMatrix) {
         int sum = 0;
         for (int i = 0; i < myMatrix[0].length; i++) {

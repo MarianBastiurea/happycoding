@@ -14,6 +14,8 @@ The pattern like :
  */
 
 public class TriangleUsingAsterisk {
+    private TriangleUsingAsterisk () {}
+
     public static String generateTriangle(int number) {
         String asterix = "*";
         String result = "";

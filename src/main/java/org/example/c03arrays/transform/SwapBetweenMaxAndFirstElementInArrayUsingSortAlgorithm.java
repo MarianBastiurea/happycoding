@@ -4,6 +4,8 @@ package org.example.c03arrays.transform;
 Write a Java program to sort a list of elements using the selection sort algorithm.
  */
 public class SwapBetweenMaxAndFirstElementInArrayUsingSortAlgorithm {
+    private SwapBetweenMaxAndFirstElementInArrayUsingSortAlgorithm () {}
+
     public static int[] swapBetweenMax(int[] myArray) {
         int temp;
         int max = 0;

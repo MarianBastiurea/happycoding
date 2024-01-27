@@ -4,6 +4,8 @@ package org.example.c03arrays.calculate;
 Write a program in Java to find a pair with given sum in the array.
  */
 public class FindPairOfElementsOfAnArrayWithGivenSum {
+    private FindPairOfElementsOfAnArrayWithGivenSum () {}
+
     public static int[][] findPair(int[] myArray, int sum) {
         int k = 0;
         int temporaryLength = myArray.length * myArray.length;

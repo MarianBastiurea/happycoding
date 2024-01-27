@@ -5,6 +5,8 @@ Write a program in Java to read n number of values in an array and display them 
  */
 
 public class ReverseArray {
+    private ReverseArray () {}
+
     public static int[] reverse(int[] myArray) {
         int[] resultArray = new int[myArray.length];
         for (int i = 0; i < myArray.length; i++) {

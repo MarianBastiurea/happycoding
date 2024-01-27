@@ -5,6 +5,8 @@ Write a program in Java to print all unique elements in an array.
 */
 
 public class FindAllUniqueElementsInArray {
+    private FindAllUniqueElementsInArray () {}
+
     public static int[] uniqueElement(int[] myArray) {
         int count,k=0;
         int[] temporaryArray = new int[myArray.length];

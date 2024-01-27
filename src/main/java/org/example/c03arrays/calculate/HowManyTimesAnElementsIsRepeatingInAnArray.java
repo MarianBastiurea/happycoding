@@ -1,6 +1,8 @@
 package org.example.c03arrays.calculate;
 
 public class HowManyTimesAnElementsIsRepeatingInAnArray {
+    private HowManyTimesAnElementsIsRepeatingInAnArray () {}
+
     public static int[][] howManyTimes(int[] myArray) {
         int k = 0; //number of unique elements which it will find number of appearance
         int count = 0; // how many times a number appears in an array

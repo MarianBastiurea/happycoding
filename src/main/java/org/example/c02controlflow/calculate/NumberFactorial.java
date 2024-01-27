@@ -7,6 +7,8 @@ package org.example.c02controlflow.calculate;
  */
 
 public class NumberFactorial {
+    private NumberFactorial () {}
+
     public static int findFactorial(int number) {
         int factorial = 1;
         if (number < 0) {

@@ -1,6 +1,8 @@
 package org.example.c02controlflow.calculate;
 
 public class LongestSubstringBetweenTwoSameCharacters {
+    private LongestSubstringBetweenTwoSameCharacters () {}
+
     public static String findLongestSubstring(String inputString) {
         // define a matrix where we store repeating element and distance between them
         int[][] longestSubstring = new int[inputString.length()][2];

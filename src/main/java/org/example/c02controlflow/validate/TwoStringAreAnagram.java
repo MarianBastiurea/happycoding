@@ -6,6 +6,8 @@ Write a program in Java to check whether two given strings are an anagram.
  */
 
 public class TwoStringAreAnagram {
+    private TwoStringAreAnagram () {}
+
     public static String checkAnagram(String firstString, String secondString) {
         String result;
         if (firstString.length() != secondString.length()) {

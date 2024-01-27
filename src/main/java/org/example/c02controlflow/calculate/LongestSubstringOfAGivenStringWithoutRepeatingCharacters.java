@@ -2,6 +2,8 @@ package org.example.c02controlflow.calculate;
 import java.util.Arrays;
 
 public class LongestSubstringOfAGivenStringWithoutRepeatingCharacters {
+    private LongestSubstringOfAGivenStringWithoutRepeatingCharacters () {}
+
     public static String FindTheLongest(String myString){
         //if myString is null return ""
         if (myString == null || myString.isEmpty()) {

@@ -5,7 +5,9 @@ package org.example.c02controlflow.validate;
  */
 
 public class StringIsPalindrome {
-    public boolean isPalindrome(char[] string) {
+    private StringIsPalindrome () {}
+
+    public static boolean isPalindrome(char[] string) {
         boolean result = false;
         if (string == null) {
             result = false;

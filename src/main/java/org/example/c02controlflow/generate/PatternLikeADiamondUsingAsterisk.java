@@ -16,6 +16,8 @@ Write a program in Java to display a pattern like a diamond.
  */
 
 public class PatternLikeADiamondUsingAsterisk {
+    private PatternLikeADiamondUsingAsterisk () {}
+
     public static String generateDiamond(int numberOfRows) {
         String diamond ="";
         //print upper half of diamond

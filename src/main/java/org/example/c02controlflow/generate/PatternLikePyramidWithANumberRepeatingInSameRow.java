@@ -13,6 +13,8 @@ number which will repeat the number in the same row.
 
  */
 public class PatternLikePyramidWithANumberRepeatingInSameRow {
+    private PatternLikePyramidWithANumberRepeatingInSameRow () {}
+
     public static String generatePyramid(int number) {
         int indentation;
         String result = "";

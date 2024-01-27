@@ -12,6 +12,8 @@ Write a program in Java to print Floyd's Triangle.
  */
 
 public class FloydTriangle {
+    private FloydTriangle () {}
+
     public static String generateTriangle(int number) {
        String triangle="";
        String space=" ";

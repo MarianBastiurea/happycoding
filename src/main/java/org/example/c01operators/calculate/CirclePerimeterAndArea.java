@@ -4,6 +4,8 @@ package org.example.c01operators.calculate;
 Write a Java program to compute the perimeter and area of a circle with a given radius.
 */
 class CirclePerimeterAndArea {
+    private CirclePerimeterAndArea () {}
+
 
     public static double[] getAreaAndPerimeter(double radius) {
         double area;

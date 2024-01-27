@@ -15,6 +15,8 @@ Expected Output :
  */
 
 public class PascalTriangle {
+    private PascalTriangle () {}
+
     public static String builtTriangle(int number) {
         String triangle = "";
         for (int i = 1; i <= number; i++) {

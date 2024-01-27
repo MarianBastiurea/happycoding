@@ -4,6 +4,8 @@ package org.example.c03arrays.insert;
 Write a program in Java to insert the values in the array (sorted list).
  */
 public class InsertElementInArray {
+    private InsertElementInArray () {}
+
     public static int[] insertElements(int[] myArray, int element) {
         int[] resultArray = new int[myArray.length + 1];
         int position = 0;

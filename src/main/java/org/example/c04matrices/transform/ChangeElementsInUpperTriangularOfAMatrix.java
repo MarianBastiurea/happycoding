@@ -27,6 +27,8 @@ Setting zero in upper triangular matrix
 7 8 9
  */
 public class ChangeElementsInUpperTriangularOfAMatrix {
+    private ChangeElementsInUpperTriangularOfAMatrix () {}
+
     public static int[][] changeElements(int[][] myMatrix) {
         int[][] resultMatrix = new int[myMatrix[0].length][myMatrix.length];
         for (int i = 0; i < myMatrix[0].length; i++) {

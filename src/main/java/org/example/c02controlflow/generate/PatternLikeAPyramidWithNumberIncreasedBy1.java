@@ -11,6 +11,8 @@ Write a program in Java to make a pyramid pattern with numbers increased by 1.
  */
 
 public class PatternLikeAPyramidWithNumberIncreasedBy1 {
+    private PatternLikeAPyramidWithNumberIncreasedBy1 () {}
+
     public static String generatePyramid(int number) {
         String pyramid="";
         int count=0;

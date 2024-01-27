@@ -1,6 +1,8 @@
 package org.example.c02controlflow.transform;
 
 public class NumberToAHexadecimalNumber {
+    private NumberToAHexadecimalNumber () {}
+
     public static String decimalToHexadecimal(int number) {
         int temp;
         String hexadecimalNumber = "";

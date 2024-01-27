@@ -4,6 +4,8 @@ package org.example.c04matrices.calculate;
 Write a program in Java to find the sum of the left diagonals of a matrix.
 */
 public class SumOfLeftDiagonalInMatrix {
+    private SumOfLeftDiagonalInMatrix () {}
+
     public static int sumOfDiagonal(int[][] myMatrix){
         int sum=0;
         int decrement= myMatrix.length-1;

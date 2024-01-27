@@ -4,6 +4,8 @@ package org.example.c04matrices.calculate;
 Write a program in Java to find the sum of rows and columns of a matrix.
  */
 public class SumOfRowsAndSumOfColumnsInMatrix {
+    private SumOfRowsAndSumOfColumnsInMatrix () {}
+
     public static int[][] sumInMatrix(int[][] myMatrix) {
         int[] sumOfRowsOfMatrix = new int[myMatrix[0].length];
         int[] sumOfColumnsOfMatrix = new int[myMatrix.length];

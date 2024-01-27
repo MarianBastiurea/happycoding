@@ -19,6 +19,8 @@ that means doors with number 1, 4, 9,16... will be open.
 this Class will use second pattern.
  */
 public class OneHundredDoorsUsingPerfectSquareNumber {
+    private OneHundredDoorsUsingPerfectSquareNumber () {}
+
 
     public static String[][] doorStatus() {
         String[][] resultMatrix = new String[100][2];
@@ -27,11 +29,6 @@ public class OneHundredDoorsUsingPerfectSquareNumber {
         for (int i = 1; i < 100; i++) {
             resultMatrix[i][0] = Integer.toString(i + 1);
             resultMatrix[i][1] = findSquareNumber(i + 1);
-        }
-        for (int i = 0; i < 100; i++) {
-            for (int j = 0; j < 2; j++) {
-                System.out.print(resultMatrix[i][j]);
-            }
         }
         return resultMatrix;
     }

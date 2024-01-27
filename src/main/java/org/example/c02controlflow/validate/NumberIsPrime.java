@@ -5,6 +5,8 @@ package org.example.c02controlflow.validate;
 */
 
 public class NumberIsPrime {
+    private NumberIsPrime () {}
+
     public static boolean checkNumber(int number) {
         int divisors = 1;// give divisors value 1 is for division by 1
 

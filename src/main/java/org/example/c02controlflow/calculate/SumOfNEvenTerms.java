@@ -7,6 +7,8 @@ package org.example.c02controlflow.calculate;
  */
 
 public class SumOfNEvenTerms {
+    private SumOfNEvenTerms () {}
+
     public static int findSum(int number) {
         int count = 0;
         int sum = 0;

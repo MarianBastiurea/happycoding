@@ -4,6 +4,8 @@ package org.example.c03arrays.sort;
 Write a Java program to sort a list of elements using the quick sort algorithm. >
  */
 public class QuickSort {
+    private QuickSort () {}
+
     public static int[] quickSort(int[] myArray) {
         int N = myArray.length;
         sortArray(myArray, 0, N - 1);

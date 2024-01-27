@@ -4,6 +4,8 @@ package org.example.c03arrays.sort;
 Write a Java program to sort a list of elements using the bubble sort algorithm.
  */
 public class BubbleSort {
+    private BubbleSort () {}
+
     public static int[] sortArray(int[] myArray) {
         int temp;
         for (int j = 0; j < myArray.length - 1; j++) {

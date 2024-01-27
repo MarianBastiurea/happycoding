@@ -5,6 +5,8 @@ Write a Java program to check whether a number is a palindrome or not.
  */
 
 public class NumberIsPalindrome {
+    private NumberIsPalindrome () {}
+
     public static boolean checkNumber(int number) {
         int reverseNumber = 0;
         boolean result = false;

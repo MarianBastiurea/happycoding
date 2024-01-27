@@ -13,6 +13,8 @@ value of x = 2.000000
  */
 
 public class SumOfASeries {
+    private SumOfASeries () {}
+
     public static double findSum(int x, int n) {
         int powerOfX = 0;
         double result = 1;

@@ -6,7 +6,9 @@ Write a program in Java to merge two arrays of the same size sorted in descendin
 */
 
 public class MergeAndSortDescendingTwoArray {
-    public int[] mergeAndSort(int[] firstArray, int[] secondArray) {
+    private MergeAndSortDescendingTwoArray () {}
+
+    public static int[] mergeAndSort(int[] firstArray, int[] secondArray) {
         int lengthArray = firstArray.length + secondArray.length;
         int[] myArray = new int[lengthArray];
         int i = 0, j = 0, k = 0;

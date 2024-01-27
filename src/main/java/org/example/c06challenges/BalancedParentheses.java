@@ -18,6 +18,8 @@ For example:
  */
 
 public class BalancedParentheses {
+    private BalancedParentheses () {}
+
 
     public static boolean areParenthesesBalanced(String expression) {
         int index = 0;

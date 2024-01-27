@@ -5,6 +5,8 @@ package org.example.c01operators.calculate;
 Write a Java program to convert specified days into years, weeks and days.
 */
 public class DaysToYearsWeeksAndDays {
+    private DaysToYearsWeeksAndDays () {}
+
 
     public static int[] findYearsWeeksDays(int numberOfDays) {
         int years=0, weeks=0, days=0, leapYear=0;

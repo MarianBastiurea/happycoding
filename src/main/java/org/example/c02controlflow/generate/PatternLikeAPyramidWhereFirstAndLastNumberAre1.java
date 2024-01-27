@@ -12,6 +12,8 @@ Write a Java program to display a such a pattern for n rows using a number that 
  */
 
 public class PatternLikeAPyramidWhereFirstAndLastNumberAre1 {
+    private PatternLikeAPyramidWhereFirstAndLastNumberAre1 () {}
+
     public static String generatePyramid(int number) {
         String pyramid="";
         for (int i = 1; i <= number; i++) {
