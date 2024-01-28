@@ -1,21 +1,19 @@
+# Happy Coding
 ![Coverage](.github/badges/jacoco.svg)
 
+Happy Coding is a challenge to help you acquire strong problem-solving skills by implementing solutions for 100 of the most popular algorithmic problems.
 
-# Happy Coding
 
-
-  The Happy Coding was created to show my training in Java coding and
-skills achieved during this time. Happy Coding can show to you my Java 
-coding abilities an act as business card for me.
 
 ## Description
+This project contains 100 problems from w3resource.com and other sources and my solutions for them using the Java language.
 
 
-  My goal was to find a solution using Java for 100 problems from w3resource.com.
-For that I used Java features like data types, operator, control flow,
-arrays and two-dimensional array. These problems cover the most common
-problems in coding. Like computation, transform, validation, manipulation 
-  and sorting an array. Also contains algorithm solving practices like 
-recursion, sorting algorithms and searching algorithms. Solution can be
-run with the help of unit testing. All solutions are covered by unit
-testing using scenarios from easy ones to most complex ones.
+For implementing the solutions, I used Java features like data types, operators, control flow and data structures like arrays and two-dimensional arrays.
+
+
+These problems cover the most common problems in software development like computation, data transformation, data validation, data manipulation, searching and sorting.
+The project also contains examples of recursion, binary search and sorting algorithms.
+
+
+Solutions can be run with the help of the available unit tests. All solutions are covered by unit tests using scenarios from easy ones to the most complex ones.
