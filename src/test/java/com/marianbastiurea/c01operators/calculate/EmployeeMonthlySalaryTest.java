@@ -1,9 +1,8 @@
 package com.marianbastiurea.c01operators.calculate;
 
-import com.marianbastiurea.c01operators.calculate.EmployeeMonthlySalary;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class EmployeeMonthlySalaryTest {
 
@@ -14,6 +13,6 @@ class EmployeeMonthlySalaryTest {
 
         double monthlySalary = EmployeeMonthlySalary.getMonthlySalary(hourlySalary, workedHours);
 
-        assertEquals(50D,monthlySalary);
+        assertEquals(50D, monthlySalary);
     }
 }

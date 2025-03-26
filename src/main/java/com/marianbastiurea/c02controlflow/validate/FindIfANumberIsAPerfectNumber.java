@@ -10,7 +10,8 @@ divisors of 6 are 1, 2, and 3. Sum of its divisors is 1 + 2 + 3 = 6
  */
 
 public class FindIfANumberIsAPerfectNumber {
-    private FindIfANumberIsAPerfectNumber () {}
+    private FindIfANumberIsAPerfectNumber() {
+    }
 
     public static boolean findPerfectNumber(int number) {
         int sum = 0;

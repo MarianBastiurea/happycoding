@@ -4,7 +4,8 @@ package com.marianbastiurea.c03arrays.filter;
 Write a program in Java to find the second largest element in an array.
  */
 public class FindTheSecondLargestElementInArray {
-    private FindTheSecondLargestElementInArray () {}
+    private FindTheSecondLargestElementInArray() {
+    }
 
     public static int findSecondLargestElement(int[] myArray) {
         int result, temp;

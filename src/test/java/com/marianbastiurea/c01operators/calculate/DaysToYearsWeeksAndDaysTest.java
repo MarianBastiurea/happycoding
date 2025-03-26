@@ -1,9 +1,8 @@
 package com.marianbastiurea.c01operators.calculate;
 
-import com.marianbastiurea.c01operators.calculate.DaysToYearsWeeksAndDays;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
  /*
  Write a code in Java to transform numbers of days in years, weeks and days.

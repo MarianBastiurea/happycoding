@@ -4,7 +4,8 @@ package com.marianbastiurea.c03arrays.sort;
 Write a program in Java to sort the elements of the array in descending order.
  */
 public class BubbleSortReverse {
-    private BubbleSortReverse () {}
+    private BubbleSortReverse() {
+    }
 
     public static int[] sortInDescendingOrder(int[] myArray) {
         int temp;

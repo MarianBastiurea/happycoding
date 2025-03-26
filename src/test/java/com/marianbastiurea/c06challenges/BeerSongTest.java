@@ -1,9 +1,8 @@
 package com.marianbastiurea.c06challenges;
 
-import com.marianbastiurea.c06challenges.BeerSong;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BeerSongTest {
     @Test

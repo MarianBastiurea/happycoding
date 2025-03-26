@@ -1,7 +1,8 @@
 package com.marianbastiurea.c02controlflow.transform;
 
 public class NumberToAHexadecimalNumber {
-    private NumberToAHexadecimalNumber () {}
+    private NumberToAHexadecimalNumber() {
+    }
 
     public static String decimalToHexadecimal(int number) {
         int temp;

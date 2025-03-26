@@ -9,7 +9,7 @@ class CirclePerimeterAndAreaTest {
     @Test
     public void givenRadiusOneAreaShouldBeNumericValueOfPi() {
         double radius = 1;
-        double area= 3.14d;
+        double area = 3.14d;
         double[] result = CirclePerimeterAndArea.getAreaAndPerimeter(radius);
         assertEquals(result[0], area, 0.01);
     }

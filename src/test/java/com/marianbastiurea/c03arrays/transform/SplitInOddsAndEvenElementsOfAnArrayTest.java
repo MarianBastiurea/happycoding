@@ -1,6 +1,5 @@
 package com.marianbastiurea.c03arrays.transform;
 
-import com.marianbastiurea.c03arrays.transform.SplitInOddsAndEvenElementsOfAnArray;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

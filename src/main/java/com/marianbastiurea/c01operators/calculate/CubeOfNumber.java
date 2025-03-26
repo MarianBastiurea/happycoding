@@ -6,7 +6,8 @@ package com.marianbastiurea.c01operators.calculate;
 */
 
 public class CubeOfNumber {
-    private CubeOfNumber () {}
+    private CubeOfNumber() {
+    }
 
     public static int findCube(int number) {
         int cubeValue;

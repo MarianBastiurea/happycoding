@@ -4,7 +4,8 @@ package com.marianbastiurea.c03arrays.sort;
 Write a Java program to sort a list of elements using the merge sort algorithm.
  */
 public class MergeSort {
-    private MergeSort () {}
+    private MergeSort() {
+    }
 
     public static int[] sortingAlgorithm(int[] myArray) {
         int m = myArray.length / 2;// Find middle of array

@@ -4,7 +4,8 @@ package com.marianbastiurea.c03arrays.filter;
 Write a program in Java to find the two repeating elements in a given array.
  */
 public class FindTwoRepeatingElementsInAnArray {
-    private FindTwoRepeatingElementsInAnArray () {}
+    private FindTwoRepeatingElementsInAnArray() {
+    }
 
     public static int[] findRepeatingElements(int[] myArray) {
         int[] tempArray = new int[myArray.length];

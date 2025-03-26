@@ -1,9 +1,8 @@
 package com.marianbastiurea.c02controlflow.calculate;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import com.marianbastiurea.c02controlflow.calculate.NNaturalNumbersAndTheirSum;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class NNaturalNumbersAndTheirSumTest {
     @Test

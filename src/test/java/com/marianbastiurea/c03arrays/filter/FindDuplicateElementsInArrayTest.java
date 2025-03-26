@@ -1,6 +1,5 @@
 package com.marianbastiurea.c03arrays.filter;
 
-import com.marianbastiurea.c03arrays.filter.FindDuplicateElementsInArray;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

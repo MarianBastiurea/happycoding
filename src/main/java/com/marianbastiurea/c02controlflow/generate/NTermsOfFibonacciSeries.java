@@ -6,7 +6,8 @@ Fibonacci series 0 1 2 3 5 8 13
  */
 
 public class NTermsOfFibonacciSeries {
-    private NTermsOfFibonacciSeries () {}
+    private NTermsOfFibonacciSeries() {
+    }
 
     public static int[] storeElements(int number) {
         int[] result = new int[10];

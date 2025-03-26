@@ -4,7 +4,8 @@ package com.marianbastiurea.c03arrays.insert;
 Write a program in Java to insert values in the array (unsorted list).
  */
 public class InsertElementAtPositionInArray {
-    private InsertElementAtPositionInArray () {}
+    private InsertElementAtPositionInArray() {
+    }
 
     public static int[] insertElementAtPosition(int[] array, int newElement, int position) {
         int LengthOfResultArray = array.length + 1;

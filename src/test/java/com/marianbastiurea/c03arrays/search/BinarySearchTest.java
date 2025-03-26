@@ -1,6 +1,5 @@
 package com.marianbastiurea.c03arrays.search;
 
-import com.marianbastiurea.c03arrays.search.BinarySearch;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

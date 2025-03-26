@@ -1,9 +1,8 @@
 package com.marianbastiurea.c01operators.calculate;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import com.marianbastiurea.c01operators.calculate.TwoIntegersProduct;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TwoIntegersProductTest {
     @Test
@@ -29,6 +28,7 @@ public class TwoIntegersProductTest {
         int result = TwoIntegersProduct.findProduct(firstInteger, secondInteger);
         assertEquals(result, product);
     }
+
     @Test
     public void givenBothNegativeNumberProductShouldBePositiveNumber() {
         int firstInteger = -2, secondInteger = -4;

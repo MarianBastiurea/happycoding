@@ -1,6 +1,5 @@
 package com.marianbastiurea.c03arrays.delete;
 
-import com.marianbastiurea.c03arrays.delete.DeleteElementAtPositionInArray;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

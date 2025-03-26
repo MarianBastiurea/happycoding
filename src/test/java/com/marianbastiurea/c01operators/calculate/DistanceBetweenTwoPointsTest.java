@@ -1,9 +1,8 @@
 package com.marianbastiurea.c01operators.calculate;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import com.marianbastiurea.c01operators.calculate.DistanceBetweenTwoPoints;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DistanceBetweenTwoPointsTest {
     @Test

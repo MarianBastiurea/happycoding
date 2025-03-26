@@ -1,6 +1,5 @@
 package com.marianbastiurea.c02controlflow.calculate;
 
-import com.marianbastiurea.c02controlflow.calculate.SumOfFirst10Integers;
 import org.junit.jupiter.api.Test;
 
 public class SumOfDisplay10IntegersTest {

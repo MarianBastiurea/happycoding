@@ -5,7 +5,8 @@ Write a Java program to find maximum in an array using the selection sort algori
  */
 
 public class FindMaximumInAnArrayUsingSelectionSortAlgorithm {
-    private FindMaximumInAnArrayUsingSelectionSortAlgorithm () {}
+    private FindMaximumInAnArrayUsingSelectionSortAlgorithm() {
+    }
 
     public static int findMaximum(int[] myArray) {
         int max = 0;

@@ -4,7 +4,8 @@ package com.marianbastiurea.c05recursion;
 Write a program in Java to find the Factorial of a number using recursion
  */
 public class FindFactorialOfANumber {
-    private FindFactorialOfANumber () {}
+    private FindFactorialOfANumber() {
+    }
 
     public static int FactorialNumbers(int number) {
         int Factorial = 1;

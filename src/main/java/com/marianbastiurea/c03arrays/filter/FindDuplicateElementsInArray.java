@@ -6,7 +6,8 @@ Write a program in Java to count the total number of duplicate elements in an ar
  */
 
 public class FindDuplicateElementsInArray {
-    private FindDuplicateElementsInArray () {}
+    private FindDuplicateElementsInArray() {
+    }
 
 
     public static int findDuplicate(int[] myArray) {

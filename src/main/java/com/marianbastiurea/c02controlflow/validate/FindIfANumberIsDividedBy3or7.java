@@ -8,7 +8,8 @@ or both. If the integer is a multiple of 3, then the program will return true.
 */
 
 public class FindIfANumberIsDividedBy3or7 {
-    private FindIfANumberIsDividedBy3or7 () {}
+    private FindIfANumberIsDividedBy3or7() {
+    }
 
     public static boolean findNumber(int number) {
         boolean result = false;

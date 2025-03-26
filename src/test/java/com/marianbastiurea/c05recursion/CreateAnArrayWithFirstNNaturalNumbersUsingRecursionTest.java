@@ -1,6 +1,5 @@
 package com.marianbastiurea.c05recursion;
 
-import com.marianbastiurea.c05recursion.CreateAnArrayWithFirstNNaturalNumbersUsingRecursion;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

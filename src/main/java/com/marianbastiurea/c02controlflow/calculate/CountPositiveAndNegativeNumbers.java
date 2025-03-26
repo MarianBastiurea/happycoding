@@ -5,7 +5,8 @@ package com.marianbastiurea.c02controlflow.calculate;
 Write a Java program that reads 5 numbers and counts the number of positive numbers and negative numbers.
 */
 public class CountPositiveAndNegativeNumbers {
-    private CountPositiveAndNegativeNumbers () {}
+    private CountPositiveAndNegativeNumbers() {
+    }
 
     public static int[] count(int[] myArray) {
         int negativeNumbers = 0, positiveNumbers = 0;

@@ -4,7 +4,8 @@ package com.marianbastiurea.c04matrices.calculate;
 Write a program in Java for adding two matrices of the same size.
  */
 public class AddingTwoMatricesOfTheSameSize {
-    private AddingTwoMatricesOfTheSameSize () {}
+    private AddingTwoMatricesOfTheSameSize() {
+    }
 
     public static int[][] addingTwoMatrices(int[][] firstMatrix, int[][] secondMatrix) {
         int[][] sum = new int[firstMatrix.length][firstMatrix.length];

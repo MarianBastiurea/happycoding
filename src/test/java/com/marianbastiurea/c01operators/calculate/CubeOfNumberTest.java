@@ -1,9 +1,8 @@
 package com.marianbastiurea.c01operators.calculate;
 
-import com.marianbastiurea.c01operators.calculate.CubeOfNumber;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CubeOfNumberTest {
     @Test

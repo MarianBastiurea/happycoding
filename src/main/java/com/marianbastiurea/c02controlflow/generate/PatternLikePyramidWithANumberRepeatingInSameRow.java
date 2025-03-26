@@ -1,7 +1,5 @@
 package com.marianbastiurea.c02controlflow.generate;
 
-import java.util.Scanner;
-
 /*
 Write a Java program to make such a pattern like a pyramid with a
 number which will repeat the number in the same row.
@@ -13,7 +11,8 @@ number which will repeat the number in the same row.
 
  */
 public class PatternLikePyramidWithANumberRepeatingInSameRow {
-    private PatternLikePyramidWithANumberRepeatingInSameRow () {}
+    private PatternLikePyramidWithANumberRepeatingInSameRow() {
+    }
 
     public static String generatePyramid(int number) {
         int indentation;

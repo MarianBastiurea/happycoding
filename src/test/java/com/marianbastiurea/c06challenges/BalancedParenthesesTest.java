@@ -1,10 +1,9 @@
 package com.marianbastiurea.c06challenges;
 
-import com.marianbastiurea.c06challenges.BalancedParentheses;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BalancedParenthesesTest {
     @Test

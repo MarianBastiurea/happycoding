@@ -4,7 +4,8 @@ package com.marianbastiurea.c04matrices.calculate;
 Write a program in Java for the subtraction of two matrices.
  */
 public class SubtractMatrices {
-    private SubtractMatrices () {}
+    private SubtractMatrices() {
+    }
 
     public static int[][] subtract(int[][] firstMatrix, int[][] secondMatrix) {
         int rows = firstMatrix[0].length;

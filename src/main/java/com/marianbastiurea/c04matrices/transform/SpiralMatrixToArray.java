@@ -12,7 +12,8 @@ The spiral form of above matrix is:
 1 2 3 4 5 10 15 20 19 18 17 16 11 6 7 8 9 14 13 12
  */
 public class SpiralMatrixToArray {
-    private SpiralMatrixToArray () {}
+    private SpiralMatrixToArray() {
+    }
 
     public static int[] transformAMatrix(int[][] myMatrix) {
         int[] result = new int[myMatrix.length * myMatrix[0].length];

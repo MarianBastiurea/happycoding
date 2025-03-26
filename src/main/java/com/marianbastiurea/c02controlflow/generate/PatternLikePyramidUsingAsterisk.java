@@ -11,7 +11,8 @@ Write a Java program to make such a pattern as a pyramid with an asterisk.
  */
 
 public class PatternLikePyramidUsingAsterisk {
-    private PatternLikePyramidUsingAsterisk () {}
+    private PatternLikePyramidUsingAsterisk() {
+    }
 
     public static String generatePyramid(int number) {
         String result = "";

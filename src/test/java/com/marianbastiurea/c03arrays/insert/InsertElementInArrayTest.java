@@ -1,6 +1,5 @@
 package com.marianbastiurea.c03arrays.insert;
 
-import com.marianbastiurea.c03arrays.insert.InsertElementInArray;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

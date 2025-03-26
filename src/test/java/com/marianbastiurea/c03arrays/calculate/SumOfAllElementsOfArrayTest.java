@@ -1,9 +1,8 @@
 package com.marianbastiurea.c03arrays.calculate;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import com.marianbastiurea.c03arrays.calculate.SumOfAllElementsOfArray;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SumOfAllElementsOfArrayTest {
     @Test

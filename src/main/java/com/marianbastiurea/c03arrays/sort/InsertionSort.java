@@ -4,7 +4,8 @@ package com.marianbastiurea.c03arrays.sort;
 Write a Java program to sort a list of elements using the insertion sort algorithm.
  */
 public class InsertionSort {
-    private InsertionSort () {}
+    private InsertionSort() {
+    }
 
     public static int[] sortUsingInsertion(int[] myArray) {
         for (int i = 1; i < myArray.length; i++) {

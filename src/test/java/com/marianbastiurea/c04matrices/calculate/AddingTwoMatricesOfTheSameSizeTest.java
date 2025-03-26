@@ -1,6 +1,5 @@
 package com.marianbastiurea.c04matrices.calculate;
 
-import com.marianbastiurea.c04matrices.calculate.AddingTwoMatricesOfTheSameSize;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

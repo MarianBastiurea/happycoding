@@ -3,7 +3,8 @@ package com.marianbastiurea.c06challenges;
 // Algorithm to count down from 99 to 0 beer.
 
 public class BeerSong {
-    private BeerSong () {}
+    private BeerSong() {
+    }
 
     public static String generateLyrics(int beerNumber) {
         String lyrics = "";

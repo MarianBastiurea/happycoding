@@ -1,13 +1,13 @@
 package com.marianbastiurea.c02controlflow.calculate;
 
-import java.util.Scanner;
 /*
 Write a program in Java to display n terms of natural numbers and their sum.
 
  */
 
 public class NNaturalNumbersAndTheirSum {
-    private NNaturalNumbersAndTheirSum () {}
+    private NNaturalNumbersAndTheirSum() {
+    }
 
     public static int findSum(int[] myArray) {
         int sum = 0;

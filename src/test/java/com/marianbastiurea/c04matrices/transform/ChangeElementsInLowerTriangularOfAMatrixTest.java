@@ -1,6 +1,5 @@
 package com.marianbastiurea.c04matrices.transform;
 
-import com.marianbastiurea.c04matrices.transform.ChangeElementsInLowerTriangularOfAMatrix;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

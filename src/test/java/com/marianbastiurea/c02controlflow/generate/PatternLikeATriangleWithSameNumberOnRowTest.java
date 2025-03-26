@@ -1,9 +1,8 @@
 package com.marianbastiurea.c02controlflow.generate;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import com.marianbastiurea.c02controlflow.generate.PatternLikeATriangleWithSameNumberOnRow;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PatternLikeATriangleWithSameNumberOnRowTest {
     @Test

@@ -12,7 +12,8 @@ Correct password
 */
 
 public class CheckPasswordIsValid {
-    private CheckPasswordIsValid () {}
+    private CheckPasswordIsValid() {
+    }
 
 
     public static String checkPassword(String password, String str) {

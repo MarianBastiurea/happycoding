@@ -5,7 +5,8 @@ Write a program in Java to display the number in reverse order.
  */
 
 public class ReverseANumber {
-    private ReverseANumber () {}
+    private ReverseANumber() {
+    }
 
     public static int reverse(int number) {
         int reverseNumber = 0;

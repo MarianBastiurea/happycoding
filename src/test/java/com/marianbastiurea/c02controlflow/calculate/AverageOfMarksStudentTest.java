@@ -1,6 +1,5 @@
 package com.marianbastiurea.c02controlflow.calculate;
 
-import com.marianbastiurea.c02controlflow.calculate.AverageOfMarksStudent;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;

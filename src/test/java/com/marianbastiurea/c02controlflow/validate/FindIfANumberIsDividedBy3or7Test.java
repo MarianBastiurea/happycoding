@@ -1,9 +1,9 @@
 package com.marianbastiurea.c02controlflow.validate;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import com.marianbastiurea.c02controlflow.validate.FindIfANumberIsDividedBy3or7;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FindIfANumberIsDividedBy3or7Test {
     @Test

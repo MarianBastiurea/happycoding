@@ -1,6 +1,5 @@
 package com.marianbastiurea.c03arrays.calculate;
 
-import com.marianbastiurea.c03arrays.calculate.FrequencyOfElementsInArray;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

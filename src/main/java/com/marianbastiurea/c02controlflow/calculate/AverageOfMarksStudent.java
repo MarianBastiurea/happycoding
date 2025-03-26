@@ -14,7 +14,8 @@ Average marks in Mathematics: 17.50
 */
 
 public class AverageOfMarksStudent {
-    private AverageOfMarksStudent () {}
+    private AverageOfMarksStudent() {
+    }
 
 
     public static double getAverage(int[] marks) {

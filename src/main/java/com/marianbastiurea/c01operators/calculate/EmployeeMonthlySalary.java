@@ -6,7 +6,8 @@ and the amount he received per hour. Print the ID and salary (with two decimal p
 of the employee for a particular month.
 */
 public class EmployeeMonthlySalary {
-    private EmployeeMonthlySalary () {}
+    private EmployeeMonthlySalary() {
+    }
 
 
     public static double getMonthlySalary(double hourlySalary, double workedHours) {

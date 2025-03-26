@@ -14,7 +14,8 @@ The pattern like :
  */
 
 public class PatternLikeATriangleUsingNumbers {
-    private PatternLikeATriangleUsingNumbers () {}
+    private PatternLikeATriangleUsingNumbers() {
+    }
 
     public static String generateTriangle(int number) {
         String result = "";

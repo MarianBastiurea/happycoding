@@ -4,7 +4,8 @@ package com.marianbastiurea.c03arrays.sort;
 Write a Java program to sort a list of elements using the quick sort algorithm. >
  */
 public class QuickSort {
-    private QuickSort () {}
+    private QuickSort() {
+    }
 
     public static int[] quickSort(int[] myArray) {
         int N = myArray.length;

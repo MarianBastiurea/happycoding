@@ -4,7 +4,8 @@ package com.marianbastiurea.c02controlflow.transform;
 Write a program in Java to convert a decimal number to a binary number using the function.
  */
 public class DecimalNumberToBinaryNumber {
-    private DecimalNumberToBinaryNumber () {}
+    private DecimalNumberToBinaryNumber() {
+    }
 
     public static int convertDecimalToBinary(int number) {
         int[] temporaryArray = new int[40];

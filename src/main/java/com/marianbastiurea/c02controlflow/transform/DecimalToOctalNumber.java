@@ -4,7 +4,8 @@ package com.marianbastiurea.c02controlflow.transform;
  Write a program in java to transform a decimal number in octal number.
  */
 public class DecimalToOctalNumber {
-    private DecimalToOctalNumber () {}
+    private DecimalToOctalNumber() {
+    }
 
     public static String decimalToOctal(int Number) {
         int temp;

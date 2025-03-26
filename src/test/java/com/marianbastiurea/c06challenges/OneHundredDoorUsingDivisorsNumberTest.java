@@ -1,6 +1,5 @@
 package com.marianbastiurea.c06challenges;
 
-import com.marianbastiurea.c06challenges.OneHundredDoorUsingDivisorsNumber;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

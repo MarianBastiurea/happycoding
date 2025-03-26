@@ -4,11 +4,14 @@ package com.marianbastiurea.c03arrays.insert;
 
 
 public class StoreElementsInArray {
-    private StoreElementsInArray () {}
+    private StoreElementsInArray() {
+    }
 
     public static int[] storeElements(int number) {
         int[] myArray = new int[10];
-        for (int i = 0; i <myArray.length; i++) {
-            myArray[i] = number+i;}
+        for (int i = 0; i < myArray.length; i++) {
+            myArray[i] = number + i;
+        }
         return myArray;
-    }}
+    }
+}

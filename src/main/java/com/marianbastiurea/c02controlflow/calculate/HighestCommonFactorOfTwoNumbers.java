@@ -10,7 +10,8 @@ HCF of 24 and 28 is : 4
  */
 
 public class HighestCommonFactorOfTwoNumbers {
-    private HighestCommonFactorOfTwoNumbers () {}
+    private HighestCommonFactorOfTwoNumbers() {
+    }
 
     public static int findHCF(int firstInteger, int secondInteger) {
         while (secondInteger != 0) {

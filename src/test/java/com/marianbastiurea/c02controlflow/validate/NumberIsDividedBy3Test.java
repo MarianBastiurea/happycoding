@@ -1,9 +1,9 @@
 package com.marianbastiurea.c02controlflow.validate;
 
-import com.marianbastiurea.c02controlflow.validate.NumberIsDividedBy3;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class NumberIsDividedBy3Test {
     @Test
@@ -15,7 +15,6 @@ public class NumberIsDividedBy3Test {
 
     @Test
 
-    
 
     public void tenIsNotDividedBy3() {
         int number = 10;

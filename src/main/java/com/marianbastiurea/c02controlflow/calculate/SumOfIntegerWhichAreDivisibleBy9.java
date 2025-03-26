@@ -6,7 +6,8 @@ Write a program in Java to find the number and sum of all integers between
  */
 
 public class SumOfIntegerWhichAreDivisibleBy9 {
-    private SumOfIntegerWhichAreDivisibleBy9 () {}
+    private SumOfIntegerWhichAreDivisibleBy9() {
+    }
 
     public static int findSum(int[] myArray) {
         int sum = 0;

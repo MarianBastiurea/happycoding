@@ -2,7 +2,8 @@ package com.marianbastiurea.c02controlflow.generate;
 
 
 public class MultiplicationTableOfAGivenInteger {
-    private MultiplicationTableOfAGivenInteger () {}
+    private MultiplicationTableOfAGivenInteger() {
+    }
 
     public static String displayMultiplicationTable(int number) {
         String result = "";

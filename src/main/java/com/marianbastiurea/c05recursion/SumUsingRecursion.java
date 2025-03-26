@@ -4,7 +4,8 @@ package com.marianbastiurea.c05recursion;
 Write a program in Java to calculate the sum of numbers from 1 to n using recursion.
  */
 public class SumUsingRecursion {
-    private SumUsingRecursion () {}
+    private SumUsingRecursion() {
+    }
 
 
     public static int sumFirstNNaturalNumbers(int start, int NumbersToAdd) {

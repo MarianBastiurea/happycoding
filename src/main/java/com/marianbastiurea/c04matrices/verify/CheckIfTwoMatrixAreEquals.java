@@ -4,7 +4,8 @@ package com.marianbastiurea.c04matrices.verify;
 Write a program in Java to accept two matrices and check whether they are equal.
  */
 public class CheckIfTwoMatrixAreEquals {
-    private CheckIfTwoMatrixAreEquals () {}
+    private CheckIfTwoMatrixAreEquals() {
+    }
 
     public static boolean checkTwoMatrix(int[][] matrix1, int[][] matrix2) {
         // Check if matrices have the same dimensions

@@ -1,6 +1,5 @@
 package com.marianbastiurea.c02controlflow.validate;
 
-import com.marianbastiurea.c02controlflow.validate.TwoStringAreAnagram;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

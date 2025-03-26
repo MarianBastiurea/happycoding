@@ -7,7 +7,8 @@ package com.marianbastiurea.c02controlflow.calculate;
  */
 
 public class NumberFactorial {
-    private NumberFactorial () {}
+    private NumberFactorial() {
+    }
 
     public static int findFactorial(int number) {
         int factorial = 1;

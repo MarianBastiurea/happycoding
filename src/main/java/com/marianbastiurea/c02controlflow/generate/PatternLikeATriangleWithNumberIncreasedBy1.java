@@ -14,7 +14,8 @@ The pattern like :
  */
 
 public class PatternLikeATriangleWithNumberIncreasedBy1 {
-    private PatternLikeATriangleWithNumberIncreasedBy1 () {}
+    private PatternLikeATriangleWithNumberIncreasedBy1() {
+    }
 
     public static String generateTriangle(int number) {
         int count = 0;

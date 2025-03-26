@@ -1,6 +1,5 @@
 package com.marianbastiurea.c03arrays.sort;
 
-import com.marianbastiurea.c03arrays.sort.InsertionSort;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

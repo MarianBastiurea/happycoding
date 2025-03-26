@@ -5,7 +5,8 @@ Write a program in Java to read 10 numbers from the keyboard and find their sum 
  */
 
 public class SumAndAverageOf10Numbers {
-    private SumAndAverageOf10Numbers () {}
+    private SumAndAverageOf10Numbers() {
+    }
 
     public static double[] findSum(double[] myArray) {
         double sum = 0;

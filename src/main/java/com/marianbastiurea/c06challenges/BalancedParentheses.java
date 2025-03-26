@@ -18,7 +18,8 @@ For example:
  */
 
 public class BalancedParentheses {
-    private BalancedParentheses () {}
+    private BalancedParentheses() {
+    }
 
 
     public static boolean areParenthesesBalanced(String expression) {

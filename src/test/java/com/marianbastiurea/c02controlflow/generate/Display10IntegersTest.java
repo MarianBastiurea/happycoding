@@ -1,9 +1,8 @@
 package com.marianbastiurea.c02controlflow.generate;
 
-import com.marianbastiurea.c02controlflow.generate.Display10Integers;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class Display10IntegersTest {
     @Test

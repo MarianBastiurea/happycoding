@@ -21,7 +21,8 @@ Example output (for the above input)
 0111 */
 
 public class MineField {
-    private MineField () {}
+    private MineField() {
+    }
 
     public static char[][] hintField(char[][] mineField) {
 

@@ -1,9 +1,8 @@
 package com.marianbastiurea.c02controlflow.calculate;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import com.marianbastiurea.c02controlflow.calculate.SumAndAverageOf10Numbers;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class SumAndAverageOf10NumbersTest {
     @Test

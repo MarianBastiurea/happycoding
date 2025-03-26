@@ -1,6 +1,5 @@
 package com.marianbastiurea.c02controlflow.transform;
 
-import com.marianbastiurea.c02controlflow.transform.DecimalNumberToBinaryNumber;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

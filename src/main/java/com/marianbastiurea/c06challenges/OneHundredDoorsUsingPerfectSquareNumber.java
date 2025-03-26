@@ -19,7 +19,8 @@ that means doors with number 1, 4, 9,16... will be open.
 this Class will use second pattern.
  */
 public class OneHundredDoorsUsingPerfectSquareNumber {
-    private OneHundredDoorsUsingPerfectSquareNumber () {}
+    private OneHundredDoorsUsingPerfectSquareNumber() {
+    }
 
 
     public static String[][] doorStatus() {
