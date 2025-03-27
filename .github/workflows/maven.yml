@@ -44,4 +44,4 @@ jobs:
         message: 'commit badge'
         add: '*.svg'
 
-    
+

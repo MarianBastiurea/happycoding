@@ -1,9 +1,22 @@
 package com.marianbastiurea.c07list;
 
+
 public class MyLinkedList<E> {
-    public MyNode<E> head;
-    public MyNode<E> tail;
-    public int size;
+    private static class MyNode<E> {
+        private E data;
+        private MyNode<E> next;
+        private MyNode<E> previous;
+
+        private MyNode(E data) {
+            this.data = data;
+            this.next = null;
+            this.previous = null;
+        }
+    }
+
+    private MyNode<E> head;
+    private MyNode<E> tail;
+    private int size;
 
     public MyLinkedList() {
         head = null;
@@ -22,7 +35,6 @@ public class MyLinkedList<E> {
         }
         size++;
     }
-
 
     public void addFirst(E data) {
         MyNode<E> newNode = new MyNode<>(data);
@@ -77,7 +89,6 @@ public class MyLinkedList<E> {
         return false;
     }
 
-
     public void remove(E data) {
         MyNode<E> current = head;
         while (current != null) {
@@ -116,5 +127,4 @@ public class MyLinkedList<E> {
             head = temp.previous;
         }
     }
-
 }

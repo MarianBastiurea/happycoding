@@ -1,9 +1,9 @@
 package com.marianbastiurea.c07list;
 
-public class MyNode<E> {
-    public E data;
-    public MyNode<E> next;
-    public MyNode<E> previous;
+class MyNode<E> {
+    private E data;
+    private MyNode<E> next;
+    private MyNode<E> previous;
 
     public MyNode(E data) {
         this.data = data;
