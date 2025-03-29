@@ -1,16 +1,28 @@
 package com.marianbastiurea.c07list;
 
-
 public class MyLinkedList<E> {
+
     private static class MyNode<E> {
         private E data;
         private MyNode<E> next;
         private MyNode<E> previous;
 
-        private MyNode(E data) {
+        public MyNode(E data) {
             this.data = data;
             this.next = null;
             this.previous = null;
+        }
+
+        public E getData() {
+            return data;
+        }
+
+        public MyNode<E> getNext() {
+            return next;
+        }
+
+        public MyNode<E> getPrevious() {
+            return previous;
         }
     }
 
@@ -22,6 +34,14 @@ public class MyLinkedList<E> {
         head = null;
         tail = null;
         size = 0;
+    }
+
+    public E getHead() {
+        return head.getData();
+    }
+
+    public E getTail() {
+        return tail.getData();
     }
 
     public void addLast(E data) {
@@ -49,17 +69,21 @@ public class MyLinkedList<E> {
     }
 
     public void insertAt(int index, E data) {
-        if (index <= 0) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException("Invalid index");
+        }
+        if (index == 0) {
             addFirst(data);
             return;
         }
-        if (index >= size) {
+        if (index == size) {
             addLast(data);
             return;
         }
 
         MyNode<E> newNode = new MyNode<>(data);
         MyNode<E> current = head;
+
         for (int i = 0; i < index; i++) {
             current = current.next;
         }
@@ -70,10 +94,6 @@ public class MyLinkedList<E> {
             current.previous.next = newNode;
         }
         current.previous = newNode;
-
-        if (index == 0) {
-            head = newNode;
-        }
 
         size++;
     }
@@ -126,5 +146,9 @@ public class MyLinkedList<E> {
         if (temp != null) {
             head = temp.previous;
         }
+    }
+
+    public int getSize() {
+        return size;
     }
 }
