@@ -4,13 +4,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class FibonacciSeriesUsingRecursionTest {
+ class FibonacciSeriesUsingRecursionTest {
 
     @Test
-    public void given10AsNumberOfElementsShouldReturnAnArrayWithFirst10TermsOfFibonacciSeries() {
-        int NumberOfElements = 10;
+   void given10AsNumberOfElementsShouldReturnAnArrayWithFirst10TermsOfFibonacciSeries() {
+        int numberOfElements = 10;
         int[] resultArray = {0, 1, 1, 2, 3, 5, 8, 13, 21, 34};
-        int[] result = FibonacciSeriesUsingRecursion.firstNElements(NumberOfElements);
+        int[] result = FibonacciSeriesUsingRecursion.firstNElements(numberOfElements);
         assertArrayEquals(resultArray, result);
     }
 }

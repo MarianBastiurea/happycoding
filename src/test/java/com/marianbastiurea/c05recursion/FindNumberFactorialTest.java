@@ -9,7 +9,7 @@ public class FindNumberFactorialTest {
     public void given5AsNumberShouldReturn120() {
         int number = 5;
         int numberFactorial = 120;
-        int result = FindFactorialOfANumber.FactorialNumbers(number);
+        int result = FindFactorialOfANumber.factorialNumbers(number);
         assertEquals(numberFactorial, result);
     }
 }

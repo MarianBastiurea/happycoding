@@ -7,12 +7,12 @@ public class FindFactorialOfANumber {
     private FindFactorialOfANumber() {
     }
 
-    public static int FactorialNumbers(int number) {
-        int Factorial = 1;
-        int NumberToFactorial = 1;
-        if (NumberToFactorial <= number) {
-            Factorial = number * FactorialNumbers(number - 1);
+    public static int factorialNumbers(int number) {
+        int factorial = 1;
+        int numberToFactorial = 1;
+        if (numberToFactorial <= number) {
+            factorial = number * factorialNumbers(number - 1);
         }
-        return Factorial;
+        return factorial;
     }
 }

@@ -8,8 +8,8 @@ public class FibonacciSeriesUsingRecursion {
     }
 
 
-    public static int[] firstNElements(int NumberOfElements) {
-        int[] myArray = new int[NumberOfElements];
+    public static int[] firstNElements(int numberOfElements) {
+        int[] myArray = new int[numberOfElements];
         myArray[0] = 0;
         myArray[1] = 1;
         addFirstNElements(myArray, 2);
