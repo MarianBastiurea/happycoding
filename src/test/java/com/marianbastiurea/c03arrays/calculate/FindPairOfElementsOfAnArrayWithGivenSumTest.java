@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class FindPairOfElementsOfAnArrayWithGivenSumTest {
+ class FindPairOfElementsOfAnArrayWithGivenSumTest {
     @Test
-    public void given15asSumShouldBe3Pairs() {
+     void given15asSumShouldBe3Pairs() {
         int[] myArray = {6, 8, 4, -5, 7, 9, 11};
         int sum = 15;
         int[][] pair = {{6, 9}, {8, 7}, {4, 11}};
@@ -15,7 +15,7 @@ public class FindPairOfElementsOfAnArrayWithGivenSumTest {
     }
 
     @Test
-    public void given7AsSumShouldBeNoPairs() {
+     void given7AsSumShouldBeNoPairs() {
         int[] myArray = {15, 5, 20, 0, 25, -5};
         int sum = 7;
         int[][] pair = new int[0][0];

@@ -8,7 +8,8 @@ public class FindTheSecondLargestElementInArray {
     }
 
     public static int findSecondLargestElement(int[] myArray) {
-        int result, temp;
+        int result;
+        int temp;
         for (int i = 0; i < myArray.length - 1; i++) {
             for (int j = i + 1; j < myArray.length; j++) {
                 if (myArray[i] > myArray[j]) {

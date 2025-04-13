@@ -4,18 +4,18 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class CopyElementsOfOneArrayIntoAnotherArrayTest {
+ class CopyElementsOfOneArrayIntoAnotherArrayTest {
     @Test
-    public void copyAnEmptyArray() {
+     void copyAnEmptyArray() {
         int[] myArray = {};
         int[] result = CopyElementsOfOneArrayIntoAnotherArray.copyElements(myArray);
-        assertArrayEquals(result, myArray);
+        assertArrayEquals(myArray, result);
     }
 
     @Test
-    public void copyOneElementArray() {
+    void copyOneElementArray() {
         int[] myArray = {1};
         int[] result = CopyElementsOfOneArrayIntoAnotherArray.copyElements(myArray);
-        assertArrayEquals(result, myArray);
+        assertArrayEquals(myArray, result);
     }
 }

@@ -9,7 +9,6 @@ public class TwoIntegersProduct {
     }
 
     public static int findProduct(int firstInteger, int secondInteger) {
-        int product = firstInteger * secondInteger;
-        return product;
+        return firstInteger * secondInteger;
     }
 }

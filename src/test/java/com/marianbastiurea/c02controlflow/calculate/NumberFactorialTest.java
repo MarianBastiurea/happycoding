@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class NumberFactorialTest {
+ class NumberFactorialTest {
     @Test
-    public void five() {
+     void five() {
         int number = 5;
         int factorial = 120;
         int result = NumberFactorial.findFactorial(number);
@@ -14,7 +14,7 @@ public class NumberFactorialTest {
     }
 
     @Test
-    public void one() {
+    void one() {
         int number = 1;
         int factorial = 1;
         int result = NumberFactorial.findFactorial(number);
@@ -22,7 +22,7 @@ public class NumberFactorialTest {
     }
 
     @Test
-    public void zero() {
+     void zero() {
         int number = 0;
         int factorial = 1;// as a math convention, factorial of 0 is 1
         int result = NumberFactorial.findFactorial(number);
@@ -30,7 +30,7 @@ public class NumberFactorialTest {
     }
 
     @Test
-    public void negativeNumber() {
+    void negativeNumber() {
         int number = -10;
         int factorial = 0;// as a math convention, doesn't exist factorial for negative number,
         // just for positive number. I choose ) just for test purpose

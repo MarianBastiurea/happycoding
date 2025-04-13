@@ -4,13 +4,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class AddingTwoMatricesOfTheSameSizeTest {
+class AddingTwoMatricesOfTheSameSizeTest {
     @Test
-    public void givenTwoMatricesShouldReturnAMatrixWithElementsBeingSumOfElementsFromFirst2Matrices() {
+     void givenTwoMatricesShouldReturnAMatrixWithElementsBeingSumOfElementsFromFirst2Matrices() {
         int[][] firstMatrix = {{1, 2}, {3, 4}};
         int[][] secondMatrix = {{5, 6}, {7, 8}};
         int[][] resultMatrices = {{6, 8}, {10, 12}};
         int[][] result = AddingTwoMatricesOfTheSameSize.addingTwoMatrices(firstMatrix, secondMatrix);
-        assertArrayEquals(result, resultMatrices);
+        assertArrayEquals(resultMatrices, result);
     }
 }

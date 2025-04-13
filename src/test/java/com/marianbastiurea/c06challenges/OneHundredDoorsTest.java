@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class OneHundredDoorsTest {
+ class OneHundredDoorsTest {
     @Test
-    public void oneHundredDoors() {
+    void oneHundredDoors() {
         String[][] resultString = {{"1", "Open"}, {"2", "Closed"}, {"3", "Closed"}, {"4", "Open"}, {"5", "Closed"},
                 {"6", "Closed"}, {"7", "Closed"}, {"8", "Closed"}, {"9", "Open"}, {"10", "Closed"}, {"11", "Closed"},
                 {"12", "Closed"}, {"13", "Closed"}, {"14", "Closed"}, {"15", "Closed"}, {"16", "Open"}, {"17", "Closed"},

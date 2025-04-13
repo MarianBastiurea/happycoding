@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TwoIntegersProductTest {
+ class TwoIntegersProductTest {
     @Test
-    public void givenPositiveNumberProductShouldBeAPositiveNumber() {
+    void givenPositiveNumberProductShouldBeAPositiveNumber() {
         int firstInteger = 7, secondInteger = 7;
         int product = 49;
         int result = TwoIntegersProduct.findProduct(firstInteger, secondInteger);
@@ -14,7 +14,7 @@ public class TwoIntegersProductTest {
     }
 
     @Test
-    public void givenOnePositiveNumberAndOtherNegativeNumberProductShouldBeNegativeNumber() {
+    void givenOnePositiveNumberAndOtherNegativeNumberProductShouldBeNegativeNumber() {
         int firstInteger = 2, secondInteger = -4;
         int product = -8;
         int result = TwoIntegersProduct.findProduct(firstInteger, secondInteger);
@@ -22,7 +22,7 @@ public class TwoIntegersProductTest {
     }
 
     @Test
-    public void givenOneNumber0ProductShouldBe0() {
+    void givenOneNumber0ProductShouldBe0() {
         int firstInteger = 2, secondInteger = 0;
         int product = 0;
         int result = TwoIntegersProduct.findProduct(firstInteger, secondInteger);
@@ -30,7 +30,7 @@ public class TwoIntegersProductTest {
     }
 
     @Test
-    public void givenBothNegativeNumberProductShouldBePositiveNumber() {
+    void givenBothNegativeNumberProductShouldBePositiveNumber() {
         int firstInteger = -2, secondInteger = -4;
         int product = 8;
         int result = TwoIntegersProduct.findProduct(firstInteger, secondInteger);

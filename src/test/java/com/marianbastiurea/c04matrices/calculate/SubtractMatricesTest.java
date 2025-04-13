@@ -4,32 +4,32 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class SubtractMatricesTest {
+ class SubtractMatricesTest {
     @Test
-    public void givenTwoMatricesShouldReturnAMatrixWithItsElementsResultAsSubtractOfElementsFromGivenMatrices() {
-        int[][] FirstMatrices = {{5, 6}, {7, 8}};
-        int[][] SecondMatrices = {{1, 2}, {3, 4}};
-        int[][] ResultMatrices = {{4, 4}, {4, 4}};
-        int[][] result = SubtractMatrices.subtract(FirstMatrices, SecondMatrices);
-        assertArrayEquals(ResultMatrices, result);
+     void givenTwoMatricesShouldReturnAMatrixWithItsElementsResultAsSubtractOfElementsFromGivenMatrices() {
+        int[][] firstMatrices = {{5, 6}, {7, 8}};
+        int[][] secondMatrices = {{1, 2}, {3, 4}};
+        int[][] resultMatrices = {{4, 4}, {4, 4}};
+        int[][] result = SubtractMatrices.subtract(firstMatrices, secondMatrices);
+        assertArrayEquals(resultMatrices, result);
     }
 
     @Test
-    public void givenTwoEmptyMatricesShouldResultAnEmptyMatrix() {
-        int[][] FirstMatrices = {{}, {}};
-        int[][] SecondMatrices = {{}, {}};
-        int[][] ResultMatrices = {{}, {}};
-        int[][] result = SubtractMatrices.subtract(FirstMatrices, SecondMatrices);
-        assertArrayEquals(ResultMatrices, result);
+    void givenTwoEmptyMatricesShouldResultAnEmptyMatrix() {
+        int[][] firstMatrices = {{}, {}};
+        int[][] secondMatrices = {{}, {}};
+        int[][] resultMatrices = {{}, {}};
+        int[][] result = SubtractMatrices.subtract(firstMatrices, secondMatrices);
+        assertArrayEquals(resultMatrices, result);
     }
 
     @Test
-    public void givenTwoSingleElementMatricesShouldResultOneElementMatrixWhichElementIsAResultOfSubtractionOfElementsFromGivenMatrix() {
-        int[][] FirstMatrices = {{5}};
-        int[][] SecondMatrices = {{2}};
-        int[][] ResultMatrices = {{3}};
-        int[][] result = SubtractMatrices.subtract(FirstMatrices, SecondMatrices);
-        assertArrayEquals(ResultMatrices, result);
+     void givenTwoSingleElementMatricesShouldResultOneElementMatrixWhichElementIsAResultOfSubtractionOfElementsFromGivenMatrix() {
+        int[][] firstMatrices = {{5}};
+        int[][] secondMatrices = {{2}};
+        int[][] resultMatrices = {{3}};
+        int[][] result = SubtractMatrices.subtract(firstMatrices, secondMatrices);
+        assertArrayEquals(resultMatrices, result);
     }
 }
 

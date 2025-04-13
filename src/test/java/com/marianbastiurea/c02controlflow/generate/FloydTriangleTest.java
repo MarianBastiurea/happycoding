@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FloydTriangleTest {
+ class FloydTriangleTest {
     @Test
-    public void generateTriangle() {
+     void generateTriangle() {
         int number = 6;
         String triangle = FloydTriangle.generateTriangle(number);
         assertEquals("""

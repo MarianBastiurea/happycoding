@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PatternLikeATriangleWithNumberIncreasedBy1Test {
+ class PatternLikeATriangleWithNumberIncreasedBy1Test {
     @Test
-    public void given5RowsGenerateAPatternLikeTriangleWithNumberIncreasedBy1() {
+     void given5RowsGenerateAPatternLikeTriangleWithNumberIncreasedBy1() {
         int number = 5;
         String result = PatternLikeATriangleWithNumberIncreasedBy1.generateTriangle(number);
         assertEquals("""

@@ -5,23 +5,23 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class NumberIsPrimeTest {
+ class NumberIsPrimeTest {
     @Test
-    public void tenIsNotAPrimeNumber() {
+     void tenIsNotAPrimeNumber() {
         int number = 10;
         boolean result = NumberIsPrime.checkNumber(number);
         assertFalse(result);
     }
 
     @Test
-    public void threeIsPrimeNumber() {
+     void threeIsPrimeNumber() {
         int number = 3;
         boolean result = NumberIsPrime.checkNumber(number);
         assertTrue(result);
     }
 
     @Test
-    public void oneHundredElevenIsNotPrimeNumber() {
+     void oneHundredElevenIsNotPrimeNumber() {
         int number = 111;
         boolean result = NumberIsPrime.checkNumber(number);
         assertFalse(result);

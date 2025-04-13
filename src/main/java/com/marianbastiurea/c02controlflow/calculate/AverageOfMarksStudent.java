@@ -22,8 +22,8 @@ public class AverageOfMarksStudent {
         double sum = 0;
         double average = 0;
         if (marks.length > 0) {
-            for (int i = 0; i < marks.length; i++) {
-                sum = sum + marks[i];
+            for (int mark : marks) {
+                sum = sum + mark;
             }
             average = sum / marks.length;
         }

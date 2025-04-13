@@ -2,7 +2,8 @@ package com.marianbastiurea.c02controlflow.calculate;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 class AverageOfMarksStudentTest {
 
@@ -12,7 +13,7 @@ class AverageOfMarksStudentTest {
 
         double average = AverageOfMarksStudent.getAverage(marks);
 
-        assertTrue(average == 0D);
+        assertEquals(0D, average);
     }
 
     @Test
@@ -21,7 +22,7 @@ class AverageOfMarksStudentTest {
 
         double average = AverageOfMarksStudent.getAverage(marks);
 
-        assertTrue(average == 5D);
+        assertEquals(5D, average);
     }
 
     @Test
@@ -30,6 +31,6 @@ class AverageOfMarksStudentTest {
 
         double average = AverageOfMarksStudent.getAverage(marks);
 
-        assertTrue(average == 6D);
+        assertEquals(6D, average);
     }
 }

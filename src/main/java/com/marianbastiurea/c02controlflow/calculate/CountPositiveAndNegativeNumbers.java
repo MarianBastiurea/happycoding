@@ -9,7 +9,8 @@ public class CountPositiveAndNegativeNumbers {
     }
 
     public static int[] count(int[] myArray) {
-        int negativeNumbers = 0, positiveNumbers = 0;
+        int negativeNumbers = 0;
+        int positiveNumbers = 0;
         int[] result = new int[2];
         for (int i : myArray) {
             if (i < 0) {

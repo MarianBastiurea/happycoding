@@ -1,6 +1,8 @@
 package com.marianbastiurea.c06challenges;
 
 public class PassByValue {
+    private PassByValue() {
+    }
 
     static class Person {
         String name;

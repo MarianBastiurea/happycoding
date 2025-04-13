@@ -11,6 +11,6 @@ class CreateAnArrayWithFirstNNaturalNumbersUsingRecursionTest {
         int numberOfElements = 5;
         int[] resultArray = {0, 1, 2, 3, 4};
         int[] result = CreateAnArrayWithFirstNNaturalNumbersUsingRecursion.createAnArray(start, numberOfElements);
-        assertArrayEquals(result, resultArray);
+        assertArrayEquals(resultArray, result);
     }
 }

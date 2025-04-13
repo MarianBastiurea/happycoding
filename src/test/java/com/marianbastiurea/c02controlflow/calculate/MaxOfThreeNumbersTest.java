@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MaxOfThreeNumbersTest {
+ class MaxOfThreeNumbersTest {
     @Test
-    public void zero() {
+     void zero() {
         int firstNumber = -1, secondNumber = 0, thirdNumber = -100;
         int max = 0;
         int result = MaxOfThreeNumbers.findMax(firstNumber, secondNumber, thirdNumber);
@@ -15,7 +15,7 @@ public class MaxOfThreeNumbersTest {
     }
 
     @Test
-    public void one() {
+     void one() {
         int firstNumber = -1, secondNumber = 0, thirdNumber = 1;
         int max = 1;
         int result = MaxOfThreeNumbers.findMax(firstNumber, secondNumber, thirdNumber);
@@ -24,7 +24,7 @@ public class MaxOfThreeNumbersTest {
     }
 
     @Test
-    public void firstNumberIsMaxNumber() {
+     void firstNumberIsMaxNumber() {
         int firstNumber = 100, secondNumber = 0, thirdNumber = 1;
         int max = 100;
         int result = MaxOfThreeNumbers.findMax(firstNumber, secondNumber, thirdNumber);

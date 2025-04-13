@@ -11,8 +11,8 @@ public class FrequencyOfElementsInArray {
         int[] frequencyArray = new int[3];
         for (int i = 0; i < myArray.length; i++) {
             int index = 0;
-            for (int j = 0; j < myArray.length; j++) {
-                if (myArray[i] == myArray[j]) {
+            for (int k : myArray) {
+                if (myArray[i] == k) {
                     index = index + 1;
                 }
                 frequencyArray[i] = index;

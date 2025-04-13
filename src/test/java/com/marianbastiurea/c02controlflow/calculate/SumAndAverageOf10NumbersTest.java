@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class SumAndAverageOf10NumbersTest {
+class SumAndAverageOf10NumbersTest {
     @Test
-    public void fortyFive() {
+     void fortyFive() {
         double[] myArray = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         double[] sumAndAverage = {45, 4.5};
         double[] result = SumAndAverageOf10Numbers.findSum(myArray);
@@ -14,7 +14,7 @@ public class SumAndAverageOf10NumbersTest {
     }
 
     @Test
-    public void zero() {
+    void zero() {
         double[] myArray = {0};
         double[] sumAndAverage = {0, 0};
         double[] result = SumAndAverageOf10Numbers.findSum(myArray);
@@ -22,7 +22,7 @@ public class SumAndAverageOf10NumbersTest {
     }
 
     @Test
-    public void negativeNumber() {
+     void negativeNumber() {
         double[] myArray = {0, -1, -2, -3, -4, -5, -6, -7, -8, -9};
         double[] sumAndAverage = {-45, -4.5};
         double[] result = SumAndAverageOf10Numbers.findSum(myArray);
@@ -30,7 +30,7 @@ public class SumAndAverageOf10NumbersTest {
     }
 
     @Test
-    public void sameZero() {
+     void sameZero() {
         double[] myArray = {0, -1, 2, 3, -4, -6, 7, 8, -9};
         double[] sumAndAverage = {0, 0};
         double[] result = SumAndAverageOf10Numbers.findSum(myArray);

@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BeerSongTest {
+class BeerSongTest {
     @Test
-    public void storeLyricsOfBeerSong() {
+     void storeLyricsOfBeerSong() {
         int beerNumber = 99;
         String result = BeerSong.generateLyrics(beerNumber);
         assertEquals("""

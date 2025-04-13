@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SumOfNEvenTermsTest {
+ class SumOfNEvenTermsTest {
     @Test
-    public void firstTen() {
+     void firstTen() {
         int number = 10;
         int sum = 110;
         int result = SumOfNEvenTerms.findSum(number);
@@ -14,7 +14,7 @@ public class SumOfNEvenTermsTest {
     }
 
     @Test
-    public void firstTwenty() {
+     void firstTwenty() {
         int number = 20;
         int sum = 420;
         int result = SumOfNEvenTerms.findSum(number);
@@ -22,7 +22,7 @@ public class SumOfNEvenTermsTest {
     }
 
     @Test
-    public void firstOneHundred() {
+     void firstOneHundred() {
         int number = 100;
         int sum = 10100;
         int result = SumOfNEvenTerms.findSum(number);

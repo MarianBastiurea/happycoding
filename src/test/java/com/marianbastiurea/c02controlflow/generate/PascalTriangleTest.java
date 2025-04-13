@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PascalTriangleTest {
+ class PascalTriangleTest {
     @Test
-    public void first4rows() {
+     void first4rows() {
         int number = 5;
         String triangle = PascalTriangle.builtTriangle(number);
         assertEquals("""

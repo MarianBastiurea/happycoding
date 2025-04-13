@@ -11,11 +11,11 @@ public class MaximumAndMinimumInArray {
         int[] resultArray = new int[2];
         int max = myArray[0];
         int min = myArray[0];
-        for (int i = 0; i < myArray.length; i++) {
-            max = Math.max(max, myArray[i]);
+        for (int k : myArray) {
+            max = Math.max(max, k);
         }
-        for (int j = 0; j < myArray.length; j++) {
-            min = Math.min(min, myArray[j]);
+        for (int i : myArray) {
+            min = Math.min(min, i);
         }
         resultArray[0] = max;
         resultArray[1] = min;

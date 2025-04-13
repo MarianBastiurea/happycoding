@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ReverseANumberTest {
+ class ReverseANumberTest {
     @Test
-    public void reverseNumberIsSameNumberWrittenFromEndToStart() {
+     void reverseNumberIsSameNumberWrittenFromEndToStart() {
         int number = 123;
         int reverseNumber = 321;
         int result = ReverseANumber.reverse(number);

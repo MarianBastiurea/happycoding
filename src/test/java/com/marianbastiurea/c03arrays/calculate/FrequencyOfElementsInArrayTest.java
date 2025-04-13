@@ -4,18 +4,18 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class FrequencyOfElementsInArrayTest {
+ class FrequencyOfElementsInArrayTest {
     @Test
-    public void given3DifferentNumberFrequencyShouldBe1() {
+     void given3DifferentNumberFrequencyShouldBe1() {
         int[] myArray = {2, 12, 43};
         int[] result = FrequencyOfElementsInArray.frequencyElement(myArray);
-        assertArrayEquals(result, new int[]{1, 1, 1});
+        assertArrayEquals(new int[]{1, 1, 1}, result);
     }
 
     @Test
-    public void given2SameNumberFrom3NumberFrequencyShouldBe2ForSameElementsAnd1ForThirdElement() {
+     void given2SameNumberFrom3NumberFrequencyShouldBe2ForSameElementsAnd1ForThirdElement() {
         int[] myArray = {25, 25, 43};
         int[] result = FrequencyOfElementsInArray.frequencyElement(myArray);
-        assertArrayEquals(result, new int[]{2, 2, 1});
+        assertArrayEquals(new int[]{2, 2, 1}, result);
     }
 }

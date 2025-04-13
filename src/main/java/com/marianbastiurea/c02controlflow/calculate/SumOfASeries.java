@@ -19,7 +19,8 @@ public class SumOfASeries {
     public static double findSum(int x, int n) {
         int powerOfX = 0;
         double result = 1;
-        double b, sum; // b have values -1 and 1 give the sign of series term
+        double b;
+        double sum; // b have values -1 and 1 give the sign of series term
         for (int i = 2; i <= n; i++) {
             int fact = 1;
             powerOfX = powerOfX + 2;

@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class NumberToAHexadecimalNumberTest {
+ class NumberToAHexadecimalNumberTest {
     @Test
-    public void hexadecimalNumberHasNumberBetween0to9AndCharactersBetweenAAndF() {
-        int Number = 10;
+    void hexadecimalNumberHasNumberBetween0to9AndCharactersBetweenAAndF() {
+        int number = 10;
         String resultHexadecimal = "A";
-        String result = NumberToAHexadecimalNumber.decimalToHexadecimal(Number);
+        String result = NumberToAHexadecimalNumber.decimalToHexadecimal(number);
         assertEquals(result, resultHexadecimal);
     }
 }

@@ -11,7 +11,6 @@ public class EmployeeMonthlySalary {
 
 
     public static double getMonthlySalary(double hourlySalary, double workedHours) {
-        double monthlySalary = hourlySalary * workedHours;
-        return monthlySalary;
+        return hourlySalary * workedHours;
     }
 }

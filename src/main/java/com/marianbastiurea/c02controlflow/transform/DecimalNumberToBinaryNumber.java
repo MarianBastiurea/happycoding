@@ -24,8 +24,8 @@ public class DecimalNumberToBinaryNumber {
         }
         int factor = 0;
         int result = 0;
-        for (int i = 0; i < resultArray.length; i++) {
-            result = resultArray[i] + factor * 10;
+        for (int value : resultArray) {
+            result = value + factor * 10;
             factor = result;
         }
         return result;

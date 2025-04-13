@@ -27,9 +27,9 @@ public class FindAllUniqueElementsInArray {
         }
         int[] resultArray = new int[k];
         int j = 0;
-        for (int i = 0; i < temporaryArray.length; i++) {
-            if (temporaryArray[i] != 0) {
-                resultArray[j] = temporaryArray[i];
+        for (int value : temporaryArray) {
+            if (value != 0) {
+                resultArray[j] = value;
                 j++;
             }
         }

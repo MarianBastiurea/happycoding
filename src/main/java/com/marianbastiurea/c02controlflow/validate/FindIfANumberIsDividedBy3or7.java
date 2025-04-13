@@ -12,10 +12,6 @@ public class FindIfANumberIsDividedBy3or7 {
     }
 
     public static boolean findNumber(int number) {
-        boolean result = false;
-        if (number % 3 == 0 || number % 7 == 0) {
-            result = true;
-        }
-        return result;
+        return number % 3 == 0 || number % 7 == 0;
     }
 }

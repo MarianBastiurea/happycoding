@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PatternLikeAPyramidWithNumberIncreasedBy1Test {
+ class PatternLikeAPyramidWithNumberIncreasedBy1Test {
     @Test
-    public void given5RowsThenGenerateAPyramidWithNumberIncreasedBy1() {
+     void given5RowsThenGenerateAPyramidWithNumberIncreasedBy1() {
         int number = 5;
         String pyramid = PatternLikeAPyramidWithNumberIncreasedBy1.generatePyramid(number);
         assertEquals("""

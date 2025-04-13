@@ -10,7 +10,10 @@ public class DaysToYearsWeeksAndDays {
 
 
     public static int[] findYearsWeeksDays(int numberOfDays) {
-        int years = 0, weeks = 0, days = 0, leapYear = 0;
+        int years = 0;
+        int weeks = 0;
+        int days = 0;
+        int leapYear = 0;
         int[] result = new int[3];
         years = numberOfDays / 365;
         //we will keep count of leap year by split by 4 number of year

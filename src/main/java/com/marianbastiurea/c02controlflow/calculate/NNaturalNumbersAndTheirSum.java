@@ -11,8 +11,8 @@ public class NNaturalNumbersAndTheirSum {
 
     public static int findSum(int[] myArray) {
         int sum = 0;
-        for (int i = 0; i < myArray.length; i++) {
-            sum = sum + myArray[i];
+        for (int j : myArray) {
+            sum = sum + j;
         }
         return sum;
     }

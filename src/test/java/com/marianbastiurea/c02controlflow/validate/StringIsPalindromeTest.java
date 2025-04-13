@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class StringIsPalindromeTest {
+ class StringIsPalindromeTest {
     @Test
-    public void nullNotPalindrome() {
+     void nullNotPalindrome() {
         char[] string = null;
 
         boolean result = StringIsPalindrome.isPalindrome(string);
@@ -16,7 +16,7 @@ public class StringIsPalindromeTest {
     }
 
     @Test
-    public void emptyStringIsNotPalindrome() {
+    void emptyStringIsNotPalindrome() {
         char[] string = {};
 
         boolean result = StringIsPalindrome.isPalindrome(string);
@@ -25,7 +25,7 @@ public class StringIsPalindromeTest {
     }
 
     @Test
-    public void oneCharIsPalindrome() {
+     void oneCharIsPalindrome() {
         char[] string = {'a'};
 
         boolean result = StringIsPalindrome.isPalindrome(string);
@@ -34,7 +34,7 @@ public class StringIsPalindromeTest {
     }
 
     @Test
-    public void twoDifferentCharsIsNotPalindrome() {
+     void twoDifferentCharsIsNotPalindrome() {
         //Arrange
         char[] string = {'a', 'b'};
 
@@ -46,7 +46,7 @@ public class StringIsPalindromeTest {
     }
 
     @Test
-    public void twoSameCharsIsPalindrome() {
+     void twoSameCharsIsPalindrome() {
         //Given
         char[] string = {'a', 'a'};
 
@@ -58,7 +58,7 @@ public class StringIsPalindromeTest {
     }
 
     @Test
-    public void threeDifferentCharsIsNotPalindrome() {
+     void threeDifferentCharsIsNotPalindrome() {
         //Given
         char[] string = {'a', 'a', 'b'};
 
@@ -70,7 +70,7 @@ public class StringIsPalindromeTest {
     }
 
     @Test
-    public void threeCharsSameAsTheirReverseIsPalindrome() {
+     void threeCharsSameAsTheirReverseIsPalindrome() {
         //Given
         char[] string = {'a', 'b', 'a'};
 
@@ -82,7 +82,7 @@ public class StringIsPalindromeTest {
     }
 
     @Test
-    public void fourCharsSameAsTheirReverseIsPalindrome() {
+     void fourCharsSameAsTheirReverseIsPalindrome() {
         //Given
         char[] string = {'a', 'b', 'b', 'a'};
 
@@ -94,7 +94,7 @@ public class StringIsPalindromeTest {
     }
 
     @Test
-    public void fourDifferentCharsIsNotPalindrome() {
+     void fourDifferentCharsIsNotPalindrome() {
         //Given
         char[] string = {'a', 'a', 'b', 'a'};
 

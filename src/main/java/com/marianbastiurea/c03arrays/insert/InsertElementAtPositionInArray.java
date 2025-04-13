@@ -8,9 +8,9 @@ public class InsertElementAtPositionInArray {
     }
 
     public static int[] insertElementAtPosition(int[] array, int newElement, int position) {
-        int LengthOfResultArray = array.length + 1;
+        int lengthOfResultArray = array.length + 1;
         int temp;
-        int[] resultArray = new int[LengthOfResultArray];
+        int[] resultArray = new int[lengthOfResultArray];
 
         // first we have to sort myArray
         for (int i = 0; i < array.length; i++) {
@@ -24,7 +24,7 @@ public class InsertElementAtPositionInArray {
         }
 
         // now, we insert new element in sorted array
-        for (int i = 0; i < LengthOfResultArray; i++) {
+        for (int i = 0; i < lengthOfResultArray; i++) {
             if (i < position)
                 resultArray[i] = array[i];
             else if (i == position)

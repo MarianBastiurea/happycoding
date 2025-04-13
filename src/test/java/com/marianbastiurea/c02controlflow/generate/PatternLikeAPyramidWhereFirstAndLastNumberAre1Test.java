@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PatternLikeAPyramidWhereFirstAndLastNumberAre1Test {
+ class PatternLikeAPyramidWhereFirstAndLastNumberAre1Test {
     @Test
-    public void generatePyramid() {
+     void generatePyramid() {
         int number = 5;
         String pyramid = PatternLikeAPyramidWhereFirstAndLastNumberAre1.generatePyramid(number);
         assertEquals("""

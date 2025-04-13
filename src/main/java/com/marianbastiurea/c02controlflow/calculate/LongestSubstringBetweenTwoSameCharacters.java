@@ -23,7 +23,8 @@ public class LongestSubstringBetweenTwoSameCharacters {
         }
         // define two temporary values to store first position of repeating element and
         // distance to second repeating  element
-        int tempI, tempJ;
+        int tempI;
+        int tempJ;
 
         // Find the biggest distance between two same elements
         // will be the last row in matrix

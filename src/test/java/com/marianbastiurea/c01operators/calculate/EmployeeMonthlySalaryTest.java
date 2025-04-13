@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class EmployeeMonthlySalaryTest {
 
     @Test
-    void given10AsHourlySalryAnd5WorkedHoursSalaryShouldBe50() {
+    void given10AsHourlySalaryAnd5WorkedHoursSalaryShouldBe50() {
         double hourlySalary = 10D;
         double workedHours = 5D;
 

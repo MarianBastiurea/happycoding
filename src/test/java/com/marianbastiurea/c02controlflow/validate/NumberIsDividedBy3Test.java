@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class NumberIsDividedBy3Test {
+ class NumberIsDividedBy3Test {
     @Test
-    public void twentyOneIsDividedBy3() {
+     void twentyOneIsDividedBy3() {
         int number = 21;
         boolean result = NumberIsDividedBy3.findNumber(number);
         assertTrue(result);
@@ -16,14 +16,14 @@ public class NumberIsDividedBy3Test {
     @Test
 
 
-    public void tenIsNotDividedBy3() {
+     void tenIsNotDividedBy3() {
         int number = 10;
         boolean result = NumberIsDividedBy3.findNumber(number);
         assertFalse(result);
     }
 
     @Test
-    public void threeIsDividedBy3() {
+     void threeIsDividedBy3() {
         int number = 3;
         boolean result = NumberIsDividedBy3.findNumber(number);
         assertTrue(result);

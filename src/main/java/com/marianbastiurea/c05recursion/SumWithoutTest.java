@@ -13,7 +13,7 @@ public class SumWithoutTest {
     public static void main(String[] args) {
         int number = 3;
         int start = 1;
-        System.out.println("sum of number fom "+ start+" to " + number + " is " + findSum(start, number));
+        System.out.println("sum of number fom " + start + " to " + number + " is " + findSum(start, number));
     }
 
 }

@@ -4,36 +4,36 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class InsertElementInArrayTest {
+ class InsertElementInArrayTest {
     @Test
-    public void fiveElements() {
+     void fiveElements() {
         int[] myArray = {2, 5, 7, 9, 11};
         int elementToBeInserted = 8;
         int[] result = InsertElementInArray.insertElements(myArray, elementToBeInserted);
-        assertArrayEquals(result, new int[]{2, 5, 7, 8, 9, 11});
+        assertArrayEquals(new int[]{2, 5, 7, 8, 9, 11}, result);
     }
 
     @Test
-    public void oneElements() {
+    void oneElements() {
         int[] myArray = {2};
         int elementToBeInserted = 8;
         int[] result = InsertElementInArray.insertElements(myArray, elementToBeInserted);
-        assertArrayEquals(result, new int[]{2, 8});
+        assertArrayEquals(new int[]{2, 8}, result);
     }
 
     @Test
-    public void NoElements() {
+     void NoElements() {
         int[] myArray = {};
         int elementToBeInserted = 8;
         int[] result = InsertElementInArray.insertElements(myArray, elementToBeInserted);
-        assertArrayEquals(result, new int[]{8});
+        assertArrayEquals(new int[]{8}, result);
     }
 
     @Test
-    public void tenElements() {
+    void tenElements() {
         int[] myArray = {-100, -20, 2, 5, 7, 9, 11, 80, 100, 300};
         int elementToBeInserted = 55;
         int[] result = InsertElementInArray.insertElements(myArray, elementToBeInserted);
-        assertArrayEquals(result, new int[]{-100, -20, 2, 5, 7, 9, 11, 55, 80, 100, 300});
+        assertArrayEquals(new int[]{-100, -20, 2, 5, 7, 9, 11, 55, 80, 100, 300}, result);
     }
 }

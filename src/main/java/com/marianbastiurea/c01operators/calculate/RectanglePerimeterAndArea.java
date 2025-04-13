@@ -9,7 +9,8 @@ class RectanglePerimeterAndArea {
 
 
     public static int[] findAreaAndPerimeter(int height, int width) {
-        int area, perimeter;
+        int area;
+        int perimeter;
         int[] result = new int[2];
         area = height * width;
         perimeter = (height + width) * 2;

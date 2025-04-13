@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PatternLikePyramidWithANumberRepeatingInSameRowTest {
+ class PatternLikePyramidWithANumberRepeatingInSameRowTest {
     @Test
-    public void given6RowsGenerateAPatternLikePyramidWithANumberRepeatingInSameRowTest() {
+  void given6RowsGenerateAPatternLikePyramidWithANumberRepeatingInSameRowTest() {
         int number = 6;
         String result = PatternLikePyramidWithANumberRepeatingInSameRow.generatePyramid(number);
         assertEquals("""

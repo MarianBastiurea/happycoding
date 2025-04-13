@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class FindTwoRepeatingElementsInAnArrayTest {
+ class FindTwoRepeatingElementsInAnArrayTest {
     @Test
-    public void Given2RepeatingElementShouldReturnThem() {
+     void Given2RepeatingElementShouldReturnThem() {
         int[] myArray = {2, 7, 4, 7, 8, 3, 9, 4};
         int[] resultArray = {7, 4};
         int[] result = FindTwoRepeatingElementsInAnArray.findRepeatingElements(myArray);
@@ -14,7 +14,7 @@ public class FindTwoRepeatingElementsInAnArrayTest {
     }
 
     @Test
-    public void givenDifferentElementsShouldReturnEmptyArray() {
+    void givenDifferentElementsShouldReturnEmptyArray() {
         int[] myArray = {2, 7, 1, 0, 4, 13};
         int[] resultArray = {};
         int[] result = FindTwoRepeatingElementsInAnArray.findRepeatingElements(myArray);

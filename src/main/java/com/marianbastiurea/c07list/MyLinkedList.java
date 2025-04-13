@@ -2,34 +2,9 @@ package com.marianbastiurea.c07list;
 
 public class MyLinkedList<E> {
 
-    private static class MyNode<E> {
-        private E data;
-        private MyNode<E> next;
-        private MyNode<E> previous;
-
-        public MyNode(E data) {
-            this.data = data;
-            this.next = null;
-            this.previous = null;
-        }
-
-        public E getData() {
-            return data;
-        }
-
-        public MyNode<E> getNext() {
-            return next;
-        }
-
-        public MyNode<E> getPrevious() {
-            return previous;
-        }
-    }
-
     private MyNode<E> head;
     private MyNode<E> tail;
     private int size;
-
     public MyLinkedList() {
         head = null;
         tail = null;
@@ -150,5 +125,29 @@ public class MyLinkedList<E> {
 
     public int getSize() {
         return size;
+    }
+
+    private static class MyNode<E> {
+        private E data;
+        private MyNode<E> next;
+        private MyNode<E> previous;
+
+        public MyNode(E data) {
+            this.data = data;
+            this.next = null;
+            this.previous = null;
+        }
+
+        public E getData() {
+            return data;
+        }
+
+        public MyNode<E> getNext() {
+            return next;
+        }
+
+        public MyNode<E> getPrevious() {
+            return previous;
+        }
     }
 }

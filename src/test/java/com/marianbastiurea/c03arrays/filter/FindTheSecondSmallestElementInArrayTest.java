@@ -4,11 +4,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FindTheSecondSmallestElementInArrayTest {
+ class FindTheSecondSmallestElementInArrayTest {
     @Test
-    public void givenFiveDifferentElementsShouldReturnOneAsSecondSmallestElement() {
+     void givenFiveDifferentElementsShouldReturnOneAsSecondSmallestElement() {
         int[] myArray = {0, 9, 4, 6, 5};
         int result = FindTheSecondSmallestElementInArray.secondSmallestElement(myArray);
-        assertEquals(result, 4);
+        assertEquals(4, result);
     }
 }

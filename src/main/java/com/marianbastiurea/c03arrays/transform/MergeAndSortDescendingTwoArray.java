@@ -12,7 +12,9 @@ public class MergeAndSortDescendingTwoArray {
     public static int[] mergeAndSort(int[] firstArray, int[] secondArray) {
         int lengthArray = firstArray.length + secondArray.length;
         int[] myArray = new int[lengthArray];
-        int i = 0, j = 0, k = 0;
+        int i = 0;
+        int j = 0;
+        int k = 0;
         while (i < firstArray.length) {
             myArray[k] = firstArray[i];
             i++;

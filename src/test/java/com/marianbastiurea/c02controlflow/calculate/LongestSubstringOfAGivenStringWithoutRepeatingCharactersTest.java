@@ -4,44 +4,44 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LongestSubstringOfAGivenStringWithoutRepeatingCharactersTest {
+class LongestSubstringOfAGivenStringWithoutRepeatingCharactersTest {
     @Test
-    public void pickoutthelongestsubstring() {
+ void pickoutthelongestsubstring() {
         String myString = "pickoutthelongestsubstring";
         String resultString = "ubstring";
-        String result = LongestSubstringOfAGivenStringWithoutRepeatingCharacters.FindTheLongest(myString);
+        String result = LongestSubstringOfAGivenStringWithoutRepeatingCharacters.findTheLongest(myString);
         assertEquals(result, resultString);
     }
 
     @Test
-    public void ppppppppppppp() {
+     void ppppppppppppp() {
         String myString = "ppppppppppppppppppppp";
         String resultString = "p";
-        String result = LongestSubstringOfAGivenStringWithoutRepeatingCharacters.FindTheLongest(myString);
+        String result = LongestSubstringOfAGivenStringWithoutRepeatingCharacters.findTheLongest(myString);
         assertEquals(result, resultString);
     }
 
     @Test
-    public void xyzxyxyy() {
+     void xyzxyxyy() {
         String myString = "xyzxyzyy";
         String resultString = "xyz";
-        String result = LongestSubstringOfAGivenStringWithoutRepeatingCharacters.FindTheLongest(myString);
+        String result = LongestSubstringOfAGivenStringWithoutRepeatingCharacters.findTheLongest(myString);
         assertEquals(result, resultString);
     }
 
     @Test
-    public void microsoft() {
+     void microsoft() {
         String myString = "microsoft";
         String resultString = "micros";
-        String result = LongestSubstringOfAGivenStringWithoutRepeatingCharacters.FindTheLongest(myString);
+        String result = LongestSubstringOfAGivenStringWithoutRepeatingCharacters.findTheLongest(myString);
         assertEquals(result, resultString);
     }
 
     @Test
-    public void emptyString() {
+   void emptyString() {
         String myString = "";
         String resultString = "";
-        String result = LongestSubstringOfAGivenStringWithoutRepeatingCharacters.FindTheLongest(myString);
+        String result = LongestSubstringOfAGivenStringWithoutRepeatingCharacters.findTheLongest(myString);
         assertEquals(result, resultString);
     }
 }

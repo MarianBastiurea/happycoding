@@ -9,9 +9,6 @@ public class NumberIsDividedBy3 {
 
 
     public static boolean findNumber(int number) {
-        boolean result = false;
-        if (number % 3 == 0)
-            result = true;
-        return result;
+        return number % 3 == 0;
     }
 }

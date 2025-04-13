@@ -13,6 +13,6 @@ class SumUsingRecursionTest {
         int numbersToAdd = 5;
         int resultSum = 15;
         int result = SumUsingRecursion.sumFirstNNaturalNumbers(start, numbersToAdd);
-        assertEquals(result, resultSum);
+        assertEquals(resultSum, result);
     }
 }

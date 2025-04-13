@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class CirclePerimeterAndAreaTest {
 
     @Test
-    public void givenRadiusOneAreaShouldBeNumericValueOfPi() {
+    void givenRadiusOneAreaShouldBeNumericValueOfPi() {
         double radius = 1;
         double area = 3.14d;
         double[] result = CirclePerimeterAndArea.getAreaAndPerimeter(radius);
@@ -15,10 +15,10 @@ class CirclePerimeterAndAreaTest {
     }
 
     @Test
-    public void givenRadiusOnePerimeterShouldBeDoubleNumericValueOfPi() {
+    void givenRadiusOnePerimeterShouldBeDoubleNumericValueOfPi() {
         double radius = 1;
-        double Perimeter = 6.28d;
+        double perimeter = 6.28d;
         double[] result = CirclePerimeterAndArea.getAreaAndPerimeter(radius);
-        assertEquals(result[1], Perimeter, 0.01);
+        assertEquals(result[1], perimeter, 0.01);
     }
 }

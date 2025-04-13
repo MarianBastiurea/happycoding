@@ -11,10 +11,10 @@ class CirclePerimeterAndArea {
     public static double[] getAreaAndPerimeter(double radius) {
         double area;
         double perimeter;
-        double PI = 3.14;
+        double pi = 3.14;
         double[] result = new double[2];
-        area = PI * radius * radius;
-        perimeter = 2 * PI * radius;
+        area = pi * radius * radius;
+        perimeter = 2 * pi * radius;
         result[0] = area;
         result[1] = perimeter;
         return result;

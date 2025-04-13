@@ -8,12 +8,8 @@ public class CheckIfTwoIntegersAreMultiplied {
     }
 
     public static boolean checkMultiplied(int[] myArray) {
-        boolean result = false;
-        if (myArray[1] > myArray[0]) {
-            if (myArray[1] % myArray[0] == 0)
-                result = true;
-        }
-        return result;
+
+        return myArray[1] > myArray[0] && myArray[1] % myArray[0] == 0;
     }
 }
 

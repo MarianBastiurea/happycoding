@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MultiplierTableFrom1ToNumberTest {
+class MultiplierTableFrom1ToNumberTest {
     @Test
-    public void multiplierTableFrom1to3() {
+    void multiplierTableFrom1to3() {
         int number = 3;
         String result = MultiplierTableFrom1ToNumber.multiplyNumber(number);
         assertEquals("""

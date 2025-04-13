@@ -4,18 +4,18 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FindTheSecondLargestElementInArrayTest {
+ class FindTheSecondLargestElementInArrayTest {
     @Test
-    public void givenDifferentNumberShouldReturn1SecondLargestElement() {
+     void givenDifferentNumberShouldReturn1SecondLargestElement() {
         int[] myArray = {2, 9, 1, 4, 6};
         int result = FindTheSecondLargestElementInArray.findSecondLargestElement(myArray);
-        assertEquals(result, 6);
+        assertEquals(6, result);
     }
 
     @Test
-    public void givenSameElementsShouldReturnOneOfThemAsSecond() {
+     void givenSameElementsShouldReturnOneOfThemAsSecond() {
         int[] myArray = {2, 2};
         int result = FindTheSecondLargestElementInArray.findSecondLargestElement(myArray);
-        assertEquals(result, 2);
+        assertEquals(2, result);
     }
 }

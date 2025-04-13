@@ -30,7 +30,7 @@ public class ChangeElementsInLowerTriangularOfAMatrix {
     private ChangeElementsInLowerTriangularOfAMatrix() {
     }
 
-    public static int[][] ChangeElements(int[][] matrix) {
+    public static int[][] changeElements(int[][] matrix) {
         int[][] resultMatrix = new int[matrix[0].length][matrix.length];
         for (int i = 0; i < matrix[0].length; i++) {
             for (int j = 0; j < matrix.length; j++) {

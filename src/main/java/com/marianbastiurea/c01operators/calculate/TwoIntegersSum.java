@@ -8,7 +8,6 @@ public class TwoIntegersSum {
     }
 
     public static int findSum(int firstInteger, int secondInteger) {
-        int sum = firstInteger + secondInteger;
-        return sum;
+        return firstInteger + secondInteger;
     }
 }

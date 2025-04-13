@@ -9,9 +9,9 @@ public class SumOfOddsValue {
 
     public static int findSum(int[] myArray) {
         int sum = 0;
-        for (int i = 0; i < myArray.length; i++) {
-            if (myArray[i] % 2 == 1) {
-                sum = sum + myArray[i];
+        for (int j : myArray) {
+            if (j % 2 == 1) {
+                sum = sum + j;
             }
         }
         return sum;

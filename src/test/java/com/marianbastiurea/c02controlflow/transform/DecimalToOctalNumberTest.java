@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DecimalToOctalNumberTest {
+ class DecimalToOctalNumberTest {
     @Test
-    public void octalNumberOnlyContainsNumbersFrom0To7() {
-        int Number = 10;
+     void octalNumberOnlyContainsNumbersFrom0To7() {
+        int number = 10;
         String resultOctal = "12";
-        String result = DecimalToOctalNumber.decimalToOctal(Number);
+        String result = DecimalToOctalNumber.decimalToOctal(number);
         assertEquals(result, resultOctal);
     }
 }

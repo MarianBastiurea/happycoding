@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LongestSubstringBetweenTwoSameCharactersTest {
+ class LongestSubstringBetweenTwoSameCharactersTest {
     @Test
-    public void pickOutTheLongestSubstring() {
+     void pickOutTheLongestSubstring() {
         String myString = "pickOutTheLongestSubstring";
         String resultString = "ickOutTheLongestSubstr";
         String result = LongestSubstringBetweenTwoSameCharacters.findLongestSubstring(myString);
@@ -14,7 +14,7 @@ public class LongestSubstringBetweenTwoSameCharactersTest {
     }
 
     @Test
-    public void substringuti() {
+void substringuti() {
         String myString = "substringuti";
         String resultString = "ubstring";
         String result = LongestSubstringBetweenTwoSameCharacters.findLongestSubstring(myString);

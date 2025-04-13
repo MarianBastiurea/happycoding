@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SumOfIntegerWhichAreDivisibleBy9Test {
+ class SumOfIntegerWhichAreDivisibleBy9Test {
     @Test
-    public void firstOneHundred() {
+     void firstOneHundred() {
         int[] myArray = {100, 200};
         int sum = 1683;
         int result = SumOfIntegerWhichAreDivisibleBy9.findSum(myArray);
@@ -14,7 +14,7 @@ public class SumOfIntegerWhichAreDivisibleBy9Test {
     }
 
     @Test
-    public void secondHundred() {
+     void secondHundred() {
         int[] myArray = {200, 300};
         int sum = 2772;
         int result = SumOfIntegerWhichAreDivisibleBy9.findSum(myArray);
@@ -22,7 +22,7 @@ public class SumOfIntegerWhichAreDivisibleBy9Test {
     }
 
     @Test
-    public void firstThousand() {
+     void firstThousand() {
         int[] myArray = {0, 1000};
         int sum = 55944;
         int result = SumOfIntegerWhichAreDivisibleBy9.findSum(myArray);

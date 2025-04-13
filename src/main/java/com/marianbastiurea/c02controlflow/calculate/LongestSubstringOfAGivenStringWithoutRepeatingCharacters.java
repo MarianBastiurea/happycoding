@@ -6,13 +6,16 @@ public class LongestSubstringOfAGivenStringWithoutRepeatingCharacters {
     private LongestSubstringOfAGivenStringWithoutRepeatingCharacters() {
     }
 
-    public static String FindTheLongest(String myString) {
+    public static String findTheLongest(String myString) {
         //if myString is null return ""
         if (myString == null || myString.isEmpty()) {
             return "";
         }
         int k = myString.length();
-        int start = 0, end = 0, maxLength = 0, maxStart = 0;
+        int start = 0;
+        int end = 0;
+        int maxLength = 0;
+        int maxStart = 0;
 
         // Length off array is number of ASCII characters
         int[] characterIndex = new int[128];

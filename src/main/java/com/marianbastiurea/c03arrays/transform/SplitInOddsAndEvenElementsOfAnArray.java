@@ -9,13 +9,14 @@ public class SplitInOddsAndEvenElementsOfAnArray {
 
     public static int[][] oddsAndEven(int[] myArray) {
         int[][] oddsAndEvenMatrix = new int[2][3];
-        int j = 0, k = 0;
-        for (int i = 0; i < myArray.length; i++) {
-            if (myArray[i] % 2 == 0) {
-                oddsAndEvenMatrix[0][j] = myArray[i];
+        int j = 0;
+        int k = 0;
+        for (int value : myArray) {
+            if (value % 2 == 0) {
+                oddsAndEvenMatrix[0][j] = value;
                 j++;
             } else {
-                oddsAndEvenMatrix[1][k] = myArray[i];
+                oddsAndEvenMatrix[1][k] = value;
                 k++;
             }
         }

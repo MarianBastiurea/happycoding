@@ -1,46 +1,44 @@
 package com.marianbastiurea.c06challenges;
 
- class ParentSuper {
+class ParentSuper {
 
-        protected int num = 1;
+    protected int num = 1;
 
-        ParentSuper(){
-            System.out.println("Parent class default constructor.");
-        }
-
-        ParentSuper(String x){
-            System.out.println("Parent class parameterised constructor.");
-        }
-
-        public void foo(){
-            System.out.println("Parent class foo!");
-        }
+    ParentSuper() {
+        System.out.println("Parent class default constructor.");
     }
 
-    class Child extends ParentSuper{
-        private int num = 2;
+    ParentSuper(String x) {
+        System.out.println("Parent class parameterised constructor.");
+    }
 
-        Child(){
+    public void foo() {
+        System.out.println("Parent class foo!");
+    }
+}
 
-            super("Call Parent");
-            System.out.println("Child class default Constructor");
-        }
+class Child extends ParentSuper {
+    private int num = 2;
 
-        void printNum(){
-            System.out.println(num);
-            System.out.println(super.num);
-        }
+    Child() {
 
-        @Override
-        public void foo(){
-            System.out.println("Child class foo!");
-            super.foo();
-        }
+        super("Call Parent");
+        System.out.println("Child class default Constructor");
+    }
 
+    public static void main(String args[]) {
+        Child demoObject = new Child();
+        demoObject.foo();
+    }
 
+    void printNum() {
+        System.out.println(num);
+        System.out.println(super.num);
+    }
 
-        public static void main(String args[]) {
-            Child demoObject=new Child();
-            demoObject.foo();
-        }
+    @Override
+    public void foo() {
+        System.out.println("Child class foo!");
+        super.foo();
+    }
 }

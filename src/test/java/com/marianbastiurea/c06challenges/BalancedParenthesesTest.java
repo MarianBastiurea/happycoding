@@ -5,51 +5,51 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class BalancedParenthesesTest {
+ class BalancedParenthesesTest {
     @Test
-    public void parenthesesUnbalancedShouldReturnFalse() {
+    void parenthesesUnbalancedShouldReturnFalse() {
         String expression = "{{)(}}";
         boolean result = BalancedParentheses.areParenthesesBalanced(expression);
         assertFalse(result);
     }
 
     @Test
-    public void givenBracesUnbalancedShouldReturnFalse() {
+     void givenBracesUnbalancedShouldReturnFalse() {
         String expression = "({)}";
         boolean result = BalancedParentheses.areParenthesesBalanced(expression);
         assertFalse(result);
     }
 
     @Test
-    public void givenAllBalancedShouldReturnTrue() {
+    void givenAllBalancedShouldReturnTrue() {
         String expression = "[({})]";
         boolean result = BalancedParentheses.areParenthesesBalanced(expression);
         assertTrue(result);
     }
 
     @Test
-    public void givenBracesBalancedShouldReturnTrue() {
+    void givenBracesBalancedShouldReturnTrue() {
         String expression = "{}([])";
         boolean result = BalancedParentheses.areParenthesesBalanced(expression);
         assertTrue(result);
     }
 
     @Test
-    public void givenBracketsBalancedShouldReturnTrue() {
+    void givenBracketsBalancedShouldReturnTrue() {
         String expression = "{()}[[{}]]";
         boolean result = BalancedParentheses.areParenthesesBalanced(expression);
         assertTrue(result);
     }
 
     @Test
-    public void givenOneBracketShouldReturnFalse() {
+     void givenOneBracketShouldReturnFalse() {
         String expression = "[";
         boolean result = BalancedParentheses.areParenthesesBalanced(expression);
         assertFalse(result);
     }
 
     @Test
-    public void givenNoBracketShouldReturnTrue() {
+    void givenNoBracketShouldReturnTrue() {
         String expression = "";
         boolean result = BalancedParentheses.areParenthesesBalanced(expression);
         assertTrue(result);

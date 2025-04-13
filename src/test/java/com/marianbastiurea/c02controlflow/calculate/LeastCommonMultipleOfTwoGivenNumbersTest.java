@@ -4,21 +4,21 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LeastCommonMultipleOfTwoGivenNumbersTest {
+class LeastCommonMultipleOfTwoGivenNumbersTest {
     @Test
-    public void zero() {
+    void zero() {
         int firstNumber = 0, secondNumber = -11;
-        int LCM = 0;
+        int lcm = 0;
         int result = LeastCommonMultipleOfTwoGivenNumbers.findLCM(firstNumber, secondNumber);
-        assertEquals(result, LCM);
+        assertEquals(result, lcm);
     }
 
     @Test
-    public void sixty() {
+    void sixty() {
         int firstNumber = 15, secondNumber = 20;
-        int LCM = 60;
+        int lcm = 60;
         int result = LeastCommonMultipleOfTwoGivenNumbers.findLCM(firstNumber, secondNumber);
-        assertEquals(result, LCM);
+        assertEquals(result, lcm);
     }
 
 }

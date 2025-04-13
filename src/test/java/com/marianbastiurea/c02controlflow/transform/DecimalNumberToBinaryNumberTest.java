@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DecimalNumberToBinaryNumberTest {
+ class DecimalNumberToBinaryNumberTest {
     @Test
-    public void decimalNumberCanOnlyHave0And1() {
+     void decimalNumberCanOnlyHave0And1() {
         int number = 47;
         int resultNumber = 101111;
         int result = DecimalNumberToBinaryNumber.convertDecimalToBinary(number);
