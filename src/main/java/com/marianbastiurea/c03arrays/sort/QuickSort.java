@@ -8,8 +8,8 @@ public class QuickSort {
     }
 
     public static int[] quickSort(int[] myArray) {
-        int N = myArray.length;
-        sortArray(myArray, 0, N - 1);
+        int n = myArray.length;
+        sortArray(myArray, 0, n - 1);
         return myArray;
     }
 
