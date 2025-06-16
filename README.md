@@ -6,7 +6,7 @@ Happy Coding is a challenge to help you acquire strong problem-solving skills by
 
 
 ## Description
-This project contains 100 problems from w3resource.com and other sources and my solutions for them using the Java language.
+This project contains more than 125 problems from w3resource.com and other sources and my solutions for them using the Java language.
 
 
 For implementing the solutions, **I used Java features like data types, operators, control flow and data structures like arrays and two-dimensional arrays**.
