@@ -20,8 +20,10 @@ Explanation: You can plant a flower at position 2 (0-based), with no adjacent fl
 
     public static boolean plantFlowers(int[] flowers, int k){
         boolean answer=false;
-        for(int i=1; i< flowers.length-1; i++){
-            if(flowers[i-1]==0&&flowers[i]==0&&flowers[i+1]==0){
+        for(int i=0; i< flowers.length; i++){
+            if((i == 0 || flowers[i - 1] == 0) &&
+                    flowers[i] == 0 &&
+                    (i == flowers.length - 1 || flowers[i + 1] == 0)){
                 k--;
                 flowers[i]=1;
             }
