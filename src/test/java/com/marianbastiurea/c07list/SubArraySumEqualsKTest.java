@@ -1,4 +1,4 @@
-package com.marianbastiurea.c07.list;
+package com.marianbastiurea.c07list;
 
 import com.marianbastiurea.c07list.SubArraySumEqualsK;
 import org.junit.jupiter.api.Test;
