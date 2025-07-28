@@ -3,6 +3,7 @@ package com.marianbastiurea.c08threads.honeyfactory;
 public class HoneyOrder {
     private final HoneyType honeyType;
     private final double quantity;
+    private boolean processed = false;
 
     public HoneyOrder(HoneyType honeyType, double quantity) {
         this.honeyType = honeyType;
@@ -15,6 +16,13 @@ public class HoneyOrder {
 
     public double getQuantity() {
         return quantity;
+    }
+    public boolean isProcessed() {
+        return processed;
+    }
+
+    public void setProcessed(boolean processed) {
+        this.processed = processed;
     }
 
     @Override

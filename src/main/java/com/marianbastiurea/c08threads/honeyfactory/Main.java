@@ -1,7 +1,8 @@
 package com.marianbastiurea.c08threads.honeyfactory;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -40,12 +41,26 @@ public class Main {
         // 5. Shuffle jobs to simulate random arrival order
         Collections.shuffle(jobs);
 
+
         // 6. Start a thread for each job
         List<Thread> threads = new ArrayList<>();
-        for (BeekeeperHoneyJob job : jobs) {
+        for (Beekeeper beekeeper : beekeepers) {
             Thread t = new Thread(() -> {
                 try {
-                    manager.tryUnload(job);
+                    for (HoneyBatch batch : beekeeper.getHoneyBatches()) {
+                        BeekeeperHoneyJob job = new BeekeeperHoneyJob(beekeeper.getBeekeeperName(), batch);
+                        manager.tryUnload(job);
+                    }
+                    System.out.printf("🚚 %s has finished unloading all honey batches.%n", beekeeper.getBeekeeperName());
+
+                    // Simulăm plata
+                    double totalPayment = 0;
+                    for (HoneyBatch batch : beekeeper.getHoneyBatches()) {
+                        double pricePerKg = HoneyPrice.valueOf(batch.getHoneyType().name()).getPricePerKg();
+                        totalPayment += batch.getQuantity() * pricePerKg;
+                    }
+                    System.out.printf("💰 %s has been paid: %.2f lei.%n", beekeeper.getBeekeeperName(), totalPayment);
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -53,6 +68,7 @@ public class Main {
             threads.add(t);
             t.start();
         }
+
 
         // 7. Wait for all threads to finish
         for (Thread t : threads) {
@@ -68,5 +84,27 @@ public class Main {
         for (HoneyType type : HoneyType.values()) {
             System.out.printf("  - %s: %.2f kg%n", type, manager.getStorageFor(type));
         }
+
+        // 9. Check if all orders have been processed
+        boolean allOrdersProcessed = orders.stream().allMatch(HoneyOrder::isProcessed);
+
+        // Dacă unele comenzi nu au fost procesate complet, adăugăm detalii
+        if (allOrdersProcessed) {
+            System.out.println("\n✅ All honey orders have been processed.");
+        } else {
+            System.out.println("\n⚠️ Some honey orders were not fully processed. Details:");
+
+            // Afișăm comenzile care nu au fost procesate complet
+            for (HoneyOrder order : orders) {
+                if (!order.isProcessed()) {
+                    System.out.printf("  -> Order for %s : %.2f kg was not processed.%n",
+                            order.getHoneyType(), order.getQuantity());
+                }
+            }
+        }
+
+
+        // 10. Final message
+        System.out.println("\n🎉 All beekeepers have finished unloading and left the center.");
     }
 }

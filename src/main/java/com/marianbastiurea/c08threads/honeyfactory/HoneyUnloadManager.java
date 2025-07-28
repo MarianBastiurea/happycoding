@@ -19,9 +19,10 @@ public class HoneyUnloadManager {
         for (HoneyType type : HoneyType.values()) {
             unloadingSemaphores.put(type, new Semaphore(1)); // only 1 beekeeper per type
             storage.put(type, 0.0);
-            maxStorageCapacity.put(type, 1000.0); // for example: 1000 kg max per type
+            maxStorageCapacity.put(type, 3000.0); // for example: 1000 kg max per type
         }
     }
+
 
     public void tryUnload(BeekeeperHoneyJob job) throws InterruptedException {
         HoneyType type = job.getHoneyBatch().getHoneyType();
@@ -29,27 +30,51 @@ public class HoneyUnloadManager {
         String beekeeperName = job.getBeekeeperName();
 
         Semaphore semaphore = unloadingSemaphores.get(type);
-        semaphore.acquire();
+        semaphore.acquire(); // exclusivitate pe tipul de miere
 
         try {
             synchronized (lock) {
-                while (storage.get(type) + quantity > maxStorageCapacity.get(type)) {
+                while (true) {
+                    double current = storage.get(type);
+                    double max = maxStorageCapacity.get(type);
+
+                    // 🟢 Dacă e loc → descarcă
+                    if (current + quantity <= max) {
+                        break;
+                    }
+
                     System.out.printf("🛑 %s is waiting – storage full for %s (%.2f / %.2f kg)%n",
-                            beekeeperName, type, storage.get(type), maxStorageCapacity.get(type));
+                            beekeeperName, type, current, max);
 
                     boolean processed = processOrderFor(type);
+
                     if (!processed) {
-                        System.out.println("❌ No matching order found to free up space.");
-                        lock.wait(); // așteaptă să se elibereze
+                        // ❗ Dacă nu s-a putut procesa nimic, verificăm din nou spațiul:
+                        current = storage.get(type);
+                        if (current + quantity <= max) {
+                            System.out.printf("🔄 Rechecking after failed processing – there's now space for %s (%s). Continuing...%n",
+                                    beekeeperName, type);
+                            break;
+                        }
+
+                        // 🛑 Altfel ieșim – nu are ce să mai facă
+                        System.out.printf("🚫 %s could not unload %.2f kg of %s and left the center.%n",
+                                beekeeperName, quantity, type);
+                        return;
                     }
+
+                    // 🔔 Procesarea a eliberat spațiu → notificăm
+                    lock.notifyAll();
                 }
 
+
+                // 🟢 Poate descărca
                 LocalTime start = LocalTime.now();
                 System.out.printf("✅ %s started unloading %.2f kg of %s at %s%n",
                         beekeeperName, quantity, type, start);
 
                 int barrels = (int) Math.ceil(quantity / 280.0);
-                //long unloadMillis = barrels * 10L * 60 * 1000; // 10 min / butoi
+               // long unloadMillis = barrels * 10L * 60 * 1000;
                 long unloadMillis=1000;
                 System.out.printf("⏳ %s is unloading %d barrels (%d minutes)%n",
                         beekeeperName, barrels, barrels * 10);
@@ -60,7 +85,7 @@ public class HoneyUnloadManager {
                 System.out.printf("✅ %s finished unloading at %s (new total: %.2f kg)%n",
                         beekeeperName, end, storage.get(type));
 
-                lock.notifyAll(); // notifică următorii
+                lock.notifyAll(); // notifică alți stupari care poate așteaptă
             }
         } finally {
             semaphore.release();
@@ -68,9 +93,10 @@ public class HoneyUnloadManager {
     }
 
 
+
     private boolean processOrderFor(HoneyType type) {
         Optional<HoneyOrder> matchingOrder = honeyOrders.stream()
-                .filter(order -> order.getHoneyType() == type)
+                .filter(order -> order.getHoneyType() == type && !order.isProcessed())
                 .findFirst();
 
         if (matchingOrder.isPresent()) {
@@ -98,9 +124,12 @@ public class HoneyUnloadManager {
             }
 
             storage.put(type, currentStock - quantityToProcess);
+            order.setProcessed(true);
             System.out.printf("✅ Processed %.2f kg of %s → new stock: %.2f kg%n",
                     quantityToProcess, type, storage.get(type));
-
+            synchronized (lock) {
+                lock.notifyAll();
+            }
             return true;
         }
 
