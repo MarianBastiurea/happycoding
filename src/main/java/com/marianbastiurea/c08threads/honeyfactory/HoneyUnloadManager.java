@@ -19,7 +19,7 @@ public class HoneyUnloadManager {
         for (HoneyType type : HoneyType.values()) {
             unloadingSemaphores.put(type, new Semaphore(1)); // only 1 beekeeper per type
             storage.put(type, 0.0);
-            maxStorageCapacity.put(type, 3000.0); // for example: 1000 kg max per type
+            maxStorageCapacity.put(type, 3000.0); // for example: 3000 kg max per type
         }
     }
 
