@@ -1,4 +1,6 @@
-package com.marianbastiurea.c08threads.honeyfactory;
+package com.marianbastiurea.c08threads.honeyfactory.beekeeper;
+
+import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyBatch;
 
 public class BeekeeperHoneyJob {
     private final String beekeeperName;

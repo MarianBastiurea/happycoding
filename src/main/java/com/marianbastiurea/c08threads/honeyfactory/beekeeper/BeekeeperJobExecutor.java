@@ -1,5 +1,7 @@
-package com.marianbastiurea.c08threads.honeyfactory;
+package com.marianbastiurea.c08threads.honeyfactory.beekeeper;
 
+import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyBatch;
+import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyUnloadManager;
 import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyPrice;
 
 import java.util.ArrayList;

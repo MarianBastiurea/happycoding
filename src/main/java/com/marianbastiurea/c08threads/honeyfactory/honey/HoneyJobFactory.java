@@ -1,4 +1,7 @@
-package com.marianbastiurea.c08threads.honeyfactory;
+package com.marianbastiurea.c08threads.honeyfactory.honey;
+
+import com.marianbastiurea.c08threads.honeyfactory.beekeeper.Beekeeper;
+import com.marianbastiurea.c08threads.honeyfactory.beekeeper.BeekeeperHoneyJob;
 
 import java.util.ArrayList;
 import java.util.List;

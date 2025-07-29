@@ -1,6 +1,6 @@
-package com.marianbastiurea.c08threads.honeyfactory.excelreaders;
-import com.marianbastiurea.c08threads.honeyfactory.Beekeeper;
-import com.marianbastiurea.c08threads.honeyfactory.HoneyBatch;
+package com.marianbastiurea.c08threads.honeyfactory.excelreaderswriters;
+import com.marianbastiurea.c08threads.honeyfactory.beekeeper.Beekeeper;
+import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyBatch;
 import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyType;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;

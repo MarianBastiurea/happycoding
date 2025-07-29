@@ -1,13 +1,20 @@
 package com.marianbastiurea.c08threads.honeyfactory;
 
+import com.marianbastiurea.c08threads.honeyfactory.beekeeper.Beekeeper;
+import com.marianbastiurea.c08threads.honeyfactory.beekeeper.BeekeeperHoneyJob;
+import com.marianbastiurea.c08threads.honeyfactory.beekeeper.BeekeeperJobExecutor;
 import com.marianbastiurea.c08threads.honeyfactory.dataloader.BeekeeperDataLoader;
 import com.marianbastiurea.c08threads.honeyfactory.dataloader.HoneyOrderLoader;
 import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyType;
+import com.marianbastiurea.c08threads.honeyfactory.excelreaderswriters.DeliveryStatusExcelWriter;
+import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyJobFactory;
+import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyOrder;
+import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyUnloadManager;
 
 import java.util.Collections;
 import java.util.List;
 
-public class Main {
+public class HoneyDeliveryMain {
     public static void main(String[] args) {
 
         // 1. Read beekeepers from Excel
@@ -45,7 +52,12 @@ public class Main {
         }
 
         // 9. Check if all orders have been processed
-        OrderProcessingVerifier.verifyAndDisplayOrderStatus(orders);
+        OrderProcessingVerifier.verifyAndDisplayOrderStatus(
+                orders,
+                manager.getDeliveredQuantities(),
+                manager.getStorage() // dacă ai getter pentru storage final
+        );
+
 
         // 10. Final message
         System.out.println("\n🎉 All beekeepers have finished unloading and left the center.");

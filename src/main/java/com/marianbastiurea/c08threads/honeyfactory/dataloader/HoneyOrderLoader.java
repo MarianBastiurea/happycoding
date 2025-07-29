@@ -1,7 +1,7 @@
 package com.marianbastiurea.c08threads.honeyfactory.dataloader;
 
-import com.marianbastiurea.c08threads.honeyfactory.HoneyOrder;
-import com.marianbastiurea.c08threads.honeyfactory.excelreaders.OrderExcelReader;
+import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyOrder;
+import com.marianbastiurea.c08threads.honeyfactory.excelreaderswriters.OrderExcelReader;
 
 import java.util.List;
 

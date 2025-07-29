@@ -1,9 +1,13 @@
-package com.marianbastiurea.c08threads.honeyfactory;
+package com.marianbastiurea.c08threads.honeyfactory.honey;
 
+import com.marianbastiurea.c08threads.honeyfactory.beekeeper.BeekeeperHoneyJob;
 import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyType;
 
 import java.time.LocalTime;
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.Semaphore;
 
 public class HoneyUnloadManager {
@@ -12,7 +16,7 @@ public class HoneyUnloadManager {
     private final Map<HoneyType, Double> storage = new HashMap<>();
     private final Map<HoneyType, Double> maxStorageCapacity = new HashMap<>();
     private final Object lock = new Object();
-
+    private final Map<HoneyOrder, Double> deliveredQuantities = new HashMap<>();
     private final List<HoneyOrder> honeyOrders;
 
     public HoneyUnloadManager(List<HoneyOrder> honeyOrders) {
@@ -23,6 +27,10 @@ public class HoneyUnloadManager {
             storage.put(type, 0.0);
             maxStorageCapacity.put(type, 3000.0); // for example: 3000 kg max per type
         }
+    }
+
+    public Map<HoneyOrder, Double> getDeliveredQuantities() {
+        return deliveredQuantities;
     }
 
 
@@ -76,8 +84,8 @@ public class HoneyUnloadManager {
                         beekeeperName, quantity, type, start);
 
                 int barrels = (int) Math.ceil(quantity / 280.0);
-               // long unloadMillis = barrels * 10L * 60 * 1000;
-                long unloadMillis=1000;
+                // long unloadMillis = barrels * 10L * 60 * 1000;
+                long unloadMillis = 1000;
                 System.out.printf("⏳ %s is unloading %d barrels (%d minutes)%n",
                         beekeeperName, barrels, barrels * 10);
                 Thread.sleep(unloadMillis);
@@ -95,29 +103,34 @@ public class HoneyUnloadManager {
     }
 
 
-
     private boolean processOrderFor(HoneyType type) {
         Optional<HoneyOrder> matchingOrder = honeyOrders.stream()
-                .filter(order -> order.getHoneyType() == type && !order.isProcessed())
+                .filter(order -> order.getHoneyType() == type)
+                .filter(order -> {
+                    double delivered = deliveredQuantities.getOrDefault(order, 0.0);
+                    return delivered < order.getQuantity(); // comanda nu e completă
+                })
                 .findFirst();
 
         if (matchingOrder.isPresent()) {
             HoneyOrder order = matchingOrder.get();
-            double orderQuantity = order.getQuantity();
+            double orderedQty = order.getQuantity();
+            double deliveredSoFar = deliveredQuantities.getOrDefault(order, 0.0);
+            double remainingQty = orderedQty - deliveredSoFar;
             double currentStock = storage.get(type);
 
-            double quantityToProcess = Math.min(orderQuantity, currentStock);
+            double quantityToProcess = Math.min(remainingQty, currentStock);
 
             if (quantityToProcess <= 0.0) {
-                System.out.printf("⚠️ Cannot process order for %s – no stock available%n", type);
+                System.out.printf("⚠️ Cannot process order for %s – no stock available or order already fulfilled.%n", type);
                 return false;
             }
 
             int barrels = (int) Math.ceil(quantityToProcess / 280.0);
-         //   long processingTimeMillis = barrels * 10L * 60 * 1000;
-            long processingTimeMillis=1000;
-            System.out.printf("🏭 Processing %.2f kg of %s (≈ %d barrels, will take %d minutes)%n",
-                    quantityToProcess, type, barrels, barrels * 10);
+            long processingTimeMillis = 1000; // simulare: 1 sec per livrare
+
+            System.out.printf("🏭 Processing %.2f kg of %s (≈ %d barrels)%n",
+                    quantityToProcess, type, barrels);
 
             try {
                 Thread.sleep(processingTimeMillis);
@@ -125,13 +138,19 @@ public class HoneyUnloadManager {
                 Thread.currentThread().interrupt();
             }
 
+            // actualizare stoc și cantitate livrată
             storage.put(type, currentStock - quantityToProcess);
-            order.setProcessed(true);
-            System.out.printf("✅ Processed %.2f kg of %s → new stock: %.2f kg%n",
-                    quantityToProcess, type, storage.get(type));
+            deliveredQuantities.put(order, deliveredSoFar + quantityToProcess);
+
+            System.out.printf("✅ Delivered %.2f kg of %s (%.2f total delivered, %.2f remaining)%n",
+                    quantityToProcess, type,
+                    deliveredQuantities.get(order),
+                    orderedQty - deliveredQuantities.get(order));
+
             synchronized (lock) {
                 lock.notifyAll();
             }
+
             return true;
         }
 
@@ -140,6 +159,10 @@ public class HoneyUnloadManager {
 
     public double getStorageFor(HoneyType type) {
         return storage.get(type);
+    }
+
+    public Map<HoneyType, Double> getStorage() {
+        return storage;
     }
 }
 

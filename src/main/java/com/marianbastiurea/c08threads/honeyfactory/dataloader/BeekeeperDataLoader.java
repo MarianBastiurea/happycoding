@@ -1,9 +1,9 @@
 package com.marianbastiurea.c08threads.honeyfactory.dataloader;
 
 
-import com.marianbastiurea.c08threads.honeyfactory.Beekeeper;
-import com.marianbastiurea.c08threads.honeyfactory.HoneyBatch;
-import com.marianbastiurea.c08threads.honeyfactory.excelreaders.BeekeeperExcelReader;
+import com.marianbastiurea.c08threads.honeyfactory.beekeeper.Beekeeper;
+import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyBatch;
+import com.marianbastiurea.c08threads.honeyfactory.excelreaderswriters.BeekeeperExcelReader;
 
 import java.util.List;
 
