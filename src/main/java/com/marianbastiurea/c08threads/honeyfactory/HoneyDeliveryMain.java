@@ -6,9 +6,8 @@ import com.marianbastiurea.c08threads.honeyfactory.beekeeper.BeekeeperJobExecuto
 import com.marianbastiurea.c08threads.honeyfactory.dataloader.BeekeeperDataLoader;
 import com.marianbastiurea.c08threads.honeyfactory.dataloader.HoneyOrderLoader;
 import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyType;
-import com.marianbastiurea.c08threads.honeyfactory.excelreaderswriters.DeliveryStatusExcelWriter;
 import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyJobFactory;
-import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyOrder;
+import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyOrderFromProcessingPlant;
 import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyUnloadManager;
 
 import java.util.Collections;
@@ -21,7 +20,7 @@ public class HoneyDeliveryMain {
         List<Beekeeper> beekeepers = BeekeeperDataLoader.loadAndDisplayBeekeepers("/Users/marianbastiurea/Desktop/beekeepers.xlsx");
 
         // 2. Read honey orders from Excel
-        List<HoneyOrder> orders = HoneyOrderLoader.loadAndDisplayOrders("/Users/marianbastiurea/Desktop/honeyOrders.xlsx");
+        List<HoneyOrderFromProcessingPlant> orders = HoneyOrderLoader.loadAndDisplayOrders("/Users/marianbastiurea/Desktop/honeyOrders.xlsx");
 
         // 3. Initialize HoneyUnloadManager with orders
         HoneyUnloadManager manager = new HoneyUnloadManager(orders);
@@ -55,7 +54,7 @@ public class HoneyDeliveryMain {
         OrderProcessingVerifier.verifyAndDisplayOrderStatus(
                 orders,
                 manager.getDeliveredQuantities(),
-                manager.getStorage() // dacă ai getter pentru storage final
+                manager.getStorage()
         );
 
 

@@ -2,7 +2,7 @@ package com.marianbastiurea.c08threads.honeyfactory;
 
 import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyType;
 import com.marianbastiurea.c08threads.honeyfactory.excelreaderswriters.DeliveryStatusExcelWriter;
-import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyOrder;
+import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyOrderFromProcessingPlant;
 
 import java.util.HashMap;
 import java.util.List;
@@ -11,8 +11,8 @@ import java.util.Map;
 public class OrderProcessingVerifier {
 
     public static void verifyAndDisplayOrderStatus(
-            List<HoneyOrder> orders,
-            Map<HoneyOrder, Double> deliveredQuantities,
+            List<HoneyOrderFromProcessingPlant> orders,
+            Map<HoneyOrderFromProcessingPlant, Double> deliveredQuantities,
             Map<HoneyType, Double> finalStorage) {
 
         System.out.println("\n📦 Final Honey Order Status:");
@@ -21,7 +21,7 @@ public class OrderProcessingVerifier {
         Map<HoneyType, Double> deliveredByType = new HashMap<>();
 
         // Grupăm comenzile și livrările pe tip de miere
-        for (HoneyOrder order : orders) {
+        for (HoneyOrderFromProcessingPlant order : orders) {
             HoneyType type = order.getHoneyType();
             double ordered = order.getQuantity();
             double delivered = deliveredQuantities.getOrDefault(order, 0.0);

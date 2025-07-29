@@ -25,10 +25,8 @@ public class BeekeeperExcelReader {
                 String honeyTypeStr = row.getCell(1).getStringCellValue().toUpperCase();
                 String quantityStr = row.getCell(2).toString().trim();
                 double quantity = Double.parseDouble(quantityStr);
-
                 HoneyType type = HoneyType.valueOf(honeyTypeStr);
                 HoneyBatch batch = new HoneyBatch(type, quantity);
-
                 Beekeeper beekeeper = beekeepersMap.getOrDefault(name, new Beekeeper(name));
                 beekeeper.addHoneyBatch(batch);
                 beekeepersMap.put(name, beekeeper);
@@ -41,7 +39,6 @@ public class BeekeeperExcelReader {
         List<Beekeeper> beekeepers = new ArrayList<>(beekeepersMap.values());
 
         Collections.shuffle(beekeepers);
-
         return beekeepers;
     }
 }

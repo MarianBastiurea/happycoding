@@ -16,11 +16,11 @@ public class HoneyUnloadManager {
     private final Map<HoneyType, Double> storage = new HashMap<>();
     private final Map<HoneyType, Double> maxStorageCapacity = new HashMap<>();
     private final Object lock = new Object();
-    private final Map<HoneyOrder, Double> deliveredQuantities = new HashMap<>();
-    private final List<HoneyOrder> honeyOrders;
+    private final Map<HoneyOrderFromProcessingPlant, Double> deliveredQuantities = new HashMap<>();
+    private final List<HoneyOrderFromProcessingPlant> honeyOrderFromProcessingPlants;
 
-    public HoneyUnloadManager(List<HoneyOrder> honeyOrders) {
-        this.honeyOrders = honeyOrders;
+    public HoneyUnloadManager(List<HoneyOrderFromProcessingPlant> honeyOrderFromProcessingPlants) {
+        this.honeyOrderFromProcessingPlants = honeyOrderFromProcessingPlants;
 
         for (HoneyType type : HoneyType.values()) {
             unloadingSemaphores.put(type, new Semaphore(1)); // only 1 beekeeper per type
@@ -29,7 +29,7 @@ public class HoneyUnloadManager {
         }
     }
 
-    public Map<HoneyOrder, Double> getDeliveredQuantities() {
+    public Map<HoneyOrderFromProcessingPlant, Double> getDeliveredQuantities() {
         return deliveredQuantities;
     }
 
@@ -73,8 +73,7 @@ public class HoneyUnloadManager {
                         return;
                     }
 
-                    // 🔔 Procesarea a eliberat spațiu → notificăm
-                    lock.notifyAll();
+
                 }
 
 
@@ -85,7 +84,7 @@ public class HoneyUnloadManager {
 
                 int barrels = (int) Math.ceil(quantity / 280.0);
                 // long unloadMillis = barrels * 10L * 60 * 1000;
-                long unloadMillis = 1000;
+                long unloadMillis = 100;
                 System.out.printf("⏳ %s is unloading %d barrels (%d minutes)%n",
                         beekeeperName, barrels, barrels * 10);
                 Thread.sleep(unloadMillis);
@@ -94,8 +93,6 @@ public class HoneyUnloadManager {
                 LocalTime end = LocalTime.now();
                 System.out.printf("✅ %s finished unloading at %s (new total: %.2f kg)%n",
                         beekeeperName, end, storage.get(type));
-
-                lock.notifyAll(); // notifică alți stupari care poate așteaptă
             }
         } finally {
             semaphore.release();
@@ -104,7 +101,7 @@ public class HoneyUnloadManager {
 
 
     private boolean processOrderFor(HoneyType type) {
-        Optional<HoneyOrder> matchingOrder = honeyOrders.stream()
+        Optional<HoneyOrderFromProcessingPlant> matchingOrder = honeyOrderFromProcessingPlants.stream()
                 .filter(order -> order.getHoneyType() == type)
                 .filter(order -> {
                     double delivered = deliveredQuantities.getOrDefault(order, 0.0);
@@ -113,7 +110,7 @@ public class HoneyUnloadManager {
                 .findFirst();
 
         if (matchingOrder.isPresent()) {
-            HoneyOrder order = matchingOrder.get();
+            HoneyOrderFromProcessingPlant order = matchingOrder.get();
             double orderedQty = order.getQuantity();
             double deliveredSoFar = deliveredQuantities.getOrDefault(order, 0.0);
             double remainingQty = orderedQty - deliveredSoFar;
@@ -127,7 +124,8 @@ public class HoneyUnloadManager {
             }
 
             int barrels = (int) Math.ceil(quantityToProcess / 280.0);
-            long processingTimeMillis = 1000; // simulare: 1 sec per livrare
+            // long processingTimeMillis= barrels * 10L * 60 * 1000;
+            long processingTimeMillis = 100; // simulare: 1 sec per livrare
 
             System.out.printf("🏭 Processing %.2f kg of %s (≈ %d barrels)%n",
                     quantityToProcess, type, barrels);
@@ -146,10 +144,6 @@ public class HoneyUnloadManager {
                     quantityToProcess, type,
                     deliveredQuantities.get(order),
                     orderedQty - deliveredQuantities.get(order));
-
-            synchronized (lock) {
-                lock.notifyAll();
-            }
 
             return true;
         }
