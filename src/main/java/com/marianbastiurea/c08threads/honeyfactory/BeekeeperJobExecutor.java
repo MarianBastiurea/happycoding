@@ -1,5 +1,7 @@
 package com.marianbastiurea.c08threads.honeyfactory;
 
+import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyPrice;
+
 import java.util.ArrayList;
 import java.util.List;
 

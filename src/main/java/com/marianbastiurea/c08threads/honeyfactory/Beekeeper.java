@@ -1,5 +1,7 @@
 package com.marianbastiurea.c08threads.honeyfactory;
 
+import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyType;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

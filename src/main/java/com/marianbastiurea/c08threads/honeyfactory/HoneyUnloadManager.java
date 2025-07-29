@@ -1,5 +1,7 @@
 package com.marianbastiurea.c08threads.honeyfactory;
 
+import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyType;
+
 import java.time.LocalTime;
 import java.util.*;
 import java.util.concurrent.Semaphore;

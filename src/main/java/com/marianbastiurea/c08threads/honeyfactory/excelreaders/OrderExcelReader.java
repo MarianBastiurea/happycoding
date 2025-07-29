@@ -1,5 +1,7 @@
-package com.marianbastiurea.c08threads.honeyfactory;
+package com.marianbastiurea.c08threads.honeyfactory.excelreaders;
 
+import com.marianbastiurea.c08threads.honeyfactory.HoneyOrder;
+import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;

@@ -1,5 +1,7 @@
 package com.marianbastiurea.c08threads.honeyfactory;
 
+import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyType;
+
 public class HoneyBatch {
     private HoneyType honeyType;
     private double quantity;

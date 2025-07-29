@@ -1,4 +1,4 @@
-package com.marianbastiurea.c08threads.honeyfactory;
+package com.marianbastiurea.c08threads.honeyfactory.enums;
 public enum HoneyPrice {
     ACACIA(15.0),
     RAPESEED(12.0),

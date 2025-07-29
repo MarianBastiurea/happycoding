@@ -1,6 +1,9 @@
 package com.marianbastiurea.c08threads.honeyfactory;
 
-import java.util.ArrayList;
+import com.marianbastiurea.c08threads.honeyfactory.dataloader.BeekeeperDataLoader;
+import com.marianbastiurea.c08threads.honeyfactory.dataloader.HoneyOrderLoader;
+import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyType;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -8,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
         // 1. Read beekeepers from Excel
-       List<Beekeeper> beekeepers = BeekeeperDataLoader.loadAndDisplayBeekeepers("/Users/marianbastiurea/Desktop/beekeepers.xlsx");
+        List<Beekeeper> beekeepers = BeekeeperDataLoader.loadAndDisplayBeekeepers("/Users/marianbastiurea/Desktop/beekeepers.xlsx");
 
         // 2. Read honey orders from Excel
         List<HoneyOrder> orders = HoneyOrderLoader.loadAndDisplayOrders("/Users/marianbastiurea/Desktop/honeyOrders.xlsx");
@@ -21,7 +24,7 @@ public class Main {
 
         // 5. Shuffle jobs to simulate random arrival order
         Collections.shuffle(jobs);
-        
+
         // 6. Start a thread for each job
         List<Thread> threads = BeekeeperJobExecutor.executeJobsInThreads(beekeepers, manager);
 
@@ -42,23 +45,7 @@ public class Main {
         }
 
         // 9. Check if all orders have been processed
-        boolean allOrdersProcessed = orders.stream().allMatch(HoneyOrder::isProcessed);
-
-        // Dacă unele comenzi nu au fost procesate complet, adăugăm detalii
-        if (allOrdersProcessed) {
-            System.out.println("\n✅ All honey orders have been processed.");
-        } else {
-            System.out.println("\n⚠️ Some honey orders were not fully processed. Details:");
-
-            // Afișăm comenzile care nu au fost procesate complet
-            for (HoneyOrder order : orders) {
-                if (!order.isProcessed()) {
-                    System.out.printf("  -> Order for %s : %.2f kg was not processed.%n",
-                            order.getHoneyType(), order.getQuantity());
-                }
-            }
-        }
-
+        OrderProcessingVerifier.verifyAndDisplayOrderStatus(orders);
 
         // 10. Final message
         System.out.println("\n🎉 All beekeepers have finished unloading and left the center.");
