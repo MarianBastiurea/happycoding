@@ -8,66 +8,22 @@ public class Main {
     public static void main(String[] args) {
 
         // 1. Read beekeepers from Excel
-        List<Beekeeper> beekeepers = BeekeeperExcelReader.readBeekeepers("/Users/marianbastiurea/Desktop/beekeepers.xlsx");
-
-        System.out.println("👩‍🌾 Beekeepers and their honey batches:");
-        for (Beekeeper b : beekeepers) {
-            System.out.println("Beekeeper: " + b.getBeekeeperName());
-            for (HoneyBatch h : b.getHoneyBatches()) {
-                System.out.println("  -> " + h.getHoneyType() + " : " + h.getQuantity() + " kg");
-            }
-        }
+       List<Beekeeper> beekeepers = BeekeeperDataLoader.loadAndDisplayBeekeepers("/Users/marianbastiurea/Desktop/beekeepers.xlsx");
 
         // 2. Read honey orders from Excel
-        String orderFilePath = "/Users/marianbastiurea/Desktop/honeyOrders.xlsx";
-        List<HoneyOrder> orders = OrderExcelReader.readAllOrders(orderFilePath);
-
-        System.out.println("\n📦 All Honey Orders:");
-        for (HoneyOrder order : orders) {
-            System.out.println("  -> " + order.getHoneyType() + " : " + order.getQuantity() + " kg");
-        }
+        List<HoneyOrder> orders = HoneyOrderLoader.loadAndDisplayOrders("/Users/marianbastiurea/Desktop/honeyOrders.xlsx");
 
         // 3. Initialize HoneyUnloadManager with orders
         HoneyUnloadManager manager = new HoneyUnloadManager(orders);
 
         // 4. Create jobs from beekeepers (each HoneyBatch becomes a job)
-        List<BeekeeperHoneyJob> jobs = new ArrayList<>();
-        for (Beekeeper b : beekeepers) {
-            for (HoneyBatch batch : b.getHoneyBatches()) {
-                jobs.add(new BeekeeperHoneyJob(b.getBeekeeperName(), batch));
-            }
-        }
+        List<BeekeeperHoneyJob> jobs = HoneyJobFactory.createJobsFromBeekeepers(beekeepers);
 
         // 5. Shuffle jobs to simulate random arrival order
         Collections.shuffle(jobs);
-
-
+        
         // 6. Start a thread for each job
-        List<Thread> threads = new ArrayList<>();
-        for (Beekeeper beekeeper : beekeepers) {
-            Thread t = new Thread(() -> {
-                try {
-                    for (HoneyBatch batch : beekeeper.getHoneyBatches()) {
-                        BeekeeperHoneyJob job = new BeekeeperHoneyJob(beekeeper.getBeekeeperName(), batch);
-                        manager.tryUnload(job);
-                    }
-                    System.out.printf("🚚 %s has finished unloading all honey batches.%n", beekeeper.getBeekeeperName());
-
-                    // Simulăm plata
-                    double totalPayment = 0;
-                    for (HoneyBatch batch : beekeeper.getHoneyBatches()) {
-                        double pricePerKg = HoneyPrice.valueOf(batch.getHoneyType().name()).getPricePerKg();
-                        totalPayment += batch.getQuantity() * pricePerKg;
-                    }
-                    System.out.printf("💰 %s has been paid: %.2f lei.%n", beekeeper.getBeekeeperName(), totalPayment);
-
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            });
-            threads.add(t);
-            t.start();
-        }
+        List<Thread> threads = BeekeeperJobExecutor.executeJobsInThreads(beekeepers, manager);
 
 
         // 7. Wait for all threads to finish
