@@ -10,10 +10,13 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class PackagingLineManager {
+
     private final Map<HoneyType, BlockingQueue<PackagingJob>> packagingQueues = new EnumMap<>(HoneyType.class);
     private final Map<HoneyType, ExecutorService> packagingExecutors = new EnumMap<>(HoneyType.class);
+    private final Map<HoneyType, Double> finalStorage;
 
-    public PackagingLineManager() {
+    public PackagingLineManager(Map<HoneyType, Double> finalStorage) {
+        this.finalStorage = finalStorage;
         initializePackagingLines();
     }
 
@@ -25,7 +28,7 @@ public class PackagingLineManager {
             ExecutorService executor = Executors.newSingleThreadExecutor();
             packagingExecutors.put(type, executor);
 
-            executor.submit(new PackagingWorker(type, queue));
+            executor.submit(new PackagingWorker(type, queue, finalStorage));
         }
     }
 

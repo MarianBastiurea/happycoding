@@ -16,9 +16,9 @@ import java.util.List;
 public class HoneyDeliveryMain {
     public static void main(String[] args) {
 
-        List<Beekeeper> beekeepers = BeekeeperDataLoader.loadAndDisplayBeekeepers("/Users/marianbastiurea/Desktop/beekeepers.xlsx");
+        List<Beekeeper> beekeepers = BeekeeperDataLoader.loadAndDisplayBeekeepers("excel-data/beekeepers.xlsx");
 
-        List<HoneyOrderFromProcessingPlant> orders = HoneyOrderLoader.loadAndDisplayOrders("/Users/marianbastiurea/Desktop/honeyOrders.xlsx");
+        List<HoneyOrderFromProcessingPlant> orders = HoneyOrderLoader.loadAndDisplayOrders("excel-data/honeyOrdersFromProcessingPlant.xlsx");
 
         HoneyUnloadManager manager = new HoneyUnloadManager(orders);
 

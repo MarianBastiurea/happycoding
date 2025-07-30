@@ -47,7 +47,7 @@ public class OrderProcessingVerifier {
             }
         }
 
-        String outputFile = "/Users/marianbastiurea/Desktop/deliveredStatus.xlsx";
+        String outputFile = "excel-data/honeyOrdersFromProcessingPlant.xlsx";
         DeliveryStatusExcelWriter.writeDeliveryStatusToExcel(
                 orderedByType,
                 deliveredByType,
