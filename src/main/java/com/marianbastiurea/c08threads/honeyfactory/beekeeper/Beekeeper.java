@@ -17,7 +17,7 @@ public class Beekeeper extends Thread {
     public Beekeeper(String beekeeperName) {
         this.beekeeperName = beekeeperName;
         this.honeyBatches = new ArrayList<>();
-        this.honeyQueues = null; // va fi setat separat înainte de start()
+        this.honeyQueues = null;
     }
 
     @Override
@@ -28,11 +28,11 @@ public class Beekeeper extends Thread {
         for (HoneyBatch batch : honeyBatches) {
             try {
                 BeekeeperHoneyJob job = new BeekeeperHoneyJob(beekeeperName, batch);
-                honeyQueues.get(batch.getHoneyType()).put(job);
-                System.out.println(beekeeperName + " queued for " + batch.getHoneyType() + " (" + batch.getQuantity() + " kg).");
+                honeyQueues.get(batch.honeyType()).put(job);
+                System.out.println(beekeeperName + " queued for " + batch.honeyType() + " (" + batch.quantity() + " kg).");
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
-                System.err.println(beekeeperName + " was interrupted while queuing for " + batch.getHoneyType());
+                System.err.println(beekeeperName + " was interrupted while queuing for " + batch.honeyType());
             }
         }
     }

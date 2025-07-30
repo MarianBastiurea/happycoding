@@ -16,14 +16,12 @@ import java.util.concurrent.BlockingQueue;
 public class JarProcessingMain {
     public static void main(String[] args) {
 
-        String excelPath = "excel-data/honeyOrdersFromProcessingPlant.xlsx";
+        String honeyQuantitiesReceivedFromWarehousePath = "excel-data/honeyOrdersFromProcessingPlant.xlsx";
         String storeOrdersPath = "excel-data/StoreOrder.xlsx";
-
-        JarProcessorExcelReaders.processDeliveredHoney(excelPath);
 
         List<HoneyJarOrderFromStore> orders = HoneyJarOrderFromStoreExcelReader.readOrders(storeOrdersPath);
 
-        Map<HoneyType, Double> finalStorage = JarProcessorExcelReaders.readFinalStorage(excelPath);
+        Map<HoneyType, Double> finalStorage = JarProcessorExcelReaders.readFinalStorage(honeyQuantitiesReceivedFromWarehousePath);
 
         PackagingLineManager lineManager = new PackagingLineManager(finalStorage);
 
@@ -32,7 +30,6 @@ public class JarProcessingMain {
 
         JarPackagingCoordinator coordinator = new JarPackagingCoordinator(queues, executors, orders.size());
         coordinator.processOrders(orders);
-
         coordinator.awaitAllOrders();
         coordinator.shutdownAll();
 

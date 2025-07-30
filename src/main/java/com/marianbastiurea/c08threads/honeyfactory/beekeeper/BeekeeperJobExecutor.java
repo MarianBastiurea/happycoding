@@ -22,8 +22,8 @@ public class BeekeeperJobExecutor {
 
                     double totalPayment = 0;
                     for (HoneyBatch batch : beekeeper.getHoneyBatches()) {
-                        double pricePerKg = HoneyPrice.valueOf(batch.getHoneyType().name()).getPricePerKg();
-                        totalPayment += batch.getQuantity() * pricePerKg;
+                        double pricePerKg = HoneyPrice.valueOf(batch.honeyType().name()).getPricePerKg();
+                        totalPayment += batch.quantity() * pricePerKg;
                     }
                     System.out.printf("💰 %s has been paid: %.2f lei.%n", beekeeper.getBeekeeperName(), totalPayment);
 

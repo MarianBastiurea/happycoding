@@ -4,7 +4,7 @@ import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyType;
 import com.marianbastiurea.c08threads.honeyfactory.excelreaderswriters.DeliveryStatusExcelWriter;
 import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyOrderFromProcessingPlant;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,8 +17,9 @@ public class OrderProcessingVerifier {
 
         System.out.println("\n📦 Final Honey Order Status:");
 
-        Map<HoneyType, Double> orderedByType = new HashMap<>();
-        Map<HoneyType, Double> deliveredByType = new HashMap<>();
+        Map<HoneyType, Double> orderedByType = new EnumMap<>(HoneyType.class);
+        Map<HoneyType, Double> deliveredByType = new EnumMap<>(HoneyType.class);
+
 
         for (HoneyOrderFromProcessingPlant order : orders) {
             HoneyType type = order.getHoneyType();

@@ -43,7 +43,7 @@ public class JarPackagingCoordinator {
                     try {
                         System.out.printf("📤 Sending job: %s → %d jars for store %s%n",
                                 honeyType, quantity, storeName);
-                        packagingQueues.get(honeyType).put(job); // trimite jobul spre linia de ambalare
+                        packagingQueues.get(honeyType).put(job);
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
                     }

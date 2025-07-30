@@ -16,7 +16,7 @@ public class BeekeeperDataLoader {
         for (Beekeeper b : beekeepers) {
             System.out.println("Beekeeper: " + b.getBeekeeperName());
             for (HoneyBatch h : b.getHoneyBatches()) {
-                System.out.println("  -> " + h.getHoneyType() + " : " + h.getQuantity() + " kg");
+                System.out.println("  -> " + h.honeyType() + " : " + h.quantity() + " kg");
             }
         }
         return beekeepers;

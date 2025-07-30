@@ -20,7 +20,6 @@ public class HoneyJarOrderFromStoreExcelReader {
 
         try (FileInputStream fis = new FileInputStream(excelFilePath);
              Workbook workbook = new XSSFWorkbook(fis)) {
-
             Sheet sheet = workbook.getSheetAt(0);
 
             for (int rowIndex = 1; rowIndex <= sheet.getLastRowNum(); rowIndex++) {
@@ -30,7 +29,6 @@ public class HoneyJarOrderFromStoreExcelReader {
                 String storeName = row.getCell(0).getStringCellValue().trim();
                 String honeyTypeStr = row.getCell(1).getStringCellValue().trim().toUpperCase();
                 int quantity = (int) row.getCell(2).getNumericCellValue();
-
                 HoneyType honeyType;
                 try {
                     honeyType = HoneyType.valueOf(honeyTypeStr);
@@ -38,29 +36,13 @@ public class HoneyJarOrderFromStoreExcelReader {
                     System.err.printf("⚠️ Invalid honey type '%s' at row %d – skipped%n", honeyTypeStr, rowIndex);
                     continue;
                 }
-
                 ordersMap
-                        .computeIfAbsent(storeName, name -> new HoneyJarOrderFromStore(name))
+                        .computeIfAbsent(storeName, HoneyJarOrderFromStore::new)
                         .addHoneyOrder(honeyType, quantity);
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        List<HoneyJarOrderFromStore> allOrders = new ArrayList<>(ordersMap.values());
-
-        System.out.println("📦 Orders from stores:");
-        System.out.println("─────────────────────────────");
-
-        for (HoneyJarOrderFromStore order : allOrders) {
-            System.out.println("🏪 Store: " + order.getStoreName());
-            for (Map.Entry<HoneyType, Integer> entry : order.getJarsToDeliver().entrySet()) {
-                System.out.printf("   → %s: %d jars%n", entry.getKey(), entry.getValue());
-            }
-            System.out.println();
-        }
-
         return new ArrayList<>(ordersMap.values());
     }
 }

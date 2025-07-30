@@ -21,7 +21,7 @@ public class OrderExcelReader {
              Workbook workbook = new XSSFWorkbook(fis)) {
             Sheet sheet = workbook.getSheetAt(0);
             for (Row row : sheet) {
-                if (row.getRowNum() == 0) continue; // Skip header
+                if (row.getRowNum() == 0) continue;
                 String honeyTypeStr = row.getCell(0).getStringCellValue().trim().toUpperCase();
                 double quantity = row.getCell(1).getNumericCellValue();
                 HoneyType type = HoneyType.valueOf(honeyTypeStr);

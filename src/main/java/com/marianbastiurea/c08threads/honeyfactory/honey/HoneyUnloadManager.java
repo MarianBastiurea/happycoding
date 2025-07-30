@@ -4,17 +4,14 @@ import com.marianbastiurea.c08threads.honeyfactory.beekeeper.BeekeeperHoneyJob;
 import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyType;
 
 import java.time.LocalTime;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.Semaphore;
 
 public class HoneyUnloadManager {
 
-    private final Map<HoneyType, Semaphore> unloadingSemaphores = new HashMap<>();
-    private final Map<HoneyType, Double> storage = new HashMap<>();
-    private final Map<HoneyType, Double> maxStorageCapacity = new HashMap<>();
+    private final Map<HoneyType, Semaphore> unloadingSemaphores = new EnumMap<>(HoneyType.class);
+    private final Map<HoneyType, Double> storage = new EnumMap<>(HoneyType.class);
+    private final Map<HoneyType, Double> maxStorageCapacity = new EnumMap<>(HoneyType.class);
     private final Object lock = new Object();
     private final Map<HoneyOrderFromProcessingPlant, Double> deliveredQuantities = new HashMap<>();
     private final List<HoneyOrderFromProcessingPlant> honeyOrderFromProcessingPlants;
@@ -34,10 +31,9 @@ public class HoneyUnloadManager {
     }
 
     public void tryUnload(BeekeeperHoneyJob job) throws InterruptedException {
-        HoneyType type = job.getHoneyBatch().getHoneyType();
-        double quantity = job.getHoneyBatch().getQuantity();
-        String beekeeperName = job.getBeekeeperName();
-
+        HoneyType type = job.honeyBatch().honeyType();
+        double quantity = job.honeyBatch().quantity();
+        String beekeeperName = job.beekeeperName();
         Semaphore semaphore = unloadingSemaphores.get(type);
         semaphore.acquire();
 
