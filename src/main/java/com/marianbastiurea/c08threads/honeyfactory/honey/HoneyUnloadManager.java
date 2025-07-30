@@ -23,9 +23,9 @@ public class HoneyUnloadManager {
         this.honeyOrderFromProcessingPlants = honeyOrderFromProcessingPlants;
 
         for (HoneyType type : HoneyType.values()) {
-            unloadingSemaphores.put(type, new Semaphore(1)); // only 1 beekeeper per type
+            unloadingSemaphores.put(type, new Semaphore(1));
             storage.put(type, 0.0);
-            maxStorageCapacity.put(type, 3000.0); // for example: 3000 kg max per type
+            maxStorageCapacity.put(type, 3000.0);
         }
     }
 
@@ -33,22 +33,19 @@ public class HoneyUnloadManager {
         return deliveredQuantities;
     }
 
-
     public void tryUnload(BeekeeperHoneyJob job) throws InterruptedException {
         HoneyType type = job.getHoneyBatch().getHoneyType();
         double quantity = job.getHoneyBatch().getQuantity();
         String beekeeperName = job.getBeekeeperName();
 
         Semaphore semaphore = unloadingSemaphores.get(type);
-        semaphore.acquire(); // exclusivitate pe tipul de miere
+        semaphore.acquire();
 
         try {
             synchronized (lock) {
                 while (true) {
                     double current = storage.get(type);
                     double max = maxStorageCapacity.get(type);
-
-                    // 🟢 Dacă e loc → descarcă
                     if (current + quantity <= max) {
                         break;
                     }
@@ -59,15 +56,12 @@ public class HoneyUnloadManager {
                     boolean processed = processOrderFor(type);
 
                     if (!processed) {
-                        // ❗ Dacă nu s-a putut procesa nimic, verificăm din nou spațiul:
                         current = storage.get(type);
                         if (current + quantity <= max) {
                             System.out.printf("🔄 Rechecking after failed processing – there's now space for %s (%s). Continuing...%n",
                                     beekeeperName, type);
                             break;
                         }
-
-                        // 🛑 Altfel ieșim – nu are ce să mai facă
                         System.out.printf("🚫 %s could not unload %.2f kg of %s and left the center.%n",
                                 beekeeperName, quantity, type);
                         return;
@@ -76,15 +70,13 @@ public class HoneyUnloadManager {
 
                 }
 
-
-                // 🟢 Poate descărca
                 LocalTime start = LocalTime.now();
                 System.out.printf("✅ %s started unloading %.2f kg of %s at %s%n",
                         beekeeperName, quantity, type, start);
 
                 int barrels = (int) Math.ceil(quantity / 280.0);
                 // long unloadMillis = barrels * 10L * 60 * 1000;
-                long unloadMillis = 100;
+                long unloadMillis = 100;// just for testing purposes
                 System.out.printf("⏳ %s is unloading %d barrels (%d minutes)%n",
                         beekeeperName, barrels, barrels * 10);
                 Thread.sleep(unloadMillis);
@@ -105,7 +97,7 @@ public class HoneyUnloadManager {
                 .filter(order -> order.getHoneyType() == type)
                 .filter(order -> {
                     double delivered = deliveredQuantities.getOrDefault(order, 0.0);
-                    return delivered < order.getQuantity(); // comanda nu e completă
+                    return delivered < order.getQuantity();
                 })
                 .findFirst();
 
@@ -125,7 +117,7 @@ public class HoneyUnloadManager {
 
             int barrels = (int) Math.ceil(quantityToProcess / 280.0);
             // long processingTimeMillis= barrels * 10L * 60 * 1000;
-            long processingTimeMillis = 100; // simulare: 1 sec per livrare
+            long processingTimeMillis = 100;// just for testing purposes
 
             System.out.printf("🏭 Processing %.2f kg of %s (≈ %d barrels)%n",
                     quantityToProcess, type, barrels);
@@ -136,7 +128,6 @@ public class HoneyUnloadManager {
                 Thread.currentThread().interrupt();
             }
 
-            // actualizare stoc și cantitate livrată
             storage.put(type, currentStock - quantityToProcess);
             deliveredQuantities.put(order, deliveredSoFar + quantityToProcess);
 

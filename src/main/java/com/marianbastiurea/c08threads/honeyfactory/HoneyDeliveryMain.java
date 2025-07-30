@@ -16,26 +16,18 @@ import java.util.List;
 public class HoneyDeliveryMain {
     public static void main(String[] args) {
 
-        // 1. Read beekeepers from Excel
         List<Beekeeper> beekeepers = BeekeeperDataLoader.loadAndDisplayBeekeepers("/Users/marianbastiurea/Desktop/beekeepers.xlsx");
 
-        // 2. Read honey orders from Excel
         List<HoneyOrderFromProcessingPlant> orders = HoneyOrderLoader.loadAndDisplayOrders("/Users/marianbastiurea/Desktop/honeyOrders.xlsx");
 
-        // 3. Initialize HoneyUnloadManager with orders
         HoneyUnloadManager manager = new HoneyUnloadManager(orders);
 
-        // 4. Create jobs from beekeepers (each HoneyBatch becomes a job)
         List<BeekeeperHoneyJob> jobs = HoneyJobFactory.createJobsFromBeekeepers(beekeepers);
 
-        // 5. Shuffle jobs to simulate random arrival order
         Collections.shuffle(jobs);
 
-        // 6. Start a thread for each job
         List<Thread> threads = BeekeeperJobExecutor.executeJobsInThreads(beekeepers, manager);
 
-
-        // 7. Wait for all threads to finish
         for (Thread t : threads) {
             try {
                 t.join();
@@ -44,21 +36,17 @@ public class HoneyDeliveryMain {
             }
         }
 
-        // 8. Final summary of honey storage
         System.out.println("\n📊 Final honey storage in center:");
         for (HoneyType type : HoneyType.values()) {
             System.out.printf("  - %s: %.2f kg%n", type, manager.getStorageFor(type));
         }
 
-        // 9. Check if all orders have been processed
         OrderProcessingVerifier.verifyAndDisplayOrderStatus(
                 orders,
                 manager.getDeliveredQuantities(),
                 manager.getStorage()
         );
 
-
-        // 10. Final message
         System.out.println("\n🎉 All beekeepers have finished unloading and left the center.");
     }
 }

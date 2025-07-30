@@ -19,8 +19,7 @@ public class OrderProcessingVerifier {
 
         Map<HoneyType, Double> orderedByType = new HashMap<>();
         Map<HoneyType, Double> deliveredByType = new HashMap<>();
-
-        // Grupăm comenzile și livrările pe tip de miere
+        
         for (HoneyOrderFromProcessingPlant order : orders) {
             HoneyType type = order.getHoneyType();
             double ordered = order.getQuantity();

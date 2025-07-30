@@ -1,8 +1,11 @@
 package com.marianbastiurea.c08threads.honeyfactory.excelreaderswriters;
+
 import com.marianbastiurea.c08threads.honeyfactory.beekeeper.Beekeeper;
-import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyBatch;
 import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyType;
-import org.apache.poi.ss.usermodel.*;
+import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyBatch;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
@@ -19,7 +22,7 @@ public class BeekeeperExcelReader {
 
             Sheet sheet = workbook.getSheetAt(0);
             for (Row row : sheet) {
-                if (row.getRowNum() == 0) continue; // Skip header
+                if (row.getRowNum() == 0) continue;
 
                 String name = row.getCell(0).getStringCellValue();
                 String honeyTypeStr = row.getCell(1).getStringCellValue().toUpperCase();

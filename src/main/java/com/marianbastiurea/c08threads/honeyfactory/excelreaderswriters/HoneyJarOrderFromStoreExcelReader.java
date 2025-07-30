@@ -2,7 +2,6 @@ package com.marianbastiurea.c08threads.honeyfactory.excelreaderswriters;
 
 import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyType;
 import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyJarOrderFromStore;
-import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -11,42 +10,57 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class HoneyJarOrderFromStoreExcelReader {
-    public static List<HoneyJarOrderFromStore> readOrders(String filePath) {
-        List<HoneyJarOrderFromStore> orders = new ArrayList<>();
+    public static List<HoneyJarOrderFromStore> readOrders(String excelFilePath) {
+        Map<String, HoneyJarOrderFromStore> ordersMap = new HashMap<>();
 
-        try (FileInputStream fis = new FileInputStream(filePath);
+        try (FileInputStream fis = new FileInputStream(excelFilePath);
              Workbook workbook = new XSSFWorkbook(fis)) {
 
             Sheet sheet = workbook.getSheetAt(0);
-            for (Row row : sheet) {
-                // Skip header row
-                if (row.getRowNum() == 0) continue;
 
-                Cell storeCell = row.getCell(0);
-                Cell honeyTypeCell = row.getCell(1);
-                Cell jarsCell = row.getCell(2);
+            for (int rowIndex = 1; rowIndex <= sheet.getLastRowNum(); rowIndex++) {
+                Row row = sheet.getRow(rowIndex);
+                if (row == null) continue;
 
-                String storeName = storeCell.getStringCellValue().trim();
-                String honeyTypeStr = honeyTypeCell.getStringCellValue().trim().toUpperCase();
-                int numberOfJars = (int) jarsCell.getNumericCellValue();
+                String storeName = row.getCell(0).getStringCellValue().trim();
+                String honeyTypeStr = row.getCell(1).getStringCellValue().trim().toUpperCase();
+                int quantity = (int) row.getCell(2).getNumericCellValue();
 
-                HoneyType honeyType = HoneyType.valueOf(honeyTypeStr);
+                HoneyType honeyType;
+                try {
+                    honeyType = HoneyType.valueOf(honeyTypeStr);
+                } catch (IllegalArgumentException e) {
+                    System.err.printf("⚠️ Invalid honey type '%s' at row %d – skipped%n", honeyTypeStr, rowIndex);
+                    continue;
+                }
 
-                HoneyJarOrderFromStore order = new HoneyJarOrderFromStore(storeName, honeyType, numberOfJars);
-                orders.add(order);
+                ordersMap
+                        .computeIfAbsent(storeName, name -> new HoneyJarOrderFromStore(name))
+                        .addHoneyOrder(honeyType, quantity);
             }
 
-        } catch (IOException | IllegalArgumentException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("🛒 Honey Jar Orders from Stores:");
-        for (HoneyJarOrderFromStore order : orders) {
-            System.out.println(order);
+
+        List<HoneyJarOrderFromStore> allOrders = new ArrayList<>(ordersMap.values());
+
+        System.out.println("📦 Orders from stores:");
+        System.out.println("─────────────────────────────");
+
+        for (HoneyJarOrderFromStore order : allOrders) {
+            System.out.println("🏪 Store: " + order.getStoreName());
+            for (Map.Entry<HoneyType, Integer> entry : order.getJarsToDeliver().entrySet()) {
+                System.out.printf("   → %s: %d jars%n", entry.getKey(), entry.getValue());
+            }
+            System.out.println();
         }
 
-        return orders;
+        return new ArrayList<>(ordersMap.values());
     }
 }

@@ -19,6 +19,7 @@ public class HoneyOrderFromProcessingPlant {
     public double getQuantity() {
         return quantity;
     }
+
     public boolean isProcessed() {
         return processed;
     }

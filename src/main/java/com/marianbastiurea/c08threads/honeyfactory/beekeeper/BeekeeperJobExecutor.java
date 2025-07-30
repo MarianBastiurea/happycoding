@@ -1,8 +1,8 @@
 package com.marianbastiurea.c08threads.honeyfactory.beekeeper;
 
+import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyPrice;
 import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyBatch;
 import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyUnloadManager;
-import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyPrice;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,6 @@ public class BeekeeperJobExecutor {
                     }
                     System.out.printf("🚚 %s has finished unloading all honey batches.%n", beekeeper.getBeekeeperName());
 
-                    // Simulăm plata
                     double totalPayment = 0;
                     for (HoneyBatch batch : beekeeper.getHoneyBatches()) {
                         double pricePerKg = HoneyPrice.valueOf(batch.getHoneyType().name()).getPricePerKg();

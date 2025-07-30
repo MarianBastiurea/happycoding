@@ -19,7 +19,6 @@ public class DeliveryStatusExcelWriter {
         try (Workbook workbook = new XSSFWorkbook()) {
             Sheet sheet = workbook.createSheet("Delivery Status");
 
-            // Header row
             Row header = sheet.createRow(0);
             header.createCell(0).setCellValue("Honey Type");
             header.createCell(1).setCellValue("Ordered (kg)");

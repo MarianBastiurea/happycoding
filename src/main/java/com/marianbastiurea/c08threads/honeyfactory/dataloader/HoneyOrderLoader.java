@@ -1,7 +1,7 @@
 package com.marianbastiurea.c08threads.honeyfactory.dataloader;
 
-import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyOrderFromProcessingPlant;
 import com.marianbastiurea.c08threads.honeyfactory.excelreaderswriters.OrderExcelReader;
+import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyOrderFromProcessingPlant;
 
 import java.util.List;
 
@@ -13,7 +13,6 @@ public class HoneyOrderLoader {
         for (HoneyOrderFromProcessingPlant order : orders) {
             System.out.println("  -> " + order.getHoneyType() + " : " + order.getQuantity() + " kg");
         }
-
         return orders;
     }
 }

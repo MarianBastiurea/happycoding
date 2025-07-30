@@ -1,7 +1,7 @@
 package com.marianbastiurea.c08threads.honeyfactory.beekeeper;
 
-import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyBatch;
 import com.marianbastiurea.c08threads.honeyfactory.enums.HoneyType;
+import com.marianbastiurea.c08threads.honeyfactory.honey.HoneyBatch;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,11 +13,6 @@ public class Beekeeper extends Thread {
     private List<HoneyBatch> honeyBatches;
     private final Map<HoneyType, BlockingQueue<BeekeeperHoneyJob>> honeyQueues;
 
-    public Beekeeper(Map<HoneyType, BlockingQueue<BeekeeperHoneyJob>> honeyQueues, List<HoneyBatch> honeyBatches, String beekeeperName) {
-        this.honeyQueues = honeyQueues;
-        this.honeyBatches = honeyBatches;
-        this.beekeeperName = beekeeperName;
-    }
 
     public Beekeeper(String beekeeperName) {
         this.beekeeperName = beekeeperName;
