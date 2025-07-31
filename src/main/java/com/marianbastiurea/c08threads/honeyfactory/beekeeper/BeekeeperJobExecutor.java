@@ -35,7 +35,6 @@ public class BeekeeperJobExecutor {
             threads.add(t);
             t.start();
         }
-
         return threads;
     }
 }

@@ -22,8 +22,8 @@ public class OrderProcessingVerifier {
 
 
         for (HoneyOrderFromProcessingPlant order : orders) {
-            HoneyType type = order.getHoneyType();
-            double ordered = order.getQuantity();
+            HoneyType type = order.honeyType();
+            double ordered = order.quantity();
             double delivered = deliveredQuantities.getOrDefault(order, 0.0);
 
             orderedByType.put(type, orderedByType.getOrDefault(type, 0.0) + ordered);

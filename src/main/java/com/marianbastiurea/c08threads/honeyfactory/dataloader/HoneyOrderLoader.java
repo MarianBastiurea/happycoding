@@ -11,7 +11,7 @@ public class HoneyOrderLoader {
 
         System.out.println("\n📦 All Honey Orders:");
         for (HoneyOrderFromProcessingPlant order : orders) {
-            System.out.println("  -> " + order.getHoneyType() + " : " + order.getQuantity() + " kg");
+            System.out.println("  -> " + order.honeyType() + " : " + order.quantity() + " kg");
         }
         return orders;
     }

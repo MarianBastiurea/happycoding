@@ -15,7 +15,6 @@ public class HoneyJobFactory {
                 jobs.add(new BeekeeperHoneyJob(b.getBeekeeperName(), batch));
             }
         }
-
         return jobs;
     }
 }

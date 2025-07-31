@@ -15,7 +15,7 @@ public class HoneyUnloadManager {
     private final Object lock = new Object();
     private final Map<HoneyOrderFromProcessingPlant, Double> deliveredQuantities = new HashMap<>();
     private final List<HoneyOrderFromProcessingPlant> honeyOrderFromProcessingPlants;
-
+    private static final int UNLOAD_MINUTES_PER_BARREL = 10;
     public HoneyUnloadManager(List<HoneyOrderFromProcessingPlant> honeyOrderFromProcessingPlants) {
         this.honeyOrderFromProcessingPlants = honeyOrderFromProcessingPlants;
 
@@ -71,7 +71,7 @@ public class HoneyUnloadManager {
                         beekeeperName, quantity, type, start);
 
                 int barrels = (int) Math.ceil(quantity / 280.0);
-                // long unloadMillis = barrels * 10L * 60 * 1000;
+                // long unloadMillis = barrels * UNLOAD_MINUTES_PER_BARREL*60L*1000;
                 long unloadMillis = 100;// just for testing purposes
                 System.out.printf("⏳ %s is unloading %d barrels (%d minutes)%n",
                         beekeeperName, barrels, barrels * 10);
@@ -90,16 +90,16 @@ public class HoneyUnloadManager {
 
     private boolean processOrderFor(HoneyType type) {
         Optional<HoneyOrderFromProcessingPlant> matchingOrder = honeyOrderFromProcessingPlants.stream()
-                .filter(order -> order.getHoneyType() == type)
+                .filter(order -> order.honeyType() == type)
                 .filter(order -> {
                     double delivered = deliveredQuantities.getOrDefault(order, 0.0);
-                    return delivered < order.getQuantity();
+                    return delivered < order.quantity();
                 })
                 .findFirst();
 
         if (matchingOrder.isPresent()) {
             HoneyOrderFromProcessingPlant order = matchingOrder.get();
-            double orderedQty = order.getQuantity();
+            double orderedQty = order.quantity();
             double deliveredSoFar = deliveredQuantities.getOrDefault(order, 0.0);
             double remainingQty = orderedQty - deliveredSoFar;
             double currentStock = storage.get(type);
@@ -112,7 +112,7 @@ public class HoneyUnloadManager {
             }
 
             int barrels = (int) Math.ceil(quantityToProcess / 280.0);
-            // long processingTimeMillis= barrels * 10L * 60 * 1000;
+           //  long processingTimeMillis= barrels * UNLOAD_MINUTES_PER_BARREL*60L*1000;
             long processingTimeMillis = 100;// just for testing purposes
 
             System.out.printf("🏭 Processing %.2f kg of %s (≈ %d barrels)%n",
